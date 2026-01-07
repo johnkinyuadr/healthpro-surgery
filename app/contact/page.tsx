@@ -51,7 +51,12 @@ export default function ContactPage() {
         {/* Redirect after submit */}
         <input
           type="hidden"
-          name="_next"
+          name="<input
+  type="hidden"
+  name="_next"
+  value="https://healthpro-surgery-hi3j.vercel.app/thanks"
+/>
+"
           value="thanks"
         />
 
