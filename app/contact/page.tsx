@@ -14,6 +14,10 @@ export default function ContactPage() {
     "Hello HealthPro Surgery, I’d like to book a consultation."
   )}`;
 
+  const gmailComposeLink = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(
+    EMAIL
+  )}&su=${encodeURIComponent("HealthPro Surgery enquiry")}`;
+
   return (
     <>
       <section className="hero">
@@ -26,7 +30,9 @@ export default function ContactPage() {
           <a className="btn btnGreen" href={waLink} target="_blank" rel="noreferrer">
             WhatsApp
           </a>
-          <a className="btn" href={`mailto:${EMAIL}`}>Email</a>
+          <a className="btn" href={gmailComposeLink} target="_blank" rel="noreferrer">
+            Email
+          </a>
         </div>
       </section>
 
@@ -38,27 +44,9 @@ export default function ContactPage() {
         <input className="input" name="subject" placeholder="Subject" required />
         <textarea className="textarea" name="message" placeholder="Your message" required />
 
-        {/* Anti-spam honeypot */}
         <input type="text" name="_gotcha" style={{ display: "none" }} />
-
-        {/* Email subject */}
-        <input
-          type="hidden"
-          name="_subject"
-          value="New message from HealthPro Surgery website"
-        />
-
-        {/* Redirect after submit */}
-        <input
-          type="hidden"
-          name="<input
-  type="hidden"
-  name="_next"
-  value="https://healthpro-surgery-hi3j.vercel.app/thanks"
-/>
-"
-          value="thanks"
-        />
+        <input type="hidden" name="_subject" value="New message from HealthPro Surgery website" />
+        <input type="hidden" name="_next" value="/thanks" />
 
         <div className="small">
           Please do not include highly sensitive medical details. We’ll guide you during consultation.
