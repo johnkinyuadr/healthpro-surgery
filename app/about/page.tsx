@@ -59,7 +59,7 @@ export default function AboutPage() {
       <section className="grid" style={{ alignItems: "center", marginTop: "24px" }}>
         <div className="card" style={{ gridColumn: "span 4" }}>
           <img
-            src="/images/dr-collins-ochieng2.jpg?v=20260108"
+            src="/images/dr-collins-ochieng-20260108.jpg?v=20260108"
             alt="Dr Collins Ochieng - General Surgeon"
             style={{
               width: "100%",
