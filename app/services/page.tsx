@@ -29,7 +29,6 @@ export default function ServicesPage() {
         <p className="p">
           HealthPro Surgery provides specialist vascular, laparoscopic, and general
           surgical services, as well as diagnostic gastrointestinal endoscopy.
-          We offer patient-centred care with clear explanations and safe surgical planning.
         </p>
 
         <div className="btnRow">
@@ -54,8 +53,8 @@ export default function ServicesPage() {
           />
           <h3>Vascular Surgery</h3>
           <p>
-            Comprehensive assessment and management of arterial and venous disease,
-            including limb ischemia, aneurysms, carotid disease, and vascular access planning.
+            Assessment and management of arterial and venous disease, aneurysms,
+            carotid disease, limb ischemia, and vascular access planning.
           </p>
         </div>
 
@@ -80,8 +79,8 @@ export default function ServicesPage() {
           />
           <h3>Dialysis &amp; Vascular Access</h3>
           <p>
-            Planning and follow-up for AV fistula and AV graft creation,
-            as well as management of access-related complications.
+            AV fistula and AV graft creation, access surveillance,
+            and management of dialysis access complications.
           </p>
         </div>
 
@@ -93,8 +92,8 @@ export default function ServicesPage() {
           />
           <h3>Laparoscopic Surgery</h3>
           <p>
-            Minimally invasive surgical approaches for selected abdominal conditions,
-            offering reduced pain and faster recovery where appropriate.
+            Minimally invasive surgical options for selected abdominal conditions,
+            offering faster recovery where appropriate.
           </p>
         </div>
       </section>
@@ -102,8 +101,7 @@ export default function ServicesPage() {
       {/* GENERAL SURGERY */}
       <h2 className="sectionTitle">General Surgery</h2>
       <p className="p" style={{ marginTop: "-8px" }}>
-        We manage a wide range of general surgical conditions, offering both elective
-        and emergency surgical care.
+        We manage a wide range of general surgical conditions including:
       </p>
 
       <section className="grid">
@@ -111,4 +109,90 @@ export default function ServicesPage() {
           <img
             src="/images/general-surgery.jpg"
             alt="General surgery procedures"
-            styl
+            style={imgStyle}
+          />
+          <h3>General Surgery Procedures</h3>
+          <ul className="list" style={{ marginTop: "10px" }}>
+            <li>Hernias (inguinal, umbilical, incisional)</li>
+            <li>Thyroid disease and thyroid surgery</li>
+            <li>Breast disease and breast lumps</li>
+            <li>Laparotomy (open abdominal surgery)</li>
+            <li>Lipomas and ganglions</li>
+          </ul>
+        </div>
+
+        <div className="card">
+          <h3>Minor &amp; Day-Case Surgery</h3>
+          <p>
+            Lipoma excision, ganglion excision, wound care,
+            and other minor surgical procedures.
+          </p>
+        </div>
+
+        <div className="card">
+          <h3>Consultation &amp; Second Opinion</h3>
+          <p>
+            Clear assessment, explanation of findings,
+            and shared decision-making.
+          </p>
+        </div>
+
+        <div className="card">
+          <h3>Pre-operative Assessment &amp; Follow-up</h3>
+          <p>
+            Thorough evaluation before surgery and structured
+            post-operative follow-up.
+          </p>
+        </div>
+      </section>
+
+      {/* ENDOSCOPY */}
+      <h2 className="sectionTitle">Endoscopy</h2>
+
+      <section className="grid">
+        <div className="card">
+          <img
+            src="/images/endoscopy-upper.jpg"
+            alt="Upper GI endoscopy (OGD)"
+            style={imgStyle}
+          />
+          <h3>Upper GI Endoscopy (OGD)</h3>
+          <p>
+            Diagnostic upper gastrointestinal endoscopy for reflux,
+            dysphagia, persistent epigastric pain, or GI bleeding.
+          </p>
+        </div>
+
+        <div className="card">
+          <img
+            src="/images/endoscopy-colonoscopy.jpg"
+            alt="Lower GI endoscopy (colonoscopy)"
+            style={imgStyle}
+          />
+          <h3>Lower GI Endoscopy (Colonoscopy)</h3>
+          <p>
+            Colonoscopy for rectal bleeding, anemia,
+            change in bowel habits, or screening.
+          </p>
+        </div>
+      </section>
+
+      {/* BOOKING */}
+      <div className="card" style={{ marginTop: "18px" }}>
+        <h3>Booking &amp; Enquiries</h3>
+        <p>
+          To book a consultation, procedure, or endoscopy,
+          please contact us via WhatsApp or the contact form.
+        </p>
+        <div className="btnRow">
+          <Link className="btn btnAccent" href="/contact">
+            Contact / Book
+          </Link>
+          <a className="btn btnGreen" href={waLink} target="_blank" rel="noreferrer">
+            WhatsApp
+          </a>
+        </div>
+      </div>
+    </>
+  );
+}
