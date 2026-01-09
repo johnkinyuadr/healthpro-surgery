@@ -54,7 +54,7 @@ export default function ServicesPage() {
         </div>
 
         <div className="card">
-          <img src="/images/consultation.jpg" alt="Venous disease consultation" style={imgStyle} />
+          <img src="/images/vasccons.jpg" alt="Venous disease consultation" style={imgStyle} />
           <h3>Varicose Veins &amp; Venous Disease</h3>
           <p>
             Evaluation and treatment planning for varicose veins, venous insufficiency, leg swelling,
