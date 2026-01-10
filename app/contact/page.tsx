@@ -2,60 +2,77 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Contact",
-  description: "Contact HealthPro Surgery in Mombasa.",
+  description:
+    "Contact HealthPro Surgery in Mombasa to book a consultation or appointment.",
 };
 
-const WHATSAPP_NUMBER = "254721446206";
-const EMAIL = "johnkinyua@gmail.com";
-const FORMSPREE_ENDPOINT = "https://formspree.io/f/mnjnedvp";
-
 export default function ContactPage() {
-  const waLink = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
-    "Hello HealthPro Surgery, I’d like to book a consultation."
-  )}`;
-
-  const gmailComposeLink = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(
-    EMAIL
-  )}&su=${encodeURIComponent("HealthPro Surgery enquiry")}`;
-
   return (
-    <>
-      <section className="hero">
-        <h1 className="h1">Contact</h1>
-        <p className="p">
-          Reach us via WhatsApp or email, or send a message using the form below.
-        </p>
+    <section className="hero">
+      <h1 className="h1">Contact & Appointments</h1>
 
-        <div className="btnRow">
-          <a className="btn btnGreen" href={waLink} target="_blank" rel="noreferrer">
-            WhatsApp
-          </a>
-          <a className="btn" href={gmailComposeLink} target="_blank" rel="noreferrer">
-            Email
-          </a>
-        </div>
-      </section>
+      <p className="p">
+        To book a consultation or request an appointment, please fill in the form
+        below. Our team will contact you to confirm details and next steps.
+      </p>
 
-      <h2 className="sectionTitle">Send a message</h2>
+      <div className="card" style={{ maxWidth: "600px", margin: "20px auto" }}>
+        <form
+          action="https://formspree.io/f/mnjnedvp"
+          method="POST"
+        >
+          {/* Redirect after successful submission */}
+          <input
+            type="hidden"
+            name="_redirect"
+            value="https://www.healthprosurgery.com/thank-you"
+          />
 
-      <form className="form" action={FORMSPREE_ENDPOINT} method="POST">
-        <input className="input" name="name" placeholder="Your name" required />
-        <input className="input" type="email" name="email" placeholder="Your email" required />
-        <input className="input" name="subject" placeholder="Subject" required />
-        <textarea className="textarea" name="message" placeholder="Your message" required />
+          <label className="label">Full Name</label>
+          <input
+            className="input"
+            type="text"
+            name="name"
+            placeholder="Your full name"
+            required
+          />
 
-        <input type="text" name="_gotcha" style={{ display: "none" }} />
-        <input type="hidden" name="_subject" value="New message from HealthPro Surgery website" />
-        <input type="hidden" name="_next" value="/thanks" />
+          <label className="label">Email Address</label>
+          <input
+            className="input"
+            type="email"
+            name="email"
+            placeholder="you@example.com"
+            required
+          />
 
-        <div className="small">
-          Please do not include highly sensitive medical details. We’ll guide you during consultation.
-        </div>
+          <label className="label">Phone / WhatsApp Number</label>
+          <input
+            className="input"
+            type="tel"
+            name="phone"
+            placeholder="+254..."
+            required
+          />
 
-        <button className="btn btnAccent" type="submit">
-          Send Message
-        </button>
-      </form>
-    </>
+          <label className="label">Message</label>
+          <textarea
+            className="input"
+            name="message"
+            placeholder="Briefly describe your concern or the service you are booking (e.g. hernia, colonoscopy, varicose veins)."
+            rows={4}
+            required
+          ></textarea>
+
+          <button type="submit" className="btn btnAccent" style={{ marginTop: "12px" }}>
+            Submit Request
+          </button>
+        </form>
+      </div>
+
+      <p className="p" style={{ textAlign: "center", marginTop: "20px" }}>
+        Prefer WhatsApp? Contact us directly on <strong>+254 721 446 206</strong>.
+      </p>
+    </section>
   );
 }
