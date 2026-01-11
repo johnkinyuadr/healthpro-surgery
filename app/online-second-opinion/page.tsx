@@ -2,18 +2,20 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Online Surgical Second Opinion | KSh 2,000",
+  title: "Online Specialist Surgical Second Opinion | KSh 2,000",
   description:
-    "Request an online specialist surgical second opinion. Pay KSh 2,000 via M-Pesa and submit your details securely.",
+    "Request an online specialist surgical second opinion. Pay KSh 2,000 via M-Pesa PayBill and submit your details securely.",
 };
 
 const WHATSAPP_NUMBER = "254721446206";
+
+// M-Pesa Details
 const MPESA_PAYBILL = "400200";
 const MPESA_ACCOUNT = "1025353";
 
 export default function OnlineSecondOpinionPage() {
   const waLink = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
-    "Hello HealthPro Surgery. I have paid KSh 2,000 for an online second opinion."
+    "Hello HealthPro Surgery. I have paid KSh 2,000 for an online second opinion. Kindly confirm the next steps."
   )}`;
 
   return (
@@ -22,28 +24,48 @@ export default function OnlineSecondOpinionPage() {
         <h1 className="h1">Online Specialist Surgical Second Opinion</h1>
         <p className="p">
           Get a professional specialist review remotely. Ideal for confirming a diagnosis,
-          understanding treatment options, or deciding whether surgery is necessary.
+          understanding options, or deciding whether surgery is necessary.
         </p>
+
+        <div className="card" style={{ marginTop: "14px" }}>
+          <h2 style={{ marginTop: 0 }}>Response time</h2>
+          <p className="p">
+            We aim to respond within <strong>24–48 hours</strong> after receiving your
+            details and payment.
+          </p>
+        </div>
+
+        <div className="btnRow">
+          <a className="btn btnGreen" href={waLink} target="_blank" rel="noreferrer">
+            WhatsApp for Help
+          </a>
+          <Link className="btn" href="/second-opinion">
+            Back to Second Opinion
+          </Link>
+        </div>
       </section>
 
       <div className="card" style={{ maxWidth: "720px", margin: "0 auto" }}>
-        <h2>Fee</h2>
-        <p className="p"><strong>KSh 2,000</strong> — online initial review</p>
+        <h2 style={{ marginTop: 0 }}>Consultation Fee</h2>
+        <p className="p">
+          <strong>KSh 2,000</strong> — online specialist surgical second opinion (initial review).
+        </p>
 
-        <h2>Pay via M-Pesa</h2>
-        <ul className="list">
-          <li><strong>PayBill:</strong> {MPESA_PAYBILL}</li>
-          <li><strong>Account:</strong> {MPESA_ACCOUNT}</li>
+        <h2 style={{ marginTop: "16px" }}>How to Pay via M-Pesa</h2>
+        <ul className="list" style={{ marginTop: "10px" }}>
+          <li><strong>M-Pesa → Pay Bill</strong></li>
+          <li><strong>Business Number:</strong> {MPESA_PAYBILL}</li>
+          <li><strong>Account Number:</strong> {MPESA_ACCOUNT}</li>
           <li><strong>Amount:</strong> KSh 2,000</li>
         </ul>
 
-        <p className="p">
-          After payment, submit the form below and include your M-Pesa receipt code.
+        <p className="p" style={{ marginTop: "10px" }}>
+          After payment, submit the form below and include your <strong>M-Pesa receipt code</strong>.
         </p>
       </div>
 
       <div className="card" style={{ maxWidth: "720px", margin: "20px auto" }}>
-        <h2>Submit your request</h2>
+        <h2 style={{ marginTop: 0 }}>Submit Your Online Second Opinion Request</h2>
 
         <form action="https://formspree.io/f/mnjnedvp" method="POST">
           <input
@@ -54,37 +76,53 @@ export default function OnlineSecondOpinionPage() {
           <input
             type="hidden"
             name="service"
-            value="Online Second Opinion (KSh 2,000)"
+            value="Online Specialist Surgical Second Opinion (KSh 2,000)"
           />
 
           <label className="label">Full Name</label>
           <input className="input" type="text" name="name" required />
 
-          <label className="label">Phone / WhatsApp</label>
+          <label className="label">Phone / WhatsApp Number</label>
           <input className="input" type="tel" name="phone" required />
 
-          <label className="label">Email</label>
+          <label className="label">Email Address</label>
           <input className="input" type="email" name="email" required />
 
-          <label className="label">Clinical summary</label>
-          <textarea className="input" name="summary" rows={5} required />
+          <label className="label">Brief Clinical Summary</label>
+          <textarea
+            className="input"
+            name="summary"
+            rows={5}
+            placeholder="Briefly describe your condition, diagnosis, and proposed treatment."
+            required
+          />
 
           <label className="label">M-Pesa Receipt Code</label>
-          <input className="input" type="text" name="mpesa_receipt" required />
+          <input
+            className="input"
+            type="text"
+            name="mpesa_receipt"
+            placeholder="e.g. QWE123ABC4"
+            required
+          />
+
+          <label className="label">Reports / Imaging (optional)</label>
+          <textarea
+            className="input"
+            name="reports"
+            rows={4}
+            placeholder="Paste key report text here. PDFs/images can be shared via WhatsApp after submission."
+          />
 
           <button type="submit" className="btn btnAccent" style={{ marginTop: "12px" }}>
-            Submit Online Review
+            Submit Online Second Opinion
           </button>
-        </form>
 
-        <div className="btnRow" style={{ marginTop: "12px" }}>
-          <a className="btn btnGreen" href={waLink} target="_blank" rel="noreferrer">
-            WhatsApp After Payment
-          </a>
-          <Link className="btn" href="/second-opinion">
-            Back
-          </Link>
-        </div>
+          <p className="p" style={{ marginTop: "12px", opacity: 0.85 }}>
+            This online review provides professional guidance based on submitted information and does
+            not replace emergency care.
+          </p>
+        </form>
       </div>
     </>
   );

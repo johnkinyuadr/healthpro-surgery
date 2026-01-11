@@ -23,6 +23,13 @@ export default function SecondOpinionPage() {
           and explore safe alternatives. We provide clear, independent specialist guidance.
         </p>
 
+        <div className="card" style={{ marginTop: "14px" }}>
+          <h2 style={{ marginTop: 0 }}>Response time (online review)</h2>
+          <p className="p">
+            We aim to respond within <strong>24–48 hours</strong> after receiving your details and payment.
+          </p>
+        </div>
+
         <div className="btnRow">
           <Link className="btn btnAccent" href="/online-second-opinion">
             Online Second Opinion (KSh 2,000)
