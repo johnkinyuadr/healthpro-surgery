@@ -188,6 +188,58 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* === START: SERVICE FAQs (ADDED - NO EXISTING CONTENT REMOVED) === */}
+      <h2 className="sectionTitle">Service FAQs</h2>
+      <section className="grid">
+        <div className="card">
+          <h3 style={{ marginTop: 0 }}>Varicose Veins</h3>
+          <p style={{ marginTop: 6, marginBottom: 12, opacity: 0.9 }}>
+            Leg pain, swelling, visible veins, skin changes, ulcers — learn what to expect and when to
+            seek treatment.
+          </p>
+          <div className="btnRow" style={{ gap: 10, flexWrap: "wrap" }}>
+            <Link className="btn" href="/services/varicose-veins">
+              View FAQs
+            </Link>
+            <a className="btn btnGreen" href={waLink} target="_blank" rel="noreferrer">
+              WhatsApp
+            </a>
+          </div>
+        </div>
+
+        <div className="card">
+          <h3 style={{ marginTop: 0 }}>Dialysis Access</h3>
+          <p style={{ marginTop: 6, marginBottom: 12, opacity: 0.9 }}>
+            AV fistula and AV graft information, planning timelines, and common complications to watch
+            for.
+          </p>
+          <div className="btnRow" style={{ gap: 10, flexWrap: "wrap" }}>
+            <Link className="btn" href="/services/dialysis-access">
+              View FAQs
+            </Link>
+            <a className="btn btnGreen" href={waLink} target="_blank" rel="noreferrer">
+              WhatsApp
+            </a>
+          </div>
+        </div>
+
+        <div className="card">
+          <h3 style={{ marginTop: 0 }}>Hernia Surgery</h3>
+          <p style={{ marginTop: 6, marginBottom: 12, opacity: 0.9 }}>
+            Understand hernia types, when surgery is needed, warning signs, and recovery expectations.
+          </p>
+          <div className="btnRow" style={{ gap: 10, flexWrap: "wrap" }}>
+            <Link className="btn" href="/services/hernia-surgery">
+              View FAQs
+            </Link>
+            <a className="btn btnGreen" href={waLink} target="_blank" rel="noreferrer">
+              WhatsApp
+            </a>
+          </div>
+        </div>
+      </section>
+      {/* === END: SERVICE FAQs (ADDED) === */}
+
       {/* FOCUS AREAS WITH IMAGES */}
       <h2 className="sectionTitle">Our Focus Areas</h2>
       <section className="grid">
