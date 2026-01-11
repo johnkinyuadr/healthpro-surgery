@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import type { CSSProperties } from "react";
 
 export const metadata: Metadata = {
   title: "Services",
@@ -14,7 +15,7 @@ export default function ServicesPage() {
     "Hello HealthPro Surgery, I’d like to inquire about services / booking a consultation."
   )}`;
 
-  const imgStyle: React.CSSProperties = {
+  const imgStyle: CSSProperties = {
     width: "100%",
     borderRadius: "12px",
     marginBottom: "10px",
@@ -43,6 +44,47 @@ export default function ServicesPage() {
 
       {/* CORE SERVICES */}
       <h2 className="sectionTitle">Core Services</h2>
+
+      {/* === START: SERVICE FAQs (ADDED - NO EXISTING CONTENT REMOVED) === */}
+      <h2 className="sectionTitle">Service FAQs</h2>
+      <section className="grid">
+        <Link className="card" href="/services/varicose-veins">
+          <img
+            src="/images/varicose.png"
+            alt="Varicose veins and venous disease FAQs"
+            style={imgStyle}
+          />
+          <h3>Varicose Veins – FAQs</h3>
+          <p>
+            Symptoms, risks, treatment options, and when to seek care.
+          </p>
+        </Link>
+
+        <Link className="card" href="/services/dialysis-access">
+          <img
+            src="/images/dialysis.jpg"
+            alt="Dialysis and vascular access FAQs"
+            style={imgStyle}
+          />
+          <h3>Dialysis Access – FAQs</h3>
+          <p>
+            AV fistula/graft planning, timelines, and common complications.
+          </p>
+        </Link>
+
+        <Link className="card" href="/services/hernia-surgery">
+          <img
+            src="/images/general-surgery.jpg"
+            alt="Hernia surgery FAQs"
+            style={imgStyle}
+          />
+          <h3>Hernia Surgery – FAQs</h3>
+          <p>
+            Hernia types, warning signs, surgery timing, and recovery guidance.
+          </p>
+        </Link>
+      </section>
+      {/* === END: SERVICE FAQs (ADDED) === */}
 
       <section className="grid">
         <div className="card">
