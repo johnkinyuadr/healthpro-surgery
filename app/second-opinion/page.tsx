@@ -26,7 +26,10 @@ export default function SecondOpinionPage() {
 
         <div className="btnRow">
           <Link className="btn btnAccent" href="/contact">
-            Book a Second Opinion
+            Book In-Person / Standard Second Opinion
+          </Link>
+          <Link className="btn" href="/online-second-opinion">
+            Online Second Opinion (KSh 1,000)
           </Link>
           <a className="btn btnGreen" href={waLink} target="_blank" rel="noreferrer">
             WhatsApp
@@ -75,7 +78,7 @@ export default function SecondOpinionPage() {
           <h2 style={{ marginTop: 0 }}>How it works</h2>
           <ol className="list" style={{ marginTop: "10px" }}>
             <li>
-              <strong>Book an appointment</strong> via the contact form or WhatsApp.
+              <strong>Choose your option:</strong> online (KSh 1,000) or standard appointment.
             </li>
             <li>
               <strong>Share your documents</strong> (reports, imaging reports, medication list).
@@ -97,20 +100,21 @@ export default function SecondOpinionPage() {
       <div className="card" style={{ marginTop: "18px" }}>
         <h2 style={{ marginTop: 0 }}>Booking</h2>
         <p className="p">
-          Second opinion consultations are offered on a professional fee basis. To book, use the
-          contact form and select “Second Opinion” in your message, or WhatsApp us directly.
+          Choose the option that suits you. For an online second opinion, you’ll pay KSh 1,000 via
+          M-Pesa and submit your details. For in-person/standard review, use the contact form or
+          WhatsApp us.
         </p>
 
         <div className="btnRow" style={{ marginTop: "10px" }}>
-          <Link className="btn btnAccent" href="/contact">
-            Book via Website
+          <Link className="btn btnAccent" href="/online-second-opinion">
+            Online Second Opinion (KSh 1,000)
+          </Link>
+          <Link className="btn" href="/contact">
+            Book Standard Appointment
           </Link>
           <a className="btn btnGreen" href={waLink} target="_blank" rel="noreferrer">
             WhatsApp Booking
           </a>
-          <Link className="btn" href="/services">
-            View Services
-          </Link>
         </div>
       </div>
     </>
