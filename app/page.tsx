@@ -1,105 +1,157 @@
 import Link from "next/link";
-import type { Metadata } from "next";
 
-export const metadata: Metadata = {
-  title: "HealthPro Surgery | Vascular, General & Laparoscopic Surgery in Mombasa",
-  description:
-    "HealthPro Surgery provides vascular, general, and laparoscopic surgery services in Mombasa, including endoscopy, colonoscopy, and specialist surgical second opinions.",
-};
+const WHATSAPP_NUMBER = "254721446206";
+const EMAIL = "johnkinyua@gmail.com";
 
 export default function HomePage() {
+  const waLink = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
+    "Hello HealthPro Surgery, I’d like to inquire about a consultation."
+  )}`;
+
+  const gmailComposeLink = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(
+    EMAIL
+  )}&su=${encodeURIComponent("HealthPro Surgery enquiry")}&body=${encodeURIComponent(
+    "Hello HealthPro Surgery,\n\nI would like to inquire about a consultation.\n\nName:\nPhone:\n"
+  )}`;
+
   return (
     <>
-      {/* HERO SECTION */}
       <section className="hero">
-        <h1 className="h1">
-          HealthPro Surgery
-        </h1>
-
+        <h1 className="h1">HealthPro Surgery</h1>
         <p className="p">
-          Specialist vascular, general, and laparoscopic surgical care in Mombasa.
-          We also offer gastrointestinal endoscopy services and expert surgical second opinions.
+          Vascular & Laparoscopic Surgery in Mombasa, Kenya. Patient-centered, evidence-based surgical
+          care with a focus on safety, clear communication, and excellent outcomes.
         </p>
 
         <div className="btnRow">
-          <Link href="/contact" className="btn btnAccent">
-            Book Appointment
-          </Link>
-          <Link href="/services" className="btn">
+          <Link className="btn btnAccent" href="/services">
             View Services
           </Link>
+
+          <a
+            className="btn btnGreen"
+            href={waLink}
+            target="_blank"
+            rel="noreferrer"
+          >
+            WhatsApp
+          </a>
+
+          {/* Opens Gmail compose in browser (works even if mail app isn't configured) */}
+          <a
+            className="btn"
+            href={gmailComposeLink}
+            target="_blank"
+            rel="noreferrer"
+          >
+            Email
+          </a>
         </div>
       </section>
 
-      {/* SECOND OPINION CTA */}
-      <div className="card" style={{ marginTop: "20px" }}>
-        <h2 style={{ marginTop: 0 }}>Need a Specialist Surgical Second Opinion?</h2>
-
-        <p className="p">
-          Get clarity before making an important surgical decision.
-          We offer both <strong>online</strong> and <strong>in-person</strong> specialist
-          surgical second opinions.
-        </p>
-
-        <ul className="list">
-          <li>✔ Online second opinion (initial review): <strong>KSh 2,000</strong></li>
-          <li>✔ In-person specialist second opinion: <strong>KSh 3,000</strong></li>
-          <li>✔ We aim to respond within <strong>24–48 hours</strong></li>
-        </ul>
-
-        <div className="btnRow" style={{ marginTop: "12px" }}>
-          <Link href="/online-second-opinion" className="btn btnAccent">
-            Start Online Second Opinion
-          </Link>
-          <Link href="/second-opinion" className="btn">
-            Learn More
-          </Link>
-        </div>
-      </div>
-
-      {/* SERVICES SUMMARY */}
-      <section className="grid" style={{ marginTop: "20px" }}>
+      <h2 className="sectionTitle">Highlights</h2>
+      <section className="grid">
         <div className="card">
+          <h3>Vascular Expertise</h3>
+          <p>
+            Evaluation and management of arterial and venous disease, tailored to your condition and
+            goals.
+          </p>
+        </div>
+
+        <div className="card">
+          <h3>Minimally Invasive Surgery</h3>
+          <p>
+            Laparoscopic approaches where appropriate to support faster recovery and reduced
+            postoperative pain.
+          </p>
+        </div>
+
+        <div className="card">
+          <h3>Clear Pathway to Care</h3>
+          <p>
+            Simple consultation pathway with direct communication via WhatsApp or email.
+          </p>
+        </div>
+
+        <div className="card">
+          <h3>Quality &amp; Safety</h3>
+          <p>
+            Focused on evidence-based practice, patient safety, and continuous improvement in outcomes.
+          </p>
+        </div>
+      </section>
+
+      <h2 className="sectionTitle">Our Focus Areas</h2>
+      <section className="grid">
+        <div className="card">
+          <img
+            src="/images/vascular.jpg"
+            alt="Vascular surgery"
+            style={{
+              width: "100%",
+              borderRadius: "12px",
+              marginBottom: "10px",
+              border: "1px solid rgba(255,255,255,0.08)",
+            }}
+          />
           <h3>Vascular Surgery</h3>
-          <p className="p">
-            Management of varicose veins, peripheral arterial disease, dialysis access,
-            and vascular consultations.
+          <p>
+            Specialist care for arterial and venous disease with individualized treatment planning.
           </p>
         </div>
 
         <div className="card">
-          <h3>General & Laparoscopic Surgery</h3>
-          <p className="p">
-            Hernias, thyroid disease, breast disease, laparotomy,
-            lipomas, ganglions, and other general surgical conditions.
+          <img
+            src="/images/laparoscopic.jpg"
+            alt="Laparoscopic surgery"
+            style={{
+              width: "100%",
+              borderRadius: "12px",
+              marginBottom: "10px",
+              border: "1px solid rgba(255,255,255,0.08)",
+            }}
+          />
+          <h3>Laparoscopic Surgery</h3>
+          <p>
+            Minimally invasive surgical options to support faster recovery and reduced pain.
           </p>
         </div>
 
         <div className="card">
-          <h3>Endoscopy Services</h3>
-          <p className="p">
-            Upper gastrointestinal endoscopy (OGD) and lower GI endoscopy
-            (colonoscopy) for diagnosis and screening.
+          <img
+            src="/images/consultation.jpg"
+            alt="Surgical consultation"
+            style={{
+              width: "100%",
+              borderRadius: "12px",
+              marginBottom: "10px",
+              border: "1px solid rgba(255,255,255,0.08)",
+            }}
+          />
+          <h3>Consultation</h3>
+          <p>
+            Clear explanations, shared decision-making, and patient-centered care.
+          </p>
+        </div>
+
+        <div className="card">
+          <img
+            src="/images/clinic.jpg"
+            alt="Clinic environment"
+            style={{
+              width: "100%",
+              borderRadius: "12px",
+              marginBottom: "10px",
+              border: "1px solid rgba(255,255,255,0.08)",
+            }}
+          />
+          <h3>Care Environment</h3>
+          <p>
+            Professional, safe, and modern clinical settings.
           </p>
         </div>
       </section>
-
-      {/* TRUST / CLOSING */}
-      <div className="card" style={{ marginTop: "20px" }}>
-        <p className="p">
-          At HealthPro Surgery, our focus is patient-centred, ethical,
-          and evidence-based surgical care.
-        </p>
-
-        <div className="btnRow">
-          <Link href="/contact" className="btn btnAccent">
-            Contact Us
-          </Link>
-          <Link href="/about" className="btn">
-            About the Practice
-          </Link>
-        </div>
-      </div>
     </>
   );
 }
