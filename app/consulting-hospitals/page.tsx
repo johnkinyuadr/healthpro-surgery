@@ -1,5 +1,11 @@
-// app/consulting-hospitals/page.tsx
+import type { Metadata } from "next";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "Hospitals We Consult At",
+  description:
+    "Hospitals where HealthPro Surgery consultants provide specialist surgical care in Mombasa, the South Coast, and Nairobi.",
+};
 
 type Hospital = {
   name: string;
@@ -9,7 +15,7 @@ type Hospital = {
 };
 
 const HOSPITALS: Hospital[] = [
-  // Highlighted
+  // ===== Highlighted =====
   {
     name: "Avenue Healthcare – Mombasa",
     url: "https://avenuehealthcare.com",
@@ -39,7 +45,7 @@ const HOSPITALS: Hospital[] = [
       "An internationally accredited tertiary hospital delivering world-class specialist care, advanced diagnostics, and evidence-based surgical services.",
   },
   {
-    name: "Premier Hospital – Nyali, Mombasa",
+    name: "Premier Hospital – Mombasa",
     url: "https://premierhospital.co.ke",
     highlight: true,
     narration:
@@ -50,7 +56,7 @@ const HOSPITALS: Hospital[] = [
     url: "https://welcaremedicalcentre.co.ke",
     highlight: true,
     narration:
-      "A trusted community-based hospital providing accessible, high-quality medical and surgical care with a strong focus on continuity and safety.",
+      "A trusted community-based facility providing accessible, high-quality medical and surgical care with a strong focus on continuity and safety.",
   },
   {
     name: "Bayleaf Hospital – Mombasa",
@@ -60,12 +66,12 @@ const HOSPITALS: Hospital[] = [
       "A contemporary healthcare facility delivering efficient outpatient, inpatient, and surgical services in a patient-friendly environment.",
   },
 
-  // Others (links if available; leave url undefined if not sure)
-  { name: "Aga Khan Hospital – Mombasa (Aga Khan)", url: "https://www.agakhanhospitals.org/mombasa" }, // optional duplicate; remove if you prefer
-  { name: "Avenue Health Centre", url: "https://avenuehealthcare.com" }, // optional naming variant
+  // ===== Others (add URLs where available) =====
   { name: "Mewa Hospital" },
   { name: "Jocham Hospital" },
   { name: "Sayyida Fatima Hospital" },
+  { name: "The Nairobi Women’s Hospital – Mombasa" },
+  { name: "The Nairobi Home Hospital – Nyali" },
   { name: "Diani Beach Hospital" },
   { name: "Montana Hospital" },
   { name: "Arawa Hospital" },
@@ -73,54 +79,45 @@ const HOSPITALS: Hospital[] = [
   { name: "Al Farouq Hospital" },
   { name: "Bomu Hospital" },
   { name: "AfyaFirst Medical Centre" },
-  { name: "The Nairobi Women’s Hospital – Mombasa" },
-  { name: "The Nairobi Hospital – Nyali (Nairobi Home Hospital)" },
 ];
-
-function classNames(...c: Array<string | false | undefined>) {
-  return c.filter(Boolean).join(" ");
-}
 
 export default function ConsultingHospitalsPage() {
   const highlighted = HOSPITALS.filter((h) => h.highlight);
   const others = HOSPITALS.filter((h) => !h.highlight);
 
   return (
-    <main className="mx-auto max-w-6xl px-4 py-10">
-      <div className="mb-8">
-        <h1 className="text-3xl font-semibold tracking-tight">
-          Hospitals We Consult At
-        </h1>
-        <p className="mt-2 text-gray-600">
-          A trusted network of hospitals across Mombasa, the South Coast, and Nairobi.
+    <>
+      <section className="hero">
+        <h1 className="h1">Hospitals We Consult At</h1>
+        <p className="p">
+          HealthPro Surgery consultants provide specialist care across a trusted network
+          of hospitals in Mombasa, the South Coast, and Nairobi.
         </p>
-      </div>
+      </section>
 
-      {/* Highlighted "tabs" */}
-      <section className="mb-10">
-        <h2 className="text-xl font-semibold mb-4">Featured Hospitals</h2>
+      <section style={{ marginTop: "24px" }}>
+        <h2 className="sectionTitle">Featured Hospitals</h2>
 
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid" style={{ marginTop: "12px" }}>
           {highlighted.map((h) => (
-            <div
-              key={h.name}
-              className="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm hover:shadow-md transition"
-            >
-              <div className="flex items-start justify-between gap-3">
-                <h3 className="text-lg font-semibold leading-snug">{h.name}</h3>
+            <div key={h.name} className="card" style={{ gridColumn: "span 4" }}>
+              <div style={{ display: "flex", justifyContent: "space-between", gap: "12px" }}>
+                <h3 style={{ margin: 0 }}>{h.name}</h3>
                 {h.url ? (
                   <a
+                    className="link"
                     href={h.url}
                     target="_blank"
                     rel="noreferrer"
-                    className="text-sm font-medium text-blue-600 hover:underline whitespace-nowrap"
+                    style={{ whiteSpace: "nowrap" }}
                   >
-                    Visit site →
+                    Website →
                   </a>
                 ) : null}
               </div>
+
               {h.narration ? (
-                <p className="mt-3 text-sm text-gray-600 leading-relaxed">
+                <p className="p" style={{ marginTop: "10px" }}>
                   {h.narration}
                 </p>
               ) : null}
@@ -129,42 +126,33 @@ export default function ConsultingHospitalsPage() {
         </div>
       </section>
 
-      {/* Other hospitals */}
-      <section className="mb-10">
-        <h2 className="text-xl font-semibold mb-4">Other Consulting Hospitals</h2>
+      <section style={{ marginTop: "24px" }}>
+        <h2 className="sectionTitle">Other Consulting Hospitals</h2>
 
-        <div className="grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid" style={{ marginTop: "12px" }}>
           {others.map((h) => (
-            <div
-              key={h.name}
-              className="rounded-xl border border-gray-200 bg-white px-4 py-3"
-            >
+            <div key={h.name} className="card" style={{ gridColumn: "span 4" }}>
               {h.url ? (
-                <a
-                  href={h.url}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="text-gray-800 hover:text-blue-600 hover:underline"
-                >
+                <a className="link" href={h.url} target="_blank" rel="noreferrer">
                   {h.name}
                 </a>
               ) : (
-                <span className="text-gray-800">{h.name}</span>
+                <span>{h.name}</span>
               )}
             </div>
           ))}
         </div>
 
-        <p className="mt-4 text-sm text-gray-500">
-          Some facilities may not have an official website listed yet. We can add links as they become available.
+        <p className="p" style={{ marginTop: "12px", opacity: 0.85 }}>
+          Where an official website link is available, it is included. Additional links can be added anytime.
         </p>
       </section>
 
-      <div className="border-t pt-6">
-        <Link href="/" className="text-blue-600 hover:underline">
+      <section style={{ marginTop: "24px" }}>
+        <Link className="link" href="/">
           ← Back to Home
         </Link>
-      </div>
-    </main>
+      </section>
+    </>
   );
 }
