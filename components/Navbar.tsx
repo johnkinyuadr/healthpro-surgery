@@ -11,6 +11,12 @@ export default function Navbar() {
         <nav className="links">
           <Link className="link" href="/about">About</Link>
           <Link className="link" href="/services">Services</Link>
+
+          {/* NEW TAB */}
+          <Link className="link" href="/consulting-hospitals">
+            Hospitals
+          </Link>
+
           <Link className="link" href="/second-opinion">Second Opinion</Link>
           <Link className="link" href="/online-second-opinion">Online Second Opinion</Link>
           <Link className="link" href="/contact">Contact</Link>
