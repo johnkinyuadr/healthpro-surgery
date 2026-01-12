@@ -25,7 +25,7 @@ const HOSPITALS: Hospital[] = [
   },
   {
     name: "Pandya Memorial Hospital – Mombasa",
-    url: "https://pandyahospital.org",
+    url: "https://pandyahospital.org/dr-john-kinyua/",
     highlight: true,
     narration:
       "A well-established hospital combining affordability with dependable surgical and inpatient services, serving a wide spectrum of patients across the Coast region.",
