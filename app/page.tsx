@@ -5,7 +5,7 @@ const EMAIL = "johnkinyua@gmail.com";
 
 // Payment details (M-Pesa Paybill)
 const PAYBILL = "400200";
-const ACCOUNT = "1025353";
+const ACCOUNT = "1025453";
 
 export default function HomePage() {
   const waLink = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
