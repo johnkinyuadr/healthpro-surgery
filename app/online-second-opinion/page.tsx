@@ -11,7 +11,7 @@ const WHATSAPP_NUMBER = "254721446206";
 
 // M-Pesa Details
 const MPESA_PAYBILL = "400200";
-const MPESA_ACCOUNT = "1025353";
+const MPESA_ACCOUNT = "1025453";
 
 export default function OnlineSecondOpinionPage() {
   const waLink = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
