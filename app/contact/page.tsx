@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Contact HealthPro Surgery in Mombasa to book a consultation or appointment.",
+    "Contact HealthPro Surgery at Aga Khan Hospital Mombasa to book a consultation or appointment.",
 };
 
 export default function ContactPage() {
@@ -16,11 +16,30 @@ export default function ContactPage() {
         below. Our team will contact you to confirm details and next steps.
       </p>
 
+      {/* LOCATION CARD */}
       <div className="card" style={{ maxWidth: "600px", margin: "20px auto" }}>
-        <form
-          action="https://formspree.io/f/mnjnedvp"
-          method="POST"
-        >
+        <h2 style={{ marginTop: 0 }}>Our Location</h2>
+
+        <p className="p">
+          HealthPro Surgery is now located at:
+        </p>
+
+        <p className="p">
+          <strong>
+            Aga Khan Hospital Mombasa<br />
+            Drs Plaza, 2nd Floor<br />
+            Mombasa, Kenya
+          </strong>
+        </p>
+
+        <p className="p" style={{ marginTop: "10px" }}>
+          📞 Phone / WhatsApp: <strong>+254 721 446 206</strong>
+        </p>
+      </div>
+
+      {/* FORM */}
+      <div className="card" style={{ maxWidth: "600px", margin: "20px auto" }}>
+        <form action="https://formspree.io/f/mnjnedvp" method="POST">
           {/* Redirect after successful submission */}
           <input
             type="hidden"
@@ -64,14 +83,20 @@ export default function ContactPage() {
             required
           ></textarea>
 
-          <button type="submit" className="btn btnAccent" style={{ marginTop: "12px" }}>
+          <button
+            type="submit"
+            className="btn btnAccent"
+            style={{ marginTop: "12px" }}
+          >
             Submit Request
           </button>
         </form>
       </div>
 
+      {/* WHATSAPP */}
       <p className="p" style={{ textAlign: "center", marginTop: "20px" }}>
-        Prefer WhatsApp? Contact us directly on <strong>+254 721 446 206</strong>.
+        Prefer WhatsApp? Contact us directly on{" "}
+        <strong>+254 721 446 206</strong>.
       </p>
     </section>
   );
