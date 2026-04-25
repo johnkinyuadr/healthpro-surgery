@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Contact HealthPro Surgery at Aga Khan Hospital Mombasa, Drs Plaza, 2nd Floor, to book a consultation or appointment.",
+    "Contact HealthPro Surgery at Aga Khan Hospital Mombasa, Drs Plaza, First Floor, to book a consultation or appointment.",
 };
 
 const GOOGLE_MAPS_DIRECTIONS =
@@ -32,7 +32,7 @@ export default function ContactPage() {
         <p className="p">
           <strong>
             Aga Khan Hospital Mombasa<br />
-            Drs Plaza, 2nd Floor<br />
+            Drs Plaza, First Floor<br />
             Mombasa, Kenya
           </strong>
         </p>
