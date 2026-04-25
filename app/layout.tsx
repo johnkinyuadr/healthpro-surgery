@@ -6,6 +6,9 @@ import Footer from "@/components/Footer";
 
 const siteUrl = "https://www.healthprosurgery.com";
 
+const GOOGLE_MAPS_DIRECTIONS =
+  "https://www.google.com/maps/search/?api=1&query=Aga%20Khan%20Hospital%20Mombasa%20Drs%20Plaza";
+
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
@@ -13,7 +16,7 @@ export const metadata: Metadata = {
     template: "%s | HealthPro Surgery",
   },
   description:
-    "HealthPro Surgery in Mombasa, Kenya — vascular surgery, general surgery, laparoscopic surgery, and GI endoscopy including colonoscopy and OGD. Now located at Aga Khan Hospital Mombasa, Drs Plaza, First Floor.",
+    "HealthPro Surgery in Mombasa, Kenya — vascular surgery, general surgery, laparoscopic surgery, GI endoscopy, colonoscopy and OGD. Located at Aga Khan Hospital Mombasa, Drs Plaza, 2nd Floor.",
   alternates: {
     canonical: siteUrl,
   },
@@ -23,7 +26,7 @@ export const metadata: Metadata = {
     siteName: "HealthPro Surgery",
     title: "HealthPro Surgery | Mombasa",
     description:
-      "Vascular, general & laparoscopic surgery and GI endoscopy services in Mombasa, Kenya. Now at Aga Khan Hospital Mombasa, Drs Plaza, First Floor.",
+      "Vascular, general & laparoscopic surgery and GI endoscopy services in Mombasa, Kenya. Located at Aga Khan Hospital Mombasa, Drs Plaza, 2nd Floor.",
   },
   twitter: {
     card: "summary_large_image",
@@ -69,7 +72,7 @@ export default function RootLayout({
               email: "johnkinyua@gmail.com",
               address: {
                 "@type": "PostalAddress",
-                streetAddress: "Aga Khan Hospital Mombasa, Drs Plaza, First Floor",
+                streetAddress: "Aga Khan Hospital Mombasa, Drs Plaza, 2nd Floor",
                 addressLocality: "Mombasa",
                 addressCountry: "KE",
               },
@@ -82,19 +85,27 @@ export default function RootLayout({
           }}
         />
 
-        <div
-          style={{
-            backgroundColor: "#1e40af",
-            color: "white",
-            textAlign: "center",
-            padding: "10px 14px",
-            fontSize: "14px",
-            fontWeight: 600,
-          }}
+        <a
+          href={GOOGLE_MAPS_DIRECTIONS}
+          target="_blank"
+          rel="noreferrer"
+          style={{ textDecoration: "none" }}
         >
-          📍 HealthPro Surgery has moved to{" "}
-          <strong>Aga Khan Hospital Mombasa, Drs Plaza, First Floor</strong>
-        </div>
+          <div
+            style={{
+              backgroundColor: "#1e40af",
+              color: "white",
+              textAlign: "center",
+              padding: "10px 14px",
+              fontSize: "14px",
+              fontWeight: 600,
+              cursor: "pointer",
+            }}
+          >
+            📍 HealthPro Surgery has moved to{" "}
+            <strong>Aga Khan Hospital Mombasa, Drs Plaza, 2nd Floor</strong> — Tap for directions
+          </div>
+        </a>
 
         <Navbar />
         <main className="container">{children}</main>
