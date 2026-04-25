@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     template: "%s | HealthPro Surgery",
   },
   description:
-    "HealthPro Surgery in Mombasa, Kenya — vascular surgery, general surgery, laparoscopic surgery, and GI endoscopy including colonoscopy and OGD. Now located at Aga Khan Hospital Mombasa, Drs Plaza, 2nd Floor.",
+    "HealthPro Surgery in Mombasa, Kenya — vascular surgery, general surgery, laparoscopic surgery, and GI endoscopy including colonoscopy and OGD. Now located at Aga Khan Hospital Mombasa, Drs Plaza, First Floor.",
   alternates: {
     canonical: siteUrl,
   },
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     siteName: "HealthPro Surgery",
     title: "HealthPro Surgery | Mombasa",
     description:
-      "Vascular, general & laparoscopic surgery and GI endoscopy services in Mombasa, Kenya. Now at Aga Khan Hospital Mombasa, Drs Plaza, 2nd Floor.",
+      "Vascular, general & laparoscopic surgery and GI endoscopy services in Mombasa, Kenya. Now at Aga Khan Hospital Mombasa, Drs Plaza, First Floor.",
   },
   twitter: {
     card: "summary_large_image",
@@ -69,7 +69,7 @@ export default function RootLayout({
               email: "johnkinyua@gmail.com",
               address: {
                 "@type": "PostalAddress",
-                streetAddress: "Aga Khan Hospital Mombasa, Drs Plaza, 2nd Floor",
+                streetAddress: "Aga Khan Hospital Mombasa, Drs Plaza, First Floor",
                 addressLocality: "Mombasa",
                 addressCountry: "KE",
               },
@@ -93,7 +93,7 @@ export default function RootLayout({
           }}
         >
           📍 HealthPro Surgery has moved to{" "}
-          <strong>Aga Khan Hospital Mombasa, Drs Plaza, 2nd Floor</strong>
+          <strong>Aga Khan Hospital Mombasa, Drs Plaza, First Floor</strong>
         </div>
 
         <Navbar />

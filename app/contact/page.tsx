@@ -27,7 +27,7 @@ export default function ContactPage() {
         <p className="p">
           <strong>
             Aga Khan Hospital Mombasa<br />
-            Drs Plaza, 2nd Floor<br />
+            Drs Plaza, First Floor<br />
             Mombasa, Kenya
           </strong>
         </p>
