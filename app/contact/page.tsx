@@ -84,7 +84,8 @@ export default function ContactPage() {
           <h2 style={{ fontSize: 20, marginTop: 22 }}>Insurance</h2>
           <p>
             {INSURANCE.local} accepted, plus major international insurers including{" "}
-            {INSURANCE.international.join(" and ")}.
+            {INSURANCE.international.join(" and ")}.{" "}
+            <Link href="/#insurance" style={{ color: "var(--teal)", fontWeight: 600 }}>See the full list</Link>.
           </p>
           <p className="small" style={{ marginTop: 8 }}>
             {INSURANCE.note}

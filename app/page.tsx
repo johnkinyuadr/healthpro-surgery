@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import InsurerPanel from "@/components/InsurerPanel";
 import { CLINIC_HOURS, INSURANCE } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -306,25 +307,19 @@ export default function HomePage() {
       </section>
 
       {/* INSURANCE */}
-      <section className="bleed" style={{ paddingBottom: 56 }}>
-        <div className="wrap insureBand">
-          <div>
-            <div className="eyebrow">Insurance &amp; payment</div>
-            <h2 className="h2">Your insurance is accepted</h2>
-            <p className="lead">
-              {INSURANCE.local} are accepted, together with major international insurers. Self-pay
-              patients can pay by M-Pesa.
-            </p>
+      <section id="insurance" className="bleed band bandWhite" style={{ marginBottom: 56 }}>
+        <div className="wrap">
+          <div className="sectionHead">
+            <div>
+              <div className="eyebrow">Insurance &amp; payment</div>
+              <h2 className="h2">Your insurance is accepted</h2>
+              <p className="lead">
+                {INSURANCE.local} are accepted, together with major international insurers. If you
+                don&apos;t see yours, contact us — it is very likely covered.
+              </p>
+            </div>
           </div>
-          <div className="insureList">
-            <span className="insureTag">All Kenyan insurers</span>
-            {INSURANCE.international.map((i) => (
-              <span key={i} className="insureTag">
-                {i}
-              </span>
-            ))}
-            <span className="insureTag">M-Pesa</span>
-          </div>
+          <InsurerPanel />
         </div>
       </section>
 
