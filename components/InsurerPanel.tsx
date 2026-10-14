@@ -1,9 +1,9 @@
 import type { Insurer } from "@/lib/site";
-import { INTERNATIONAL_INSURERS, KENYAN_INSURERS } from "@/lib/site";
+import { INTERNATIONAL_INSURERS, KENYAN_INSURERS, SELF_PAY } from "@/lib/site";
 
 function Tile({ insurer }: { insurer: Insurer }) {
   return (
-    <li className="insurerTile">
+    <li className={insurer.logo ? "insurerTile hasLogo" : "insurerTile"} title={insurer.name}>
       {insurer.logo ? (
         // eslint-disable-next-line @next/next/no-img-element
         <img src={insurer.logo} alt={insurer.name} loading="lazy" />
@@ -28,9 +28,7 @@ export default function InsurerPanel() {
         {INTERNATIONAL_INSURERS.map((i) => (
           <Tile key={i.name} insurer={i} />
         ))}
-        <li className="insurerTile insurerTileNote">
-          <span>Self-pay by M-Pesa</span>
-        </li>
+        <Tile insurer={SELF_PAY} />
       </ul>
     </div>
   );
