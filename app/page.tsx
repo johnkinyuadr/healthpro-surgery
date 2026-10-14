@@ -11,9 +11,6 @@ const WHATSAPP_NUMBER = "254721446206";
 const PHONE_DISPLAY = "0721 446 206";
 const EMAIL = "johnkinyua@gmail.com";
 
-// Payment details (M-Pesa Paybill)
-const PAYBILL = "400200";
-const ACCOUNT = "1025453";
 
 const MAPS_DIRECTIONS =
   "https://www.google.com/maps/search/?api=1&query=Aga%20Khan%20Hospital%20Mombasa%20Drs%20Plaza";
@@ -106,7 +103,7 @@ export default function HomePage() {
   )}`;
 
   const waSecondOpinionLink = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
-    `Hello HealthPro Surgery, I would like an Online Second Opinion.\n\nMy main concern is:\n\nI understand the fees are:\n- KSh 2,000 initial review (online)\n- KSh 3,000 in-person consultation (if needed)\n\nPayment:\nPaybill ${PAYBILL}\nAccount ${ACCOUNT}\n\nKindly advise the next steps.`
+    "Hello HealthPro Surgery, I would like a second opinion.\n\nI am (the patient / a relative / a referring doctor):\nMain concern:\n\nKindly advise the next steps."
   )}`;
 
   return (
@@ -231,30 +228,31 @@ export default function HomePage() {
         <div className="wrap split">
           <div className="stack">
             <div className="eyebrow">Online second opinion</div>
-            <h2 className="h2">A specialist review of your case within 24 hours</h2>
+            <h2 className="h2">An independent specialist opinion, in writing</h2>
             <p className="lead">
-              Share your reports and history from anywhere. You receive clear guidance on your
-              diagnosis and treatment options, and an in-person review only if it is needed.
+              Share your reports and history from anywhere — including on behalf of a relative. You
+              pay only once your case is accepted, and receive a signed written report.
             </p>
             <div className="steps">
               <div className="step">
                 <span className="stepNum">1</span>
                 <div>
-                  <strong>Send your details.</strong> A short summary of symptoms, current
-                  medication and any reports — labs, CT/MRI, ultrasound, discharge summaries.
+                  <strong>Submit your case.</strong> A short summary and your scan reports, lab
+                  results and discharge summaries — no payment yet.
                 </div>
               </div>
               <div className="step">
                 <span className="stepNum">2</span>
                 <div>
-                  <strong>Pay via M-Pesa.</strong> Paybill {PAYBILL}, Account {ACCOUNT}.
+                  <strong>Pay once accepted.</strong> We confirm suitability, then send the M-Pesa
+                  payment details.
                 </div>
               </div>
               <div className="step">
                 <span className="stepNum">3</span>
                 <div>
-                  <strong>Receive your review.</strong> A written specialist opinion and recommended
-                  next steps.
+                  <strong>Receive your written report.</strong> Within 24 hours of payment; weekend
+                  requests may take slightly longer.
                 </div>
               </div>
             </div>
@@ -264,7 +262,7 @@ export default function HomePage() {
             <div className="priceRow">
               <div>
                 <b>Online review</b>
-                <small>Response within 24 hours</small>
+                <small>Written report within 24 hours of payment</small>
               </div>
               <div className="price">KSh 2,000</div>
             </div>
@@ -275,11 +273,9 @@ export default function HomePage() {
               </div>
               <div className="price">KSh 3,000</div>
             </div>
-            <p className="payNote">
-              M-Pesa Paybill <strong>{PAYBILL}</strong> · Account <strong>{ACCOUNT}</strong>
-            </p>
-            <Link className="btn btnPrimary" href="/online-second-opinion">
-              Start online second opinion
+            <p className="payNote">Payment is requested only after your case is accepted.</p>
+            <Link className="btn btnPrimary" href="/second-opinion#request">
+              Submit your case
             </Link>
             <a className="btn" href={waSecondOpinionLink} target="_blank" rel="noreferrer">
               Start on WhatsApp

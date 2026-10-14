@@ -39,7 +39,7 @@ export default function ServicePage({
           <a className="btn btnPrimary" href={waLink(whatsappMessage)} target="_blank" rel="noreferrer">
             Book a consultation
           </a>
-          <Link className="btn" href="/online-second-opinion">
+          <Link className="btn" href="/second-opinion">
             Online second opinion
           </Link>
         </div>

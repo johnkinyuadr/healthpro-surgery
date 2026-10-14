@@ -13,7 +13,6 @@ const PATHS = [
   "/services/gi-endoscopy",
   "/consulting-hospitals",
   "/second-opinion",
-  "/online-second-opinion",
   "/patient-guides/diabetic-foot",
   "/media",
   "/contact",

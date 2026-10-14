@@ -29,7 +29,7 @@ export default function Footer() {
             <div className="footerCol">
               <h4>Second opinion</h4>
               <Link href="/second-opinion">How it works</Link>
-              <Link href="/online-second-opinion">Request online</Link>
+              <Link href="/second-opinion#request">Submit a case</Link>
             </div>
             <div className="footerCol">
               <h4>Clinic hours</h4>
