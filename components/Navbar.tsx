@@ -21,6 +21,7 @@ export default function Navbar() {
           <Link className="link" href="/services">Services</Link>
           <Link className="link" href="/consulting-hospitals">Hospitals</Link>
           <Link className="link" href="/second-opinion">Second Opinion</Link>
+          <Link className="link" href="/media">Media</Link>
           <Link className="link" href="/contact">Contact</Link>
           <a className="navCta" href={BOOK_LINK} target="_blank" rel="noreferrer">
             Book a consultation

@@ -367,3 +367,41 @@ h1, h2, h3 { color: var(--heading); }
   font-weight: 600; font-size: 15px; padding: 12px 18px; border-radius: 10px;
 }
 .footerHours { display: grid; grid-template-columns: auto auto; gap: 2px 16px; }
+
+/* ---------- Media & video ---------- */
+.videoFrame { position: relative; width: 100%; aspect-ratio: 16 / 9; border-radius: 12px; overflow: hidden; background: #0b2545; }
+.videoFrame iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+.mediaList { display: flex; flex-direction: column; gap: 24px; margin-top: 24px; }
+.mediaItem {
+  background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 24px;
+  display: flex; flex-wrap: wrap; gap: 28px; align-items: center;
+}
+.mediaItem > .videoFrame { flex: 1 1 520px; min-width: 0; }
+.mediaText { flex: 1 1 320px; min-width: 0; display: flex; flex-direction: column; gap: 10px; }
+.mediaText p { margin: 0; color: var(--muted); }
+.mediaMeta { font-size: 13px; font-weight: 600; letter-spacing: 1.2px; text-transform: uppercase; color: var(--teal); }
+.mediaTitle { margin: 0; font-family: var(--font-serif); font-weight: 500; font-size: 30px; line-height: 1.2; }
+
+/* ---------- Patient guide ---------- */
+.guideVideo {
+  margin-top: 24px; background: var(--surface); border: 1px solid var(--border); border-radius: 16px;
+  padding: 28px; display: flex; flex-wrap: wrap; gap: 28px; align-items: center;
+}
+.guideVideoText { flex: 1 1 280px; min-width: 0; display: flex; flex-direction: column; gap: 10px; }
+.guideVideoPlayer { flex: 2 1 460px; min-width: 0; }
+.alertCard {
+  margin-top: 24px; border-radius: 16px; padding: 28px;
+  background: #fff4f2; border: 1px solid #f1c7bf; color: #5a1d12;
+}
+.alertCard h2 { margin: 0 0 8px; color: #8a2414; font-size: 22px; }
+.alertCard p { margin: 0 0 10px; }
+.alertCard ul { margin: 0 0 12px; padding-left: 20px; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 6px 28px; }
+.alertCard .alertNote { font-weight: 600; margin: 0; }
+#warning-signs { scroll-margin-top: 80px; }
+.careGrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 16px; }
+.careItem {
+  background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 22px;
+  display: flex; gap: 16px; align-items: flex-start;
+}
+.careItem h3 { margin: 0 0 6px; font-size: 17px; }
+.careItem p { margin: 0; color: var(--muted); font-size: 15px; }

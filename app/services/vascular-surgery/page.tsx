@@ -67,6 +67,7 @@ export default function VascularSurgeryPage() {
         },
       ]}
       related={[
+        { label: "Diabetic foot guide", href: "/patient-guides/diabetic-foot" },
         { label: "Carotid disease", href: "/services/carotid-disease" },
         { label: "Varicose veins", href: "/services/varicose-veins" },
         { label: "Dialysis access", href: "/services/dialysis-access" },
