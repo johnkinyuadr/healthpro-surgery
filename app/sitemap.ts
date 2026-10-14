@@ -14,6 +14,8 @@ const PATHS = [
   "/consulting-hospitals",
   "/second-opinion",
   "/online-second-opinion",
+  "/patient-guides/diabetic-foot",
+  "/media",
   "/contact",
   "/privacy-policy",
 ];

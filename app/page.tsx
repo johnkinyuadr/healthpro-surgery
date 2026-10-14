@@ -75,6 +75,11 @@ const GUIDES = [
     text: "Hernia types, warning signs and recovery after repair.",
     href: "/services/hernia-surgery",
   },
+  {
+    title: "Diabetic foot care",
+    text: "Daily foot checks, footwear and the warning signs that need urgent care — with video.",
+    href: "/patient-guides/diabetic-foot",
+  },
 ];
 
 function Icon({ d }: { d: string }) {
@@ -297,7 +302,7 @@ export default function HomePage() {
               <Link key={g.title} className="guideCard" href={g.href}>
                 <h3>{g.title}</h3>
                 <p>{g.text}</p>
-                <span className="more">Read FAQs →</span>
+                <span className="more">Read guide →</span>
               </Link>
             ))}
           </div>
