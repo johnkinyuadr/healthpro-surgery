@@ -27,14 +27,19 @@ export default function FAQSection({ title, faqs }: { title: string; faqs: FAQ[]
 
       <h2 className="sectionTitle">{title}</h2>
 
-      <section className="grid">
+      <div className="faqList">
         {faqs.map((faq, idx) => (
-          <div className="card" key={idx}>
-            <h3 style={{ marginTop: 0 }}>{faq.question}</h3>
-            <p style={{ marginTop: 8, marginBottom: 0, opacity: 0.9 }}>{faq.answer}</p>
-          </div>
+          <details className="faqItem" key={idx} open={idx === 0}>
+            <summary>
+              <span>{faq.question}</span>
+              <span className="faqIcon" aria-hidden="true" />
+            </summary>
+            <div className="faqAnswer">
+              <p>{faq.answer}</p>
+            </div>
+          </details>
         ))}
-      </section>
+      </div>
     </>
   );
 }
