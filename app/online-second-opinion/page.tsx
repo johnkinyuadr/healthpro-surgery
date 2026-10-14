@@ -30,7 +30,7 @@ export default function OnlineSecondOpinionPage() {
         <div className="card" style={{ marginTop: "14px" }}>
           <h2 style={{ marginTop: 0 }}>Response time</h2>
           <p className="p">
-            We aim to respond within <strong>24–48 hours</strong> after receiving your
+            We aim to respond within <strong>24 hours</strong> after receiving your
             details and payment.
           </p>
         </div>
