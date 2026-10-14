@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import FAQSection from "@/app/components/FAQSection";
 import VideoEmbed from "@/components/VideoEmbed";
+import KiswahiliSummary from "@/components/KiswahiliSummary";
 import { waLink } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -135,6 +136,19 @@ export default function DiabeticFootGuidePage() {
           </a>
         </div>
       </section>
+
+      <KiswahiliSummary>
+        <p>
+          Kama una kisukari, miguu yako inahitaji uangalizi kila siku. Kisukari kinaweza kuharibu
+          mishipa ya fahamu na kupunguza mzunguko wa damu miguuni, hivyo kidonda kidogo kinaweza
+          kugeuka kuwa tatizo kubwa. Kagua miguu yako kila siku, usitembee bila viatu, na usikate
+          sugu mwenyewe.
+        </p>
+        <p>
+          Ukiona kidonda kisichopona, wekundu, uvimbe, usaha, au rangi nyeusi kwenye vidole, tafuta
+          matibabu siku hiyo hiyo.
+        </p>
+      </KiswahiliSummary>
 
       <section className="guideVideo">
         <div className="guideVideoText">

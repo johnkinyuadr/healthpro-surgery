@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import InsurerPanel from "@/components/InsurerPanel";
+import KiswahiliSummary from "@/components/KiswahiliSummary";
+import { PATIENT_GUIDES } from "@/lib/guides";
 import { CLINIC_HOURS, INSURANCE } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -57,28 +59,7 @@ const SERVICES = [
   },
 ];
 
-const GUIDES = [
-  {
-    title: "Varicose veins",
-    text: "Symptoms, when treatment is needed, and what EVLA involves.",
-    href: "/services/varicose-veins",
-  },
-  {
-    title: "Dialysis access",
-    text: "Fistula versus graft, planning timelines and complications to watch for.",
-    href: "/services/dialysis-access",
-  },
-  {
-    title: "Hernia surgery",
-    text: "Hernia types, warning signs and recovery after repair.",
-    href: "/services/hernia-surgery",
-  },
-  {
-    title: "Diabetic foot care",
-    text: "Daily foot checks, footwear and the warning signs that need urgent care — with video.",
-    href: "/patient-guides/diabetic-foot",
-  },
-];
+const GUIDES = PATIENT_GUIDES;
 
 function Icon({ d }: { d: string }) {
   return (
@@ -136,6 +117,15 @@ export default function HomePage() {
               <span className="chip">COSECSA Faculty</span>
               <span className="chip">Vascular Fellowship, Paris</span>
             </div>
+            <KiswahiliSummary>
+              <p>
+                HealthPro Surgery inatoa huduma za upasuaji wa mishipa ya damu, upasuaji kwa njia ya
+                tundu dogo (laparoscopic), upasuaji wa jumla na uchunguzi wa mfumo wa chakula
+                (endoscopy) mjini Mombasa. Kliniki yetu iko Aga Khan Hospital Mombasa, Doctors&apos;
+                Plaza, ghorofa ya kwanza. Bima zote za Kenya zinakubaliwa.
+              </p>
+              <p>Kwa miadi, wasiliana nasi kwa WhatsApp: 0721 446 206.</p>
+            </KiswahiliSummary>
           </div>
 
           <div className="homeHeroMedia">
@@ -293,6 +283,9 @@ export default function HomePage() {
               <div className="eyebrow">Patient guides</div>
               <h2 className="h2">Answers before your appointment</h2>
             </div>
+            <Link className="textLink" href="/patient-guides">
+              All patient guides →
+            </Link>
           </div>
           <div className="serviceGrid">
             {GUIDES.map((g) => (

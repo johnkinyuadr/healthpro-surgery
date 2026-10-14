@@ -62,6 +62,9 @@ export default function DialysisAccessPage() {
           <Link className="btn" href="/services">
             Back to Services
           </Link>
+          <Link className="btn" href="/patient-guides/av-fistula-care">
+            Fistula care guide
+          </Link>
         </div>
       </section>
 

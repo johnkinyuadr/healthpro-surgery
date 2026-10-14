@@ -62,6 +62,9 @@ export default function HerniaSurgeryPage() {
           <Link className="btn" href="/services">
             Back to Services
           </Link>
+          <Link className="btn" href="/patient-guides/hernia-repair-recovery">
+            Recovery guide
+          </Link>
         </div>
       </section>
 
