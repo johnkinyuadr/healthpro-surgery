@@ -1,104 +1,196 @@
 import type { Metadata } from "next";
+import Image from "next/image";
+import Link from "next/link";
+import { waLink } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "About",
-  description: "About HealthPro Surgery — Specialist Surgical Care in Mombasa.",
+  title: "About Dr John Kinyua Murithi | Vascular & General Surgeon, Mombasa",
+  description:
+    "Dr John Kinyua Murithi, MBChB, FCS(ECSA), FACS — Consultant General, Vascular and Laparoscopic Surgeon in Mombasa. Vascular fellowship in Paris, Head of Accident & Emergency at Coast General Teaching and Referral Hospital, COSECSA faculty and founder of Renal Access Foundation Kenya.",
+  alternates: { canonical: "/about" },
 };
+
+const QUALIFICATIONS = [
+  { title: "MBChB", text: "Bachelor of Medicine and Bachelor of Surgery" },
+  { title: "FCS(ECSA)", text: "Fellow, College of Surgeons of East, Central & Southern Africa — General Surgery" },
+  { title: "FACS", text: "Fellow, American College of Surgeons" },
+  { title: "Vascular fellowship", text: "Vascular surgery fellowship training in Paris, France" },
+];
+
+const ROLES = [
+  "Founder and Lead Consultant, HealthPro Surgery",
+  "Head of Accident & Emergency, Coast General Teaching and Referral Hospital (CGTRH)",
+  "Surgical educator and COSECSA faculty member, training the next generation of surgeons",
+  "Quality-improvement and patient-safety lead",
+  "Founder and Chairman, Renal Access Foundation Kenya (RAFK)",
+];
+
+const INTERESTS = [
+  "Vascular surgery",
+  "Endovascular surgery",
+  "Diabetic foot & limb salvage",
+  "Carotid disease",
+  "Aneurysm surgery",
+  "Varicose veins & EVLA",
+  "Dialysis access",
+  "Laparoscopic surgery",
+  "Trauma surgery",
+  "GI endoscopy",
+  "Colorectal surgery",
+  "Global surgery",
+];
+
+const EXPECT = [
+  {
+    title: "Time to understand",
+    text: "Every diagnosis and option is explained clearly, with time for your questions and your family's.",
+  },
+  {
+    title: "Shared decisions",
+    text: "Treatment plans are made with you — including when the best option is not to operate.",
+  },
+  {
+    title: "Evidence-based care",
+    text: "Recommendations follow current international guidance, adapted to your circumstances.",
+  },
+  {
+    title: "Continuity",
+    text: "Direct communication with your surgeon before and after treatment, and coordinated care with your other doctors.",
+  },
+];
 
 export default function AboutPage() {
   return (
     <>
-      <section className="hero">
-        <h1 className="h1">About HealthPro Surgery</h1>
-        <p className="p">
-          HealthPro Surgery is a specialist surgical practice based in Mombasa, Kenya,
-          offering comprehensive vascular, laparoscopic, and general surgical services.
-          Our focus is on patient-centered, evidence-based care delivered with professionalism,
-          safety, and clear communication.
+      <section className="hero aboutHero">
+        <div className="aboutHeroText">
+          <div className="eyebrow">About</div>
+          <h1 className="h1" style={{ margin: 0 }}>
+            Dr John Kinyua Murithi
+          </h1>
+          <p className="aboutCreds">MBChB, FCS(ECSA), FACS</p>
+          <p className="p" style={{ margin: 0 }}>
+            Consultant General, Vascular and Laparoscopic Surgeon based in Mombasa, and founder of
+            HealthPro Surgery. Dr Kinyua trained in vascular surgery in Paris and has worked as a
+            trauma surgeon in Somalia. He now combines private practice at Aga Khan Hospital Mombasa
+            with leadership of the Accident &amp; Emergency department at Coast General Teaching and
+            Referral Hospital, and with surgical training as COSECSA faculty.
+          </p>
+          <p className="p" style={{ margin: 0 }}>
+            His practice centres on arterial and venous disease, limb salvage, dialysis access and
+            minimally invasive surgery — with careful assessment, honest advice and shared decisions.
+          </p>
+          <div className="btnRow" style={{ paddingTop: 4 }}>
+            <a
+              className="btn btnPrimary"
+              href={waLink("Hello HealthPro Surgery, I’d like to book a consultation with Dr Kinyua.")}
+              target="_blank"
+              rel="noreferrer"
+            >
+              Book a consultation
+            </a>
+            <Link className="btn" href="/media">
+              Watch interviews
+            </Link>
+          </div>
+        </div>
+        <div className="aboutHeroMedia">
+          <div className="portrait">
+            <Image
+              src="/images/dr-kinyua.jpg"
+              alt="Dr John Kinyua Murithi in surgical scrubs"
+              fill
+              priority
+              sizes="(max-width: 900px) 90vw, 400px"
+            />
+          </div>
+        </div>
+      </section>
+
+      <h2 className="sectionTitle">Qualifications &amp; training</h2>
+      <section className="credList">
+        {QUALIFICATIONS.map((q) => (
+          <div key={q.title} className="credItem">
+            <strong>{q.title}</strong>
+            <span>{q.text}</span>
+          </div>
+        ))}
+      </section>
+
+      <section className="grid" style={{ marginTop: 32 }}>
+        <div className="card">
+          <h2 style={{ fontSize: 20 }}>Current roles</h2>
+          <ul className="list" style={{ marginTop: 10 }}>
+            {ROLES.map((r) => (
+              <li key={r}>{r}</li>
+            ))}
+          </ul>
+        </div>
+        <div className="card">
+          <h2 style={{ fontSize: 20 }}>Clinical interests</h2>
+          <div className="chips" style={{ paddingTop: 10 }}>
+            {INTERESTS.map((i) => (
+              <span key={i} className="chip">
+                {i}
+              </span>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="card rafkCard" style={{ marginTop: 32 }}>
+        <div className="eyebrow">Renal Access Foundation Kenya</div>
+        <h2 style={{ fontSize: 24, margin: "6px 0 8px" }}>
+          RAFK — <em>Rafiki wa figo yako</em>
+        </h2>
+        <p>
+          Dr Kinyua founded Renal Access Foundation Kenya to improve dialysis access for patients
+          across the country, through training, outreach and the standardisation of practice. Its
+          work includes fistula review clinics, patient education under the &ldquo;Fistula
+          First&rdquo; approach, access-salvage pathways and outcomes research.
+        </p>
+        <p style={{ marginTop: 10 }}>
+          <Link className="textLink" href="/services/dialysis-access">
+            Dialysis access at HealthPro Surgery →
+          </Link>
         </p>
       </section>
 
-      {/* ===== SURGEON 1 ===== */}
-      <section className="grid" style={{ alignItems: "center", marginTop: "24px" }}>
-        <div className="card" style={{ gridColumn: "span 4" }}>
-          <img
-            src="/images/dr-kinyua.jpg"
-            alt="Dr John Kinyua Murithi - Consultant Vascular and Laparoscopic Surgeon"
-            style={{
-              width: "100%",
-              borderRadius: "16px",
-              border: "1px solid var(--border)",
-            }}
-          />
-        </div>
-
-        <div className="card" style={{ gridColumn: "span 8" }}>
-          <h3>Dr John Kinyua Murithi</h3>
-          <p><strong>Consultant General, Vascular & Laparoscopic Surgeon</strong></p>
-
-          <p>
-            Dr John Kinyua Murithi is a consultant general, vascular, and laparoscopic surgeon
-            practicing in Mombasa, Kenya. He has extensive experience in the management of
-            arterial and venous disease, vascular access, and minimally invasive surgery.
-          </p>
-
-          <p>
-            His approach emphasizes careful evaluation, shared decision-making, and
-            individualized treatment planning to achieve safe and durable outcomes.
-          </p>
-
-          <p>
-            He is actively involved in surgical education, quality improvement initiatives,
-            and research, with a strong commitment to advancing surgical care standards
-            locally and regionally.
-          </p>
-        </div>
-      </section>
-
-      {/* ===== SURGEON 2 ===== */}
-      <section className="grid" style={{ alignItems: "center", marginTop: "24px" }}>
-        <div className="card" style={{ gridColumn: "span 4" }}>
-          <img
-            src="/images/dr-collins-ochieng-20260108.jpg?v=20260108"
-            alt="Dr Collins Ochieng - General Surgeon"
-            style={{
-              width: "100%",
-              borderRadius: "16px",
-              border: "1px solid var(--border)",
-            }}
-          />
-        </div>
-
-        <div className="card" style={{ gridColumn: "span 8" }}>
-          <h3>Dr Collins Ochieng</h3>
-          <p><strong>General Surgeon</strong></p>
-
-          <p>
-            Dr Collins Ochieng is a general surgeon with experience in the management of a wide
-            range of general surgical conditions. His practice focuses on safe, effective, and
-            patient-centered surgical care.
-          </p>
-
-          <p>
-            He is committed to clear communication, thorough assessment, and evidence-based
-            surgical decision-making to ensure optimal outcomes for patients.
-          </p>
-
-          <p>
-            Working collaboratively within the HealthPro Surgery team, he contributes to
-            comprehensive and coordinated surgical care.
-          </p>
-        </div>
-      </section>
-
       <h2 className="sectionTitle">What you can expect</h2>
-      <ul className="list">
-        <li>Access to a multidisciplinary surgical team</li>
-        <li>Clear explanation of diagnoses and treatment options</li>
-        <li>Evidence-based and patient-centered decision-making</li>
-        <li>Professional communication and continuity of care</li>
-        <li>Respect for patient preferences, safety, and outcomes</li>
-      </ul>
+      <section className="careGrid">
+        {EXPECT.map((e, i) => (
+          <div key={e.title} className="careItem">
+            <span className="stepNum">{i + 1}</span>
+            <div>
+              <h3>{e.title}</h3>
+              <p>{e.text}</p>
+            </div>
+          </div>
+        ))}
+      </section>
+
+      <h2 className="sectionTitle">The team</h2>
+      <section className="teamCard card">
+        <div className="teamPhoto">
+          <Image
+            src="/images/dr-collins-ochieng-20260108.jpg"
+            alt="Dr Collins Ochieng, General Surgeon"
+            fill
+            sizes="(max-width: 700px) 90vw, 240px"
+          />
+        </div>
+        <div className="teamText">
+          <h3 style={{ margin: 0, fontSize: 21 }}>Dr Collins Ochieng</h3>
+          <p className="aboutRole">General Surgeon</p>
+          <p>
+            Dr Collins Ochieng is a general surgeon with experience in the management of a wide range
+            of general surgical conditions. His practice focuses on safe, effective and
+            patient-centred surgical care, with clear communication, thorough assessment and
+            evidence-based decision-making. He works collaboratively within the HealthPro Surgery team
+            to provide comprehensive, coordinated care.
+          </p>
+        </div>
+      </section>
     </>
   );
 }
