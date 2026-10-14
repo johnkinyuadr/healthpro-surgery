@@ -124,6 +124,11 @@ export default function AboutPage() {
               <li key={r}>{r}</li>
             ))}
           </ul>
+          <p style={{ marginTop: 14 }}>
+            <Link className="textLink" href="/publications">
+              Publications &amp; research →
+            </Link>
+          </p>
         </div>
         <div className="card">
           <h2 style={{ fontSize: 20 }}>Clinical interests</h2>

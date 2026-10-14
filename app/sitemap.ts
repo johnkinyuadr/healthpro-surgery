@@ -18,6 +18,7 @@ const PATHS = [
   "/patient-guides/av-fistula-care",
   "/patient-guides/hernia-repair-recovery",
   "/media",
+  "/publications",
   "/contact",
   "/privacy-policy",
 ];
