@@ -42,7 +42,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en-GB">
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        {/* eslint-disable-next-line @next/next/no-page-custom-font */}
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&display=swap"
+        />
+        <meta name="theme-color" content="#0b2545" />
+      </head>
       <body>
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-3KEQ8MP6MF"
@@ -85,26 +95,10 @@ export default function RootLayout({
           }}
         />
 
-        <a
-          href={GOOGLE_MAPS_DIRECTIONS}
-          target="_blank"
-          rel="noreferrer"
-          style={{ textDecoration: "none" }}
-        >
-          <div
-            style={{
-              backgroundColor: "#1e40af",
-              color: "white",
-              textAlign: "center",
-              padding: "10px 14px",
-              fontSize: "14px",
-              fontWeight: 600,
-              cursor: "pointer",
-            }}
-          >
-            📍 HealthPro Surgery has moved to{" "}
-            <strong>Aga Khan Hospital Mombasa, Drs Plaza, First Floor</strong> — Tap for directions
-          </div>
+        <a className="topBanner" href={GOOGLE_MAPS_DIRECTIONS} target="_blank" rel="noreferrer">
+          Now consulting at{" "}
+          <strong>Aga Khan Hospital Mombasa, Doctors&apos; Plaza, First Floor</strong> ·{" "}
+          <span className="cta">Get directions</span>
         </a>
 
         <Navbar />

@@ -1,348 +1,343 @@
+import Image from "next/image";
 import Link from "next/link";
 
 const WHATSAPP_NUMBER = "254721446206";
+const PHONE_DISPLAY = "0721 446 206";
 const EMAIL = "johnkinyua@gmail.com";
 
 // Payment details (M-Pesa Paybill)
 const PAYBILL = "400200";
 const ACCOUNT = "1025453";
 
+const MAPS_DIRECTIONS =
+  "https://www.google.com/maps/search/?api=1&query=Aga%20Khan%20Hospital%20Mombasa%20Drs%20Plaza";
+const MAPS_EMBED =
+  "https://www.google.com/maps?q=Aga%20Khan%20Hospital%20Mombasa%20Doctors%20Plaza&output=embed";
+
+const SERVICES = [
+  {
+    title: "Vascular surgery",
+    text: "Arterial and venous disease, carotid disease, limb ischaemia and aneurysm assessment, with open and endovascular options.",
+    href: "/services",
+    icon: "M12 3v18M8 7c0 3 8 3 8 6s-8 3-8 6",
+  },
+  {
+    title: "Varicose veins",
+    text: "Duplex-guided assessment and endovenous laser ablation (EVLA) for symptomatic veins, swelling, skin changes and ulcers.",
+    href: "/services/varicose-veins",
+    icon: "M9 3c2 3-2 5 0 8s-2 5 0 10M15 3c-2 3 2 5 0 8s2 5 0 10",
+  },
+  {
+    title: "Dialysis access",
+    text: "AV fistula and AV graft creation, planning and salvage, including management of central venous stenosis.",
+    href: "/services/dialysis-access",
+    icon: "M4 8h10a4 4 0 0 1 0 8H4M14 12h6",
+  },
+  {
+    title: "Laparoscopic surgery",
+    text: "Keyhole surgery for hernias, gallbladder disease and other abdominal conditions, supporting a faster recovery.",
+    href: "/services/hernia-surgery",
+    icon: "M12 4v4M12 16v4M4 12h4M16 12h4M12 4a8 8 0 1 0 0.01 0",
+  },
+  {
+    title: "GI endoscopy",
+    text: "Diagnostic and therapeutic OGD and colonoscopy, including dilatation of strictures.",
+    href: "/services",
+    icon: "M5 4h6v6H5zM13 14h6v6h-6zM11 7h3a3 3 0 0 1 3 3v4",
+  },
+  {
+    title: "General & trauma surgery",
+    text: "Elective and emergency general surgery, colorectal conditions, and chest and abdominal trauma.",
+    href: "/services",
+    icon: "M12 3l7 3v6c0 4-3 7-7 9-4-2-7-5-7-9V6zM9 12l2 2 4-4",
+  },
+];
+
+const GUIDES = [
+  {
+    title: "Varicose veins",
+    text: "Symptoms, when treatment is needed, and what EVLA involves.",
+    href: "/services/varicose-veins",
+  },
+  {
+    title: "Dialysis access",
+    text: "Fistula versus graft, planning timelines and complications to watch for.",
+    href: "/services/dialysis-access",
+  },
+  {
+    title: "Hernia surgery",
+    text: "Hernia types, warning signs and recovery after repair.",
+    href: "/services/hernia-surgery",
+  },
+];
+
+function Icon({ d }: { d: string }) {
+  return (
+    <svg
+      aria-hidden="true"
+      width="32"
+      height="32"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="#0a6a73"
+      strokeWidth="1.6"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <path d={d} />
+    </svg>
+  );
+}
+
 export default function HomePage() {
-  const waLink = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
-    "Hello HealthPro Surgery, I’d like to inquire about a consultation."
+  const waBookLink = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
+    "Hello HealthPro Surgery, I’d like to book a consultation."
   )}`;
 
   const waSecondOpinionLink = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
     `Hello HealthPro Surgery, I would like an Online Second Opinion.\n\nMy main concern is:\n\nI understand the fees are:\n- KSh 2,000 initial review (online)\n- KSh 3,000 in-person consultation (if needed)\n\nPayment:\nPaybill ${PAYBILL}\nAccount ${ACCOUNT}\n\nKindly advise the next steps.`
   )}`;
 
-  const gmailComposeLink = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(
-    EMAIL
-  )}&su=${encodeURIComponent("HealthPro Surgery enquiry")}&body=${encodeURIComponent(
-    "Hello HealthPro Surgery,\n\nI would like to inquire about a consultation.\n\nName:\nPhone:\n\nConcern:\n"
-  )}`;
-
   return (
-    <>
+    <div className="home">
       {/* HERO */}
-      <section className="hero">
-        <h1 className="h1">HealthPro Surgery</h1>
-
-        <p className="p">
-          General, Laparoscopic &amp; Vascular Surgery in Mombasa, Kenya — compassionate,
-          evidence-based care focused on clear explanations, safe surgery, and strong outcomes.
-        </p>
-
-        {/* Primary CTA */}
-        <div
-          className="card"
-          style={{
-            marginTop: 18,
-            padding: 16,
-            border: "1px solid rgba(255,255,255,0.08)",
-            borderRadius: 16,
-            background: "rgba(255,255,255,0.03)",
-          }}
-        >
-          <h2 style={{ margin: 0, fontSize: 18, fontWeight: 700 }}>
-            Online Second Opinion
-          </h2>
-
-          <p style={{ marginTop: 8, marginBottom: 12, opacity: 0.9 }}>
-            Upload your reports and receive a specialist review within{" "}
-            <strong>24 hours</strong>, with clear guidance on your diagnosis and treatment options.
-          </p>
-
-          <div className="btnRow" style={{ alignItems: "center", gap: 10, flexWrap: "wrap" }}>
-            <Link className="btn btnAccent" href="/second-opinion">
-              Get an Online Second Opinion
-            </Link>
-
-            <a
-              className="btn btnGreen"
-              href={waSecondOpinionLink}
-              target="_blank"
-              rel="noreferrer"
-              title="WhatsApp to start an Online Second Opinion"
-            >
-              WhatsApp to Start
-            </a>
-
-            <div
-              style={{
-                fontSize: 13,
-                opacity: 0.9,
-                padding: "8px 10px",
-                borderRadius: 12,
-                border: "1px solid rgba(255,255,255,0.08)",
-                background: "rgba(0,0,0,0.18)",
-              }}
-            >
-              <strong>Fees:</strong> KSh 2,000 online review • KSh 3,000 in-person (if required)
+      <section className="bleed bandWhite">
+        <div className="wrap homeHero">
+          <div className="homeHeroText">
+            <div className="eyebrow">Consultant General, Vascular &amp; Laparoscopic Surgeon</div>
+            <h1 className="homeHeroTitle">
+              Specialist surgical care, explained clearly and delivered safely.
+            </h1>
+            <p className="lead">
+              Vascular, laparoscopic and general surgery, GI endoscopy and dialysis access in
+              Mombasa — with evidence-based treatment plans and direct access to your surgeon.
+            </p>
+            <div className="btnRow" style={{ paddingTop: 6 }}>
+              <a className="btn btnPrimary" href={waBookLink} target="_blank" rel="noreferrer">
+                Book a consultation
+              </a>
+              <Link className="btn" href="/second-opinion">
+                Online second opinion
+              </Link>
+            </div>
+            <div className="chips">
+              <span className="chip">MBChB</span>
+              <span className="chip">FCS(ECSA) General Surgery</span>
+              <span className="chip">FACS</span>
+              <span className="chip">COSECSA Faculty</span>
+              <span className="chip">Vascular Fellowship, Paris</span>
             </div>
           </div>
 
-          <p style={{ marginTop: 10, marginBottom: 0, fontSize: 13, opacity: 0.85 }}>
-            Pay via M-Pesa: <strong>Paybill {PAYBILL}</strong> •{" "}
-            <strong>Account {ACCOUNT}</strong>
-          </p>
-        </div>
-
-        {/* Main contact buttons */}
-        <div className="btnRow" style={{ marginTop: 18 }}>
-          <Link className="btn" href="/services">
-            View Services
-          </Link>
-
-          <a className="btn btnGreen" href={waLink} target="_blank" rel="noreferrer">
-            WhatsApp
-          </a>
-
-          {/* Opens Gmail compose in browser */}
-          <a className="btn" href={gmailComposeLink} target="_blank" rel="noreferrer">
-            Email
-          </a>
-        </div>
-      </section>
-
-      {/* PRICING */}
-      <h2 className="sectionTitle">Pricing</h2>
-      <section className="grid">
-        <div className="card">
-          <h3 style={{ marginTop: 0 }}>Online Second Opinion</h3>
-          <p style={{ marginTop: 6, marginBottom: 10, opacity: 0.9 }}>
-            Share your scans/reports and history for a specialist review and recommended next steps.
-          </p>
-          <p style={{ margin: 0 }}>
-            <strong>KSh 2,000</strong> — initial review
-          </p>
-          <p style={{ marginTop: 8, fontSize: 13, opacity: 0.85 }}>
-            <strong>Response within 24 hours.</strong>
-          </p>
-        </div>
-
-        <div className="card">
-          <h3 style={{ marginTop: 0 }}>In-Person Consultation</h3>
-          <p style={{ marginTop: 6, marginBottom: 10, opacity: 0.9 }}>
-            If an in-person review is needed, we’ll examine you and finalize a treatment plan.
-          </p>
-          <p style={{ margin: 0 }}>
-            <strong>KSh 3,000</strong> — in-person consultation
-          </p>
-          <p style={{ marginTop: 8, fontSize: 13, opacity: 0.85 }}>
-            Scheduled at your convenience.
-          </p>
-        </div>
-
-        <div className="card">
-          <h3 style={{ marginTop: 0 }}>Payment</h3>
-          <p style={{ marginTop: 6, marginBottom: 10, opacity: 0.9 }}>
-            M-Pesa Paybill details:
-          </p>
-          <p style={{ margin: 0 }}>
-            <strong>Paybill:</strong> {PAYBILL}
-          </p>
-          <p style={{ marginTop: 6, marginBottom: 0 }}>
-            <strong>Account:</strong> {ACCOUNT}
-          </p>
-        </div>
-
-        <div className="card">
-          <h3 style={{ marginTop: 0 }}>What to Send</h3>
-          <p style={{ marginTop: 6, marginBottom: 0, opacity: 0.9 }}>
-            A short summary of symptoms, current medications, and any available reports (labs, CT/MRI,
-            ultrasound, discharge summary).
-          </p>
-        </div>
-      </section>
-
-      {/* HIGHLIGHTS */}
-      <h2 className="sectionTitle">Highlights</h2>
-      <section className="grid">
-        <div className="card">
-          <h3>Vascular Expertise</h3>
-          <p>
-            Evaluation and management of arterial and venous disease, tailored to your condition and
-            goals.
-          </p>
-        </div>
-
-        <div className="card">
-          <h3>Minimally Invasive Surgery</h3>
-          <p>
-            Laparoscopic approaches where appropriate to support faster recovery and reduced
-            postoperative pain.
-          </p>
-        </div>
-
-        <div className="card">
-          <h3>Clear Pathway to Care</h3>
-          <p>Simple consultation pathway with direct communication via WhatsApp or email.</p>
-        </div>
-
-        <div className="card">
-          <h3>Quality &amp; Safety</h3>
-          <p>
-            Focused on evidence-based practice, patient safety, and continuous improvement in outcomes.
-          </p>
-        </div>
-      </section>
-
-      {/* === START: SERVICE FAQs (ADDED - NO EXISTING CONTENT REMOVED) === */}
-      <h2 className="sectionTitle">Service FAQs</h2>
-      <section className="grid">
-        <div className="card">
-          <h3 style={{ marginTop: 0 }}>Varicose Veins</h3>
-          <p style={{ marginTop: 6, marginBottom: 12, opacity: 0.9 }}>
-            Leg pain, swelling, visible veins, skin changes, ulcers — learn what to expect and when to
-            seek treatment.
-          </p>
-          <div className="btnRow" style={{ gap: 10, flexWrap: "wrap" }}>
-            <Link className="btn" href="/services/varicose-veins">
-              View FAQs
-            </Link>
-            <a className="btn btnGreen" href={waLink} target="_blank" rel="noreferrer">
-              WhatsApp
-            </a>
+          <div className="homeHeroMedia">
+            <div className="portrait">
+              <Image
+                src="/images/dr-kinyua.jpg"
+                alt="Dr John Kinyua Murithi in surgical scrubs"
+                fill
+                priority
+                sizes="(max-width: 900px) 90vw, 460px"
+              />
+            </div>
+            <div className="nameCard">
+              <strong>Dr John Kinyua Murithi</strong>
+              <span>MBChB, FCS(ECSA), FACS</span>
+              <span>Aga Khan Hospital Mombasa · Doctors&apos; Plaza</span>
+            </div>
           </div>
         </div>
+      </section>
 
-        <div className="card">
-          <h3 style={{ marginTop: 0 }}>Dialysis Access</h3>
-          <p style={{ marginTop: 6, marginBottom: 12, opacity: 0.9 }}>
-            AV fistula and AV graft information, planning timelines, and common complications to watch
-            for.
-          </p>
-          <div className="btnRow" style={{ gap: 10, flexWrap: "wrap" }}>
-            <Link className="btn" href="/services/dialysis-access">
-              View FAQs
+      {/* SERVICES */}
+      <section className="bleed band">
+        <div className="wrap">
+          <div className="sectionHead">
+            <div>
+              <div className="eyebrow">Services</div>
+              <h2 className="h2">
+                Focused expertise across vascular, minimally invasive and general surgery
+              </h2>
+            </div>
+            <Link className="textLink" href="/services">
+              All services →
             </Link>
-            <a className="btn btnGreen" href={waLink} target="_blank" rel="noreferrer">
-              WhatsApp
-            </a>
+          </div>
+          <div className="serviceGrid">
+            {SERVICES.map((s) => (
+              <Link key={s.title} className="serviceCard" href={s.href}>
+                <Icon d={s.icon} />
+                <h3>{s.title}</h3>
+                <p>{s.text}</p>
+                <span className="more">Learn more →</span>
+              </Link>
+            ))}
           </div>
         </div>
+      </section>
 
-        <div className="card">
-          <h3 style={{ marginTop: 0 }}>Hernia Surgery</h3>
-          <p style={{ marginTop: 6, marginBottom: 12, opacity: 0.9 }}>
-            Understand hernia types, when surgery is needed, warning signs, and recovery expectations.
-          </p>
-          <div className="btnRow" style={{ gap: 10, flexWrap: "wrap" }}>
-            <Link className="btn" href="/services/hernia-surgery">
-              View FAQs
+      {/* SURGEON */}
+      <section className="bleed band bandNavy">
+        <div className="wrap split">
+          <div className="stack">
+            <div className="eyebrow">Your surgeon</div>
+            <h2 className="h2">Consultant-led care from first consultation to follow-up</h2>
+            <p className="lead">
+              Dr John Kinyua Murithi is a Consultant General, Vascular and Laparoscopic Surgeon based
+              in Mombasa. He completed a vascular fellowship in Paris and has worked as a trauma
+              surgeon in Somalia.
+            </p>
+            <p className="lead">
+              At Coast General Teaching and Referral Hospital he serves as Head of Accident and
+              Emergency, leads quality-improvement work and trains surgeons as COSECSA faculty.
+            </p>
+            <Link className="textLink" href="/about">
+              Read full profile →
             </Link>
-            <a className="btn btnGreen" href={waLink} target="_blank" rel="noreferrer">
-              WhatsApp
+          </div>
+          <div className="credGrid">
+            <div className="cred">
+              <strong>FACS</strong>
+              <span>Fellow, American College of Surgeons</span>
+            </div>
+            <div className="cred">
+              <strong>FCS(ECSA)</strong>
+              <span>Fellow, College of Surgeons of East, Central &amp; Southern Africa</span>
+            </div>
+            <div className="cred">
+              <strong>Paris</strong>
+              <span>Vascular surgery fellowship</span>
+            </div>
+            <div className="cred">
+              <strong>CGTRH</strong>
+              <span>Head of Accident &amp; Emergency</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* SECOND OPINION */}
+      <section className="bleed band bandWhite">
+        <div className="wrap split">
+          <div className="stack">
+            <div className="eyebrow">Online second opinion</div>
+            <h2 className="h2">A specialist review of your case within 24 hours</h2>
+            <p className="lead">
+              Share your reports and history from anywhere. You receive clear guidance on your
+              diagnosis and treatment options, and an in-person review only if it is needed.
+            </p>
+            <div className="steps">
+              <div className="step">
+                <span className="stepNum">1</span>
+                <div>
+                  <strong>Send your details.</strong> A short summary of symptoms, current
+                  medication and any reports — labs, CT/MRI, ultrasound, discharge summaries.
+                </div>
+              </div>
+              <div className="step">
+                <span className="stepNum">2</span>
+                <div>
+                  <strong>Pay via M-Pesa.</strong> Paybill {PAYBILL}, Account {ACCOUNT}.
+                </div>
+              </div>
+              <div className="step">
+                <span className="stepNum">3</span>
+                <div>
+                  <strong>Receive your review.</strong> A written specialist opinion and recommended
+                  next steps.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="priceCard">
+            <div className="priceRow">
+              <div>
+                <b>Online review</b>
+                <small>Response within 24 hours</small>
+              </div>
+              <div className="price">KSh 2,000</div>
+            </div>
+            <div className="priceRow">
+              <div>
+                <b>In-person consultation</b>
+                <small>If examination is required</small>
+              </div>
+              <div className="price">KSh 3,000</div>
+            </div>
+            <p className="payNote">
+              M-Pesa Paybill <strong>{PAYBILL}</strong> · Account <strong>{ACCOUNT}</strong>
+            </p>
+            <Link className="btn btnPrimary" href="/online-second-opinion">
+              Start online second opinion
+            </Link>
+            <a className="btn" href={waSecondOpinionLink} target="_blank" rel="noreferrer">
+              Start on WhatsApp
             </a>
           </div>
         </div>
       </section>
-      {/* === END: SERVICE FAQs (ADDED) === */}
 
-      {/* FOCUS AREAS WITH IMAGES */}
-      <h2 className="sectionTitle">Our Focus Areas</h2>
-      <section className="grid">
-        <div className="card">
-          <img
-            src="/images/vascular.jpg"
-            alt="Vascular surgery"
-            style={{
-              width: "100%",
-              borderRadius: 12,
-              marginBottom: 10,
-              border: "1px solid rgba(255,255,255,0.08)",
-              objectFit: "cover",
-            }}
-          />
-          <h3>Vascular Surgery</h3>
-          <p>Specialist care for arterial and venous disease with individualized treatment planning.</p>
-        </div>
-
-        <div className="card">
-          <img
-            src="/images/laparoscopic.jpg"
-            alt="Laparoscopic surgery"
-            style={{
-              width: "100%",
-              borderRadius: 12,
-              marginBottom: 10,
-              border: "1px solid rgba(255,255,255,0.08)",
-              objectFit: "cover",
-            }}
-          />
-          <h3>Laparoscopic Surgery</h3>
-          <p>Minimally invasive surgical options to support faster recovery and reduced pain.</p>
-        </div>
-
-        <div className="card">
-          <img
-            src="/images/consultation.jpg"
-            alt="Surgical consultation"
-            style={{
-              width: "100%",
-              borderRadius: 12,
-              marginBottom: 10,
-              border: "1px solid rgba(255,255,255,0.08)",
-              objectFit: "cover",
-            }}
-          />
-          <h3>Consultation</h3>
-          <p>Clear explanations, shared decision-making, and patient-centered care.</p>
-        </div>
-
-        <div className="card">
-          <img
-            src="/images/clinic.jpg"
-            alt="Clinic environment"
-            style={{
-              width: "100%",
-              borderRadius: 12,
-              marginBottom: 10,
-              border: "1px solid rgba(255,255,255,0.08)",
-              objectFit: "cover",
-            }}
-          />
-          <h3>Care Environment</h3>
-          <p>Professional, safe, and modern clinical settings.</p>
+      {/* PATIENT GUIDES */}
+      <section className="bleed band">
+        <div className="wrap">
+          <div className="sectionHead">
+            <div>
+              <div className="eyebrow">Patient guides</div>
+              <h2 className="h2">Answers before your appointment</h2>
+            </div>
+          </div>
+          <div className="serviceGrid">
+            {GUIDES.map((g) => (
+              <Link key={g.title} className="guideCard" href={g.href}>
+                <h3>{g.title}</h3>
+                <p>{g.text}</p>
+                <span className="more">Read FAQs →</span>
+              </Link>
+            ))}
+          </div>
         </div>
       </section>
 
-      {/* BOTTOM CTA */}
-      <section
-        className="card"
-        style={{
-          marginTop: 28,
-          padding: 18,
-          borderRadius: 18,
-          border: "1px solid rgba(255,255,255,0.08)",
-          background: "rgba(255,255,255,0.03)",
-        }}
-      >
-        <h2 style={{ marginTop: 0, marginBottom: 8 }}>Need a Second Opinion Today?</h2>
-
-        <p style={{ marginTop: 0, marginBottom: 12, opacity: 0.9 }}>
-          Start online and get a specialist response within <strong>24 hours</strong>.
-        </p>
-
-        <div className="btnRow" style={{ flexWrap: "wrap", gap: 10 }}>
-          <Link className="btn btnAccent" href="/second-opinion">
-            Get an Online Second Opinion
-          </Link>
-
-          <a className="btn btnGreen" href={waSecondOpinionLink} target="_blank" rel="noreferrer">
-            WhatsApp Now
-          </a>
-
-          <a className="btn" href={gmailComposeLink} target="_blank" rel="noreferrer">
-            Email
-          </a>
+      {/* VISIT */}
+      <section className="bleed" style={{ paddingBottom: 88 }}>
+        <div className="wrap">
+          <div className="visit">
+            <div className="visitText">
+              <div className="eyebrow">Visit the clinic</div>
+              <h2 className="h2">Aga Khan Hospital Mombasa</h2>
+              <p className="lead">Doctors&apos; Plaza, First Floor, Mombasa</p>
+              <div className="visitInfo">
+                <div>
+                  <b>Consultations</b>
+                  By appointment — book on WhatsApp or by phone.
+                </div>
+                <div>
+                  <b>Contact</b>
+                  <a href={`tel:+${WHATSAPP_NUMBER}`}>{PHONE_DISPLAY}</a>
+                  <br />
+                  <a href={`mailto:${EMAIL}`}>{EMAIL}</a>
+                </div>
+              </div>
+              <div className="btnRow">
+                <a className="btn btnPrimary" href={MAPS_DIRECTIONS} target="_blank" rel="noreferrer">
+                  Get directions
+                </a>
+                <a className="btn" href={`tel:+${WHATSAPP_NUMBER}`}>
+                  Call the clinic
+                </a>
+              </div>
+            </div>
+            <div className="visitMap">
+              <iframe
+                title="Map showing Aga Khan Hospital Mombasa"
+                src={MAPS_EMBED}
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              />
+            </div>
+          </div>
         </div>
-
-        <p style={{ marginTop: 10, marginBottom: 0, fontSize: 13, opacity: 0.85 }}>
-          Pay via M-Pesa: <strong>Paybill {PAYBILL}</strong> • <strong>Account {ACCOUNT}</strong>
-        </p>
       </section>
-    </>
+    </div>
   );
 }
