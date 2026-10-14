@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import FAQSection from "@/app/components/FAQSection";
+import KiswahiliSummary from "@/components/KiswahiliSummary";
 import { waLink } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -124,6 +125,16 @@ export default function SecondOpinionPage() {
           </a>
         </div>
       </section>
+
+      <KiswahiliSummary>
+        <p>
+          Unaweza kutuma maelezo ya ugonjwa wako na ripoti za vipimo bila kulipa kwanza. Tutakagua
+          kama kesi yako inafaa, kisha tutakutumia maelekezo ya malipo ya M-Pesa (KSh 2,000).
+          Utapokea ripoti ya maandishi ndani ya saa 24 baada ya malipo; maombi ya wikendi yanaweza
+          kuchelewa kidogo.
+        </p>
+        <p>Huduma hii si ya dharura. Kwa dharura, nenda hospitali iliyo karibu nawe mara moja.</p>
+      </KiswahiliSummary>
 
       <section className="grid">
         <div className="card">
