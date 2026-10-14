@@ -54,6 +54,25 @@ const URGENT = [
   "New pain in the foot or calf, especially at night or at rest",
   "Fever or feeling unwell with a foot wound",
   "A foot that has suddenly changed shape or become hot and swollen",
+  "A sudden cold, pale or very painful foot",
+  "Confusion, marked weakness or feeling acutely unwell",
+];
+
+const PATHWAY = ["Injury or pressure", "Unnoticed wound", "Infection", "Deep infection", "Gangrene"];
+
+const MYTHS = [
+  {
+    myth: "“It doesn't hurt, so it isn't serious.”",
+    fact: "Nerve damage can remove pain. A painless wound can still be dangerous.",
+  },
+  {
+    myth: "“Amputation is inevitable.”",
+    fact: "Many threatened limbs can be saved with early care and, when needed, treatment to restore blood flow.",
+  },
+  {
+    myth: "“Home remedies can wait for later assessment.”",
+    fact: "Delay allows infection and tissue loss to progress. Do not self-treat a worsening ulcer.",
+  },
 ];
 
 const faqs = [
@@ -122,7 +141,8 @@ export default function DiabeticFootGuidePage() {
           <div className="eyebrow">Watch</div>
           <h2 className="h2" style={{ fontSize: 28 }}>Dr Kinyua on the diabetic foot</h2>
           <p className="lead" style={{ fontSize: 16 }}>
-            From the live health programme <em>Afya na Jamii</em> on Al Haajar TV Kenya.
+            From the live health programme <em>Afya na Jamii</em> on Al Haajar TV Kenya, part of the
+            Kenya Association of Muslim Physicians (KAMP) &ldquo;Save the Foot&rdquo; series.
           </p>
           <Link className="textLink" href="/media">
             More interviews →
@@ -146,6 +166,17 @@ export default function DiabeticFootGuidePage() {
           is red, hot and swollen, or a toe turning black, is an emergency.
         </p>
       </section>
+
+      <h2 className="sectionTitle">How a small wound leads to amputation</h2>
+      <p className="p" style={{ maxWidth: 780, margin: 0 }}>
+        Most diabetic amputations follow the same path. Early detection at any step can stop it.
+      </p>
+      <ol className="pathway">
+        {PATHWAY.map((p) => (
+          <li key={p}>{p}</li>
+        ))}
+      </ol>
+      <p className="pathwayNote">Early care saves limbs.</p>
 
       <h2 className="sectionTitle">Daily foot care: eight habits that protect your feet</h2>
       <section className="careGrid">
@@ -185,6 +216,20 @@ export default function DiabeticFootGuidePage() {
             <li>A personal plan: footwear, wound care, follow-up and, if needed, treatment to improve blood flow</li>
           </ul>
         </div>
+      </section>
+
+      <h2 className="sectionTitle">Myth or fact?</h2>
+      <section className="mythGrid">
+        {MYTHS.map((m) => (
+          <div key={m.myth} className="mythRow">
+            <div className="myth">
+              <b>Myth</b> {m.myth}
+            </div>
+            <div className="fact">
+              <b style={{ color: "var(--teal)" }}>Fact</b> {m.fact}
+            </div>
+          </div>
+        ))}
       </section>
 
       <FAQSection title="Frequently asked questions" faqs={faqs} />

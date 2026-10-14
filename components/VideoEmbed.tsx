@@ -15,3 +15,19 @@ export default function VideoEmbed({ youtubeId, title }: Props) {
     </div>
   );
 }
+
+// Instagram reel embed (official /embed endpoint, no extra script needed).
+export function InstagramEmbed({ shortcode, title }: { shortcode: string; title: string }) {
+  return (
+    <div className="reelFrame">
+      <iframe
+        src={`https://www.instagram.com/reel/${shortcode}/embed/`}
+        title={title}
+        loading="lazy"
+        allow="encrypted-media; picture-in-picture; web-share"
+        scrolling="no"
+        allowFullScreen
+      />
+    </div>
+  );
+}

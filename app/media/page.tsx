@@ -1,24 +1,24 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import VideoEmbed from "@/components/VideoEmbed";
-import { MEDIA } from "@/lib/media";
+import VideoEmbed, { InstagramEmbed } from "@/components/VideoEmbed";
+import { MEDIA, mediaUrl } from "@/lib/media";
 
 export const metadata: Metadata = {
   title: "Media & Interviews",
   description:
-    "Television interviews and health talks by Dr John Kinyua Murithi, Consultant General, Vascular and Laparoscopic Surgeon, Mombasa.",
+    "Television interviews and health videos by Dr John Kinyua Murithi, Consultant General, Vascular and Laparoscopic Surgeon, Mombasa — diabetic foot, varicose veins and venous disease.",
   alternates: { canonical: "/media" },
 };
 
 export default function MediaPage() {
-  const videoSchema = MEDIA.map((m) => ({
+  const videoSchema = MEDIA.filter((m) => m.platform === "youtube").map((m) => ({
     "@context": "https://schema.org",
     "@type": "VideoObject",
     name: `${m.title} — ${m.outlet}`,
     description: m.summary,
-    thumbnailUrl: `https://i.ytimg.com/vi/${m.youtubeId}/hqdefault.jpg`,
-    embedUrl: `https://www.youtube-nocookie.com/embed/${m.youtubeId}`,
-    contentUrl: `https://www.youtube.com/watch?v=${m.youtubeId}`,
+    thumbnailUrl: `https://i.ytimg.com/vi/${m.id}/hqdefault.jpg`,
+    embedUrl: `https://www.youtube-nocookie.com/embed/${m.id}`,
+    contentUrl: mediaUrl(m),
   }));
 
   return (
@@ -32,17 +32,24 @@ export default function MediaPage() {
         <div className="eyebrow" style={{ marginBottom: 12 }}>
           Media
         </div>
-        <h1 className="h1">Interviews &amp; health talks</h1>
+        <h1 className="h1">Interviews &amp; health videos</h1>
         <p className="p" style={{ maxWidth: 760, marginBottom: 0 }}>
-          Dr John Kinyua Murithi speaks regularly on television and radio about surgical and
-          vascular health, helping patients recognise problems early and know when to seek care.
+          Dr John Kinyua Murithi speaks on television and social media about surgical and vascular
+          health, helping patients recognise problems early and know when to seek care.
         </p>
       </section>
 
       <section className="mediaList">
         {MEDIA.map((m) => (
-          <article key={m.youtubeId} className="mediaItem">
-            <VideoEmbed youtubeId={m.youtubeId} title={`${m.title} — ${m.outlet}`} />
+          <article
+            key={m.id}
+            className={m.platform === "instagram" ? "mediaItem mediaItemReel" : "mediaItem"}
+          >
+            {m.platform === "youtube" ? (
+              <VideoEmbed youtubeId={m.id} title={`${m.title} — ${m.outlet}`} />
+            ) : (
+              <InstagramEmbed shortcode={m.id} title={`${m.title} — Instagram`} />
+            )}
             <div className="mediaText">
               <div className="mediaMeta">
                 {m.outlet}
@@ -50,19 +57,21 @@ export default function MediaPage() {
               </div>
               <h2 className="mediaTitle">{m.title}</h2>
               <p>{m.summary}</p>
+              <div className="chips" style={{ paddingTop: 2 }}>
+                {m.topics.map((t) => (
+                  <span key={t} className="chip">
+                    {t}
+                  </span>
+                ))}
+              </div>
               <div className="btnRow" style={{ marginTop: 6 }}>
                 {m.guideHref && (
                   <Link className="btn btnPrimary" href={m.guideHref}>
-                    Read the patient guide
+                    {m.guideLabel ?? "Read more"}
                   </Link>
                 )}
-                <a
-                  className="btn"
-                  href={`https://www.youtube.com/watch?v=${m.youtubeId}`}
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  Watch on YouTube
+                <a className="btn" href={mediaUrl(m)} target="_blank" rel="noreferrer">
+                  {m.platform === "youtube" ? "Watch on YouTube" : "View on Instagram"}
                 </a>
               </div>
             </div>
