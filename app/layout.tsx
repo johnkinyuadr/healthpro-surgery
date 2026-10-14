@@ -4,6 +4,8 @@ import Script from "next/script";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import EnquiryTracking from "@/components/EnquiryTracking";
+import MobileActionBar from "@/components/MobileActionBar";
+import ScrollReveal from "@/components/ScrollReveal";
 
 const siteUrl = "https://www.healthprosurgery.com";
 
@@ -129,6 +131,8 @@ export default function RootLayout({
         <main className="container">{children}</main>
         <Footer />
         <EnquiryTracking />
+        <ScrollReveal />
+        <MobileActionBar />
       </body>
     </html>
   );
