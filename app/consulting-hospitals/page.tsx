@@ -17,7 +17,7 @@ type Hospital = {
 
 const MAIN_CLINIC: Hospital = {
   name: "Aga Khan Hospital – Mombasa",
-  url: "https://www.agakhanhospitals.org/mombasa",
+  url: "https://agakhanhospitals.org/en/aga-khan-hospital-mombasa",
   narration:
     "An internationally accredited tertiary hospital delivering world-class specialist care, advanced diagnostics, and evidence-based surgical services.",
 };
