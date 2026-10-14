@@ -6,6 +6,7 @@ import { useEffect } from "react";
 const SELECTOR = [
   ".serviceCard",
   ".guideCard",
+  ".postCard",
   ".careItem",
   ".hospitalCard",
   ".insurerTile",

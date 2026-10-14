@@ -14,6 +14,7 @@ const LINKS = [
   { href: "/consulting-hospitals", label: "Hospitals" },
   { href: "/second-opinion", label: "Second Opinion" },
   { href: "/media", label: "Media" },
+  { href: "/blog", label: "Blog" },
   { href: "/contact", label: "Contact" },
 ];
 
