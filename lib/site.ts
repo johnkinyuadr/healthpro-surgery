@@ -18,10 +18,39 @@ export const CLINIC_HOURS = [
   { days: "Sunday", time: "Closed" },
 ];
 
+export type Insurer = {
+  name: string;
+  // Optional: path to an official logo file under /public/insurers/, e.g. "/insurers/aar.svg".
+  // Leave unset to show the insurer's name as text.
+  logo?: string;
+};
+
+// Medical insurers licensed by the Insurance Regulatory Authority (2026 gazette list).
+export const KENYAN_INSURERS: Insurer[] = [
+  { name: "AAR Insurance" },
+  { name: "APA Insurance" },
+  { name: "Britam" },
+  { name: "CIC Insurance" },
+  { name: "Equity Health Insurance" },
+  { name: "First Assurance" },
+  { name: "GA Insurance" },
+  { name: "Heritage Insurance" },
+  { name: "ICEA LION" },
+  { name: "Jubilee Health Insurance" },
+  { name: "Kenindia Assurance" },
+  { name: "Madison Insurance" },
+  { name: "MUA Insurance" },
+  { name: "Old Mutual" },
+  { name: "Pacis Insurance" },
+  { name: "Sanlam Allianz" },
+];
+
+export const INTERNATIONAL_INSURERS: Insurer[] = [{ name: "Bupa Global" }, { name: "Aetna International" }];
+
 export const INSURANCE = {
   local: "All Kenyan medical insurance providers",
-  international: ["Bupa", "Aetna"],
-  note: "Major international insurers accepted. Please bring your insurance card and any pre-authorisation forms to your appointment.",
+  international: INTERNATIONAL_INSURERS.map((i) => i.name),
+  note: "Please bring your insurance card and any pre-authorisation forms to your appointment. If your insurer is not listed, contact us — it is very likely accepted.",
 };
 
 export function waLink(message: string) {
