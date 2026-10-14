@@ -1,5 +1,13 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import FAQSection from "../../components/FAQSection";
+
+export const metadata: Metadata = {
+  title: "Hernia Surgery in Mombasa | Laparoscopic Repair",
+  description:
+    "Inguinal, umbilical, incisional and epigastric hernia repair in Mombasa, including laparoscopic (keyhole) surgery.",
+  alternates: { canonical: "/services/hernia-surgery" },
+};
 
 const WHATSAPP_NUMBER = "254721446206";
 

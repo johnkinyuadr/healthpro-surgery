@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { CLINIC_HOURS } from "@/lib/site";
 
 export default function Footer() {
   const year = new Date().getFullYear();
@@ -29,9 +30,21 @@ export default function Footer() {
               <Link href="/online-second-opinion">Request online</Link>
             </div>
             <div className="footerCol">
+              <h4>Clinic hours</h4>
+              <div className="footerHours">
+                {CLINIC_HOURS.map((h) => (
+                  <span key={h.days} style={{ display: "contents" }}>
+                    <span>{h.days}</span>
+                    <span>{h.time}</span>
+                  </span>
+                ))}
+              </div>
+            </div>
+            <div className="footerCol">
               <h4>Contact</h4>
               <a href="tel:+254721446206">0721 446 206</a>
               <a href="mailto:johnkinyua@gmail.com">johnkinyua@gmail.com</a>
+              <Link href="/privacy-policy">Privacy policy</Link>
             </div>
           </div>
         </div>

@@ -67,7 +67,7 @@ export default function OnlineSecondOpinionPage() {
       <div className="card" style={{ maxWidth: "720px", margin: "20px auto" }}>
         <h2 style={{ marginTop: 0 }}>Submit Your Online Second Opinion Request</h2>
 
-        <form action="https://formspree.io/f/mnjnedvp" method="POST">
+        <form className="form" action="https://formspree.io/f/mnjnedvp" method="POST">
           <input
             type="hidden"
             name="_redirect"
@@ -113,6 +113,15 @@ export default function OnlineSecondOpinionPage() {
             rows={4}
             placeholder="Paste key report text here. PDFs/images can be shared via WhatsApp after submission."
           />
+
+          <label className="consent">
+            <input type="checkbox" name="consent" value="yes" required />
+            <span>
+              I consent to HealthPro Surgery using the information I provide, including health
+              information, to respond to my request and provide care, as described in the{" "}
+              <Link href="/privacy-policy">privacy policy</Link>.
+            </span>
+          </label>
 
           <button type="submit" className="btn btnAccent" style={{ marginTop: "12px" }}>
             Submit Online Second Opinion

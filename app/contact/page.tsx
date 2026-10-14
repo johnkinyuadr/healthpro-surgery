@@ -1,108 +1,150 @@
 import type { Metadata } from "next";
+import Link from "next/link";
+import {
+  CLINIC_HOURS,
+  EMAIL,
+  INSURANCE,
+  MAPS_DIRECTIONS,
+  MAPS_EMBED,
+  PHONE_DISPLAY,
+  WHATSAPP_NUMBER,
+  waLink,
+} from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Contact",
+  title: "Contact, Clinic Hours & Insurance",
   description:
-    "Contact HealthPro Surgery at Aga Khan Hospital Mombasa, Drs Plaza, First Floor, to book a consultation or appointment.",
+    "Contact HealthPro Surgery at Aga Khan Hospital Mombasa, Doctors' Plaza, First Floor. Clinic hours Monday–Friday 9am–5pm, Saturday 9am–12 noon. All Kenyan insurers, Bupa and Aetna accepted.",
+  alternates: { canonical: "/contact" },
 };
-
-const GOOGLE_MAPS_DIRECTIONS =
-  "https://www.google.com/maps/search/?api=1&query=Aga%20Khan%20Hospital%20Mombasa%20Drs%20Plaza";
-
-const GOOGLE_MAPS_EMBED =
-  "https://www.google.com/maps?q=Aga%20Khan%20Hospital%20Mombasa%20Drs%20Plaza&output=embed";
 
 export default function ContactPage() {
   return (
-    <section className="hero">
-      <h1 className="h1">Contact & Appointments</h1>
-
-      <p className="p">
-        To book a consultation or request an appointment, please fill in the form
-        below. Our team will contact you to confirm details and next steps.
-      </p>
-
-      <div className="card" style={{ maxWidth: "760px", margin: "20px auto" }}>
-        <h2 style={{ marginTop: 0 }}>Our Location</h2>
-
-        <p className="p">
-          HealthPro Surgery is now located at:
+    <>
+      <section className="hero">
+        <h1 className="h1">Contact &amp; Appointments</h1>
+        <p className="p" style={{ maxWidth: 720 }}>
+          Book on WhatsApp or by phone, or send the form below and we will contact you to confirm
+          your appointment.
         </p>
-
-        <p className="p">
-          <strong>
-            Aga Khan Hospital Mombasa<br />
-            Drs Plaza, First Floor<br />
-            Mombasa, Kenya
-          </strong>
-        </p>
-
-        <p className="p" style={{ marginTop: "10px" }}>
-          📞 Phone / WhatsApp: <strong>+254 721 446 206</strong>
-        </p>
-
-        <div className="btnRow" style={{ marginTop: "12px" }}>
+        <div className="btnRow">
           <a
-            className="btn btnAccent"
-            href={GOOGLE_MAPS_DIRECTIONS}
+            className="btn btnPrimary"
+            href={waLink("Hello HealthPro Surgery, I’d like to book a consultation.")}
             target="_blank"
             rel="noreferrer"
           >
-            Get Directions
+            Book on WhatsApp
+          </a>
+          <a className="btn" href={`tel:+${WHATSAPP_NUMBER}`}>
+            Call {PHONE_DISPLAY}
           </a>
         </div>
+      </section>
 
-        <div
-          style={{
-            marginTop: "16px",
-            borderRadius: "16px",
-            overflow: "hidden",
-            border: "1px solid rgba(255,255,255,0.08)",
-          }}
-        >
-          <iframe
-            src={GOOGLE_MAPS_EMBED}
-            width="100%"
-            height="320"
-            style={{ border: 0 }}
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-            title="HealthPro Surgery location at Aga Khan Hospital Mombasa"
-          />
+      <section className="grid">
+        <div className="card">
+          <h2 style={{ fontSize: 20 }}>Location</h2>
+          <p>
+            <strong>Aga Khan Hospital Mombasa</strong>
+            <br />
+            Doctors&apos; Plaza, First Floor
+            <br />
+            Mombasa, Kenya
+          </p>
+          <p style={{ marginTop: 12 }}>
+            Phone / WhatsApp: <a href={`tel:+${WHATSAPP_NUMBER}`} style={{ color: "var(--navy)", fontWeight: 600 }}>{PHONE_DISPLAY}</a>
+            <br />
+            Email: <a href={`mailto:${EMAIL}`} style={{ color: "var(--navy)", fontWeight: 600 }}>{EMAIL}</a>
+          </p>
+          <div className="btnRow" style={{ marginTop: 16 }}>
+            <a className="btn btnPrimary" href={MAPS_DIRECTIONS} target="_blank" rel="noreferrer">
+              Get directions
+            </a>
+          </div>
         </div>
+
+        <div className="card">
+          <h2 style={{ fontSize: 20 }}>Clinic hours</h2>
+          <table className="hoursTable">
+            <tbody>
+              {CLINIC_HOURS.map((h) => (
+                <tr key={h.days}>
+                  <th scope="row">{h.days}</th>
+                  <td>{h.time}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+          <p className="small" style={{ marginTop: 10 }}>
+            Consultations by appointment. For emergencies, go to the nearest Accident &amp; Emergency
+            department.
+          </p>
+
+          <h2 style={{ fontSize: 20, marginTop: 22 }}>Insurance</h2>
+          <p>
+            {INSURANCE.local} accepted, plus major international insurers including{" "}
+            {INSURANCE.international.join(" and ")}.
+          </p>
+          <p className="small" style={{ marginTop: 8 }}>
+            {INSURANCE.note}
+          </p>
+        </div>
+      </section>
+
+      <div className="card" style={{ marginTop: 18, padding: 0, overflow: "hidden" }}>
+        <iframe
+          src={MAPS_EMBED}
+          width="100%"
+          height="340"
+          style={{ border: 0, display: "block" }}
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+          title="HealthPro Surgery location at Aga Khan Hospital Mombasa"
+        />
       </div>
 
-      <div className="card" style={{ maxWidth: "600px", margin: "20px auto" }}>
-        <form action="https://formspree.io/f/mnjnedvp" method="POST">
-          <input
-            type="hidden"
-            name="_redirect"
-            value="https://www.healthprosurgery.com/thank-you"
-          />
+      <div className="card" style={{ maxWidth: 680, margin: "28px auto 0" }}>
+        <h2 style={{ fontSize: 22 }}>Request an appointment</h2>
+        <form className="form" action="https://formspree.io/f/mnjnedvp" method="POST">
+          <input type="hidden" name="_redirect" value="https://www.healthprosurgery.com/thank-you" />
 
-          <label className="label">Full Name</label>
-          <input className="input" type="text" name="name" placeholder="Your full name" required />
+          <label className="label" htmlFor="c-name">Full name</label>
+          <input id="c-name" className="input" type="text" name="name" placeholder="Your full name" required />
 
-          <label className="label">Email Address</label>
-          <input className="input" type="email" name="email" placeholder="you@example.com" required />
+          <label className="label" htmlFor="c-email">Email address</label>
+          <input id="c-email" className="input" type="email" name="email" placeholder="you@example.com" required />
 
-          <label className="label">Phone / WhatsApp Number</label>
-          <input className="input" type="tel" name="phone" placeholder="+254..." required />
+          <label className="label" htmlFor="c-phone">Phone / WhatsApp number</label>
+          <input id="c-phone" className="input" type="tel" name="phone" placeholder="+254..." required />
 
-          <label className="label">Message</label>
+          <label className="label" htmlFor="c-insurer">Insurer (optional)</label>
+          <input id="c-insurer" className="input" type="text" name="insurer" placeholder="e.g. Jubilee, AAR, Bupa — or self-pay" />
+
+          <label className="label" htmlFor="c-message">Message</label>
           <textarea
-            className="input"
+            id="c-message"
+            className="textarea"
             name="message"
             placeholder="Briefly describe your concern or the service you are booking."
             rows={4}
             required
           ></textarea>
 
-          <button type="submit" className="btn btnAccent" style={{ marginTop: "12px" }}>
-            Submit Request
+          <label className="consent">
+            <input type="checkbox" name="consent" value="yes" required />
+            <span>
+              I consent to HealthPro Surgery using the information I provide, including health
+              information, to respond to my request and provide care, as described in the{" "}
+              <Link href="/privacy-policy">privacy policy</Link>.
+            </span>
+          </label>
+
+          <button type="submit" className="btn btnPrimary">
+            Submit request
           </button>
         </form>
       </div>
-    </section>
+    </>
   );
 }

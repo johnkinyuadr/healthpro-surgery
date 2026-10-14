@@ -17,9 +17,6 @@ export const metadata: Metadata = {
   },
   description:
     "HealthPro Surgery in Mombasa, Kenya — vascular surgery, general surgery, laparoscopic surgery, GI endoscopy, colonoscopy and OGD. Located at Aga Khan Hospital Mombasa, Drs Plaza, First Floor.",
-  alternates: {
-    canonical: siteUrl,
-  },
   openGraph: {
     type: "website",
     url: siteUrl,
@@ -91,6 +88,32 @@ export default function RootLayout({
                 "GeneralSurgery",
                 "LaparoscopicSurgery",
               ],
+              image: `${siteUrl}/images/dr-kinyua.jpg`,
+              hasMap: GOOGLE_MAPS_DIRECTIONS,
+              priceRange: "KSh 2,000 – KSh 3,000 consultation",
+              paymentAccepted: "M-Pesa, Medical insurance",
+              openingHoursSpecification: [
+                {
+                  "@type": "OpeningHoursSpecification",
+                  dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                  opens: "09:00",
+                  closes: "17:00",
+                },
+                {
+                  "@type": "OpeningHoursSpecification",
+                  dayOfWeek: "Saturday",
+                  opens: "09:00",
+                  closes: "12:00",
+                },
+              ],
+              employee: {
+                "@type": "Physician",
+                name: "Dr John Kinyua Murithi",
+                honorificSuffix: "MBChB, FCS(ECSA), FACS",
+                jobTitle: "Consultant General, Vascular and Laparoscopic Surgeon",
+                medicalSpecialty: ["VascularSurgery", "GeneralSurgery"],
+                image: `${siteUrl}/images/dr-kinyua.jpg`,
+              },
             }),
           }}
         />

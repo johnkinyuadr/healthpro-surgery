@@ -27,7 +27,7 @@ export default function AboutPage() {
             style={{
               width: "100%",
               borderRadius: "16px",
-              border: "1px solid rgba(255,255,255,0.08)",
+              border: "1px solid var(--border)",
             }}
           />
         </div>
@@ -64,7 +64,7 @@ export default function AboutPage() {
             style={{
               width: "100%",
               borderRadius: "16px",
-              border: "1px solid rgba(255,255,255,0.08)",
+              border: "1px solid var(--border)",
             }}
           />
         </div>

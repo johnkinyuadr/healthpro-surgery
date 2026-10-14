@@ -1,5 +1,11 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { CLINIC_HOURS, INSURANCE } from "@/lib/site";
+
+export const metadata: Metadata = {
+  alternates: { canonical: "/" },
+};
 
 const WHATSAPP_NUMBER = "254721446206";
 const PHONE_DISPLAY = "0721 446 206";
@@ -18,7 +24,7 @@ const SERVICES = [
   {
     title: "Vascular surgery",
     text: "Arterial and venous disease, carotid disease, limb ischaemia and aneurysm assessment, with open and endovascular options.",
-    href: "/services",
+    href: "/services/vascular-surgery",
     icon: "M12 3v18M8 7c0 3 8 3 8 6s-8 3-8 6",
   },
   {
@@ -36,13 +42,13 @@ const SERVICES = [
   {
     title: "Laparoscopic surgery",
     text: "Keyhole surgery for hernias, gallbladder disease and other abdominal conditions, supporting a faster recovery.",
-    href: "/services/hernia-surgery",
+    href: "/services/gallbladder-surgery",
     icon: "M12 4v4M12 16v4M4 12h4M16 12h4M12 4a8 8 0 1 0 0.01 0",
   },
   {
     title: "GI endoscopy",
     text: "Diagnostic and therapeutic OGD and colonoscopy, including dilatation of strictures.",
-    href: "/services",
+    href: "/services/gi-endoscopy",
     icon: "M5 4h6v6H5zM13 14h6v6h-6zM11 7h3a3 3 0 0 1 3 3v4",
   },
   {
@@ -298,6 +304,29 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* INSURANCE */}
+      <section className="bleed" style={{ paddingBottom: 56 }}>
+        <div className="wrap insureBand">
+          <div>
+            <div className="eyebrow">Insurance &amp; payment</div>
+            <h2 className="h2">Your insurance is accepted</h2>
+            <p className="lead">
+              {INSURANCE.local} are accepted, together with major international insurers. Self-pay
+              patients can pay by M-Pesa.
+            </p>
+          </div>
+          <div className="insureList">
+            <span className="insureTag">All Kenyan insurers</span>
+            {INSURANCE.international.map((i) => (
+              <span key={i} className="insureTag">
+                {i}
+              </span>
+            ))}
+            <span className="insureTag">M-Pesa</span>
+          </div>
+        </div>
+      </section>
+
       {/* VISIT */}
       <section className="bleed" style={{ paddingBottom: 88 }}>
         <div className="wrap">
@@ -308,8 +337,12 @@ export default function HomePage() {
               <p className="lead">Doctors&apos; Plaza, First Floor, Mombasa</p>
               <div className="visitInfo">
                 <div>
-                  <b>Consultations</b>
-                  By appointment — book on WhatsApp or by phone.
+                  <b>Clinic hours</b>
+                  {CLINIC_HOURS.map((h) => (
+                    <span key={h.days} style={{ display: "block" }}>
+                      {h.days}: {h.time}
+                    </span>
+                  ))}
                 </div>
                 <div>
                   <b>Contact</b>
