@@ -6,7 +6,7 @@ import { waLink } from "@/lib/site";
 export const metadata: Metadata = {
   title: "About Dr John Kinyua Murithi | Vascular & General Surgeon, Mombasa",
   description:
-    "Dr John Kinyua Murithi, MBChB, FCS(ECSA), FACS — Consultant General, Vascular and Laparoscopic Surgeon in Mombasa. Vascular fellowship in Paris, Head of Accident & Emergency at Coast General Teaching and Referral Hospital, COSECSA faculty and founder of Renal Access Foundation Kenya.",
+    "Dr John Kinyua Murithi, MBChB, FCS(ECSA), FACS — Consultant General, Vascular and Laparoscopic Surgeon in Mombasa. Vascular fellowship in Paris, Head of Accident & Emergency at Coast General Teaching and Referral Hospital and COSECSA faculty.",
   alternates: { canonical: "/about" },
 };
 
@@ -22,7 +22,6 @@ const ROLES = [
   "Head of Accident & Emergency, Coast General Teaching and Referral Hospital (CGTRH)",
   "Surgical educator and COSECSA faculty member, training the next generation of surgeons",
   "Quality-improvement and patient-safety lead",
-  "Founder and Chairman, Renal Access Foundation Kenya (RAFK)",
 ];
 
 const INTERESTS = [
@@ -136,24 +135,6 @@ export default function AboutPage() {
             ))}
           </div>
         </div>
-      </section>
-
-      <section className="card rafkCard" style={{ marginTop: 32 }}>
-        <div className="eyebrow">Renal Access Foundation Kenya</div>
-        <h2 style={{ fontSize: 24, margin: "6px 0 8px" }}>
-          RAFK — <em>Rafiki wa figo yako</em>
-        </h2>
-        <p>
-          Dr Kinyua founded Renal Access Foundation Kenya to improve dialysis access for patients
-          across the country, through training, outreach and the standardisation of practice. Its
-          work includes fistula review clinics, patient education under the &ldquo;Fistula
-          First&rdquo; approach, access-salvage pathways and outcomes research.
-        </p>
-        <p style={{ marginTop: 10 }}>
-          <Link className="textLink" href="/services/dialysis-access">
-            Dialysis access at HealthPro Surgery →
-          </Link>
-        </p>
       </section>
 
       <h2 className="sectionTitle">What you can expect</h2>
