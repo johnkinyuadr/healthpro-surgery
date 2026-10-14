@@ -519,7 +519,7 @@ select.input { appearance: none; background-image: linear-gradient(45deg, transp
 .navCta, .btn { transition: background 0.15s, color 0.15s, border-color 0.15s, transform 0.15s, box-shadow 0.15s; }
 .navCta:hover, .btn:hover { transform: translateY(-1px); box-shadow: 0 6px 16px rgba(11, 37, 69, 0.14); }
 
-@media (max-width: 960px) {
+@media (max-width: 1100px) {
   .nav { position: sticky; }
   .navInner { flex-wrap: nowrap; padding: 12px 20px; }
   .menuToggle {
@@ -647,3 +647,55 @@ select.input { appearance: none; background-image: linear-gradient(45deg, transp
 .pubStats div { background: var(--navy); color: #dce6f0; border-radius: 12px; padding: 20px 22px; display: flex; flex-direction: column; gap: 4px; }
 .pubStats strong { font-family: var(--font-serif); font-weight: 500; font-size: 30px; color: #fff; }
 .pubStats span { font-size: 14px; }
+
+/* ---------- Blog ---------- */
+.postGrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 18px; }
+.postGridTwo { grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); }
+.postCard {
+  background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 26px;
+  display: flex; flex-direction: column; gap: 10px; color: var(--text);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+.postCard:hover { transform: translateY(-3px); box-shadow: var(--shadow); border-color: #b9d8db; }
+.postCard h3 { margin: 0; font-family: var(--font-serif); font-weight: 500; font-size: 23px; line-height: 1.25; color: var(--heading); }
+.postCard p { margin: 0; color: var(--muted); font-size: 15px; line-height: 1.6; }
+.postCard .more { margin-top: auto; padding-top: 6px; color: var(--teal); font-weight: 600; font-size: 15px; }
+.postCardMeta { display: flex; justify-content: space-between; align-items: center; gap: 10px; font-size: 13px; color: var(--subtle); }
+.postCategory { background: var(--teal-soft); color: var(--teal); font-weight: 600; padding: 3px 10px; border-radius: 999px; }
+.postCardFeatured { grid-column: 1 / -1; background: var(--navy); border-color: var(--navy); padding: 36px; }
+.postCardFeatured h3 { color: #fff; font-size: clamp(26px, 3vw, 34px); max-width: 820px; }
+.postCardFeatured p { color: #dce6f0; font-size: 16.5px; max-width: 760px; }
+.postCardFeatured .more { color: var(--teal-light); }
+.postCardFeatured .postCardMeta { color: #b9c6d4; justify-content: flex-start; }
+.postCardFeatured .postCategory { background: rgba(127, 211, 217, 0.16); color: var(--teal-light); }
+
+.postHero .h1 { max-width: 860px; }
+.postBack { color: var(--teal); font-weight: 600; font-size: 15px; }
+.postByline { display: flex; align-items: center; gap: 12px; margin-top: 18px; font-size: 14px; color: var(--subtle); }
+.postByline strong { display: block; color: var(--heading); font-size: 15px; }
+.postAvatar { position: relative; flex: none; width: 44px; height: 44px; border-radius: 50%; overflow: hidden; background: #8a8d90; }
+.postAvatar img { object-fit: cover; object-position: center 18%; }
+
+.postArticle { max-width: 740px; margin: 40px auto 0; }
+.postLead { font-family: var(--font-serif); font-size: 22px; line-height: 1.5; color: var(--heading); margin: 0 0 28px; }
+.postBody { font-size: 18px; line-height: 1.8; color: #2b3542; }
+.postBody p { margin: 0 0 22px; }
+.postBody h2 { font-family: var(--font-serif); font-weight: 500; font-size: 28px; line-height: 1.25; margin: 40px 0 14px; color: var(--heading); }
+.postBody ul { margin: 0 0 24px; padding-left: 22px; }
+.postBody li { margin-bottom: 8px; }
+.postBody strong { color: var(--heading); }
+.postBody blockquote {
+  margin: 32px 0; padding: 4px 0 4px 24px; border-left: 3px solid var(--teal);
+  font-family: var(--font-serif); font-size: 24px; line-height: 1.45; color: var(--navy);
+}
+.postCta { margin-top: 40px; background: var(--navy); color: #dce6f0; border-radius: 16px; padding: 30px; display: flex; flex-direction: column; gap: 12px; }
+.postCta h2 { margin: 0; color: #fff; font-family: var(--font-serif); font-weight: 500; font-size: 26px; }
+.postCta p { margin: 0; }
+.postCta .btn:not(.btnPrimary) { background: transparent; color: #fff; border-color: rgba(255,255,255,0.6); }
+.postCta .btnPrimary { background: var(--teal); border-color: var(--teal); }
+@media (max-width: 600px) {
+  .postBody { font-size: 17px; }
+  .postLead { font-size: 19px; }
+  .postBody blockquote { font-size: 20px; }
+  .postCardFeatured { padding: 26px; }
+}

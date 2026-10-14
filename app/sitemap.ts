@@ -1,4 +1,5 @@
 import type { MetadataRoute } from "next";
+import { POSTS } from "@/lib/blog";
 
 const PATHS = [
   "/",
@@ -19,6 +20,8 @@ const PATHS = [
   "/patient-guides/hernia-repair-recovery",
   "/media",
   "/publications",
+  "/blog",
+  ...POSTS.map((p) => `/blog/${p.slug}`),
   "/contact",
   "/privacy-policy",
 ];
