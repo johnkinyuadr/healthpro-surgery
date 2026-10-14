@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import Script from "next/script";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import EnquiryTracking from "@/components/EnquiryTracking";
 
 const siteUrl = "https://www.healthprosurgery.com";
 
@@ -127,6 +128,7 @@ export default function RootLayout({
         <Navbar />
         <main className="container">{children}</main>
         <Footer />
+        <EnquiryTracking />
       </body>
     </html>
   );
