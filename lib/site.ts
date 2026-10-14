@@ -27,25 +27,30 @@ export type Insurer = {
 
 // Medical insurers licensed by the Insurance Regulatory Authority (2026 gazette list).
 export const KENYAN_INSURERS: Insurer[] = [
-  { name: "AAR Insurance" },
-  { name: "APA Insurance" },
-  { name: "Britam" },
-  { name: "CIC Insurance" },
-  { name: "Equity Health Insurance" },
-  { name: "First Assurance" },
-  { name: "GA Insurance" },
-  { name: "Heritage Insurance" },
-  { name: "ICEA LION" },
-  { name: "Jubilee Health Insurance" },
-  { name: "Kenindia Assurance" },
-  { name: "Madison Insurance" },
-  { name: "MUA Insurance" },
-  { name: "Old Mutual" },
-  { name: "Pacis Insurance" },
-  { name: "Sanlam Allianz" },
+  { name: "AAR Insurance", logo: "/insurers/aar.png" },
+  { name: "APA Insurance", logo: "/insurers/apa.png" },
+  { name: "Britam", logo: "/insurers/britam.png" },
+  { name: "CIC Insurance", logo: "/insurers/cic.png" },
+  { name: "Equity Health Insurance", logo: "/insurers/equity.png" },
+  { name: "First Assurance", logo: "/insurers/first-assurance.png" },
+  { name: "GA Insurance", logo: "/insurers/ga.png" },
+  { name: "Heritage Insurance", logo: "/insurers/heritage.png" },
+  { name: "ICEA LION", logo: "/insurers/icea-lion.png" },
+  { name: "Jubilee Health Insurance", logo: "/insurers/jubilee.png" },
+  { name: "Kenindia Assurance", logo: "/insurers/kenindia.png" },
+  { name: "Madison Insurance", logo: "/insurers/madison.png" },
+  { name: "MUA Insurance", logo: "/insurers/mua.png" },
+  { name: "Old Mutual", logo: "/insurers/old-mutual.png" },
+  { name: "Pacis Insurance", logo: "/insurers/pacis.png" },
+  { name: "Sanlam Allianz", logo: "/insurers/sanlam-allianz.png" },
 ];
 
-export const INTERNATIONAL_INSURERS: Insurer[] = [{ name: "Bupa Global" }, { name: "Aetna International" }];
+export const INTERNATIONAL_INSURERS: Insurer[] = [
+  { name: "Bupa Global", logo: "/insurers/bupa.png" },
+  { name: "Aetna International", logo: "/insurers/aetna.png" },
+];
+
+export const SELF_PAY: Insurer = { name: "Self-pay by M-Pesa", logo: "/insurers/mpesa.png" };
 
 export const INSURANCE = {
   local: "All Kenyan medical insurance providers",
