@@ -5,7 +5,7 @@ import { CLINIC_HOURS, MAPS_DIRECTIONS, waLink } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Hospitals We Consult At",
   description:
-    "Hospitals where HealthPro Surgery consultants provide specialist surgical care in Mombasa, the South Coast and Nairobi, including Aga Khan Hospital Mombasa, The Mombasa Hospital and Pandya Memorial Hospital.",
+    "Hospitals where HealthPro Surgery consultants provide specialist surgical care in Mombasa and the South Coast, including Aga Khan Hospital Mombasa, The Mombasa Hospital and Pandya Memorial Hospital.",
   alternates: { canonical: "/consulting-hospitals" },
 };
 
@@ -86,7 +86,7 @@ export default function ConsultingHospitalsPage() {
         <h1 className="h1">Hospitals we consult at</h1>
         <p className="p" style={{ maxWidth: 760, marginBottom: 0 }}>
           HealthPro Surgery consultants provide specialist care across a trusted network of hospitals
-          in Mombasa, the South Coast, and Nairobi. Consultations are held at our clinic at Aga Khan
+          in Mombasa and the South Coast. Consultations are held at our clinic at Aga Khan
           Hospital Mombasa; surgery and inpatient care can be arranged at the hospital that best suits
           your needs and insurance cover.
         </p>
