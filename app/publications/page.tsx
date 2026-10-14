@@ -10,11 +10,11 @@ export const metadata: Metadata = {
 };
 
 function Authors({ authors }: { authors: string }) {
-  const parts = authors.split(/(Murithi JK|Murithi J\b|Kinyua Murithi J)/);
+  const parts = authors.split(/(Murithi JK|Murithi J\b|Kinyua J\b)/);
   return (
     <>
       {parts.map((p, i) =>
-        /Murithi/.test(p) ? (
+        /Murithi|Kinyua J/.test(p) ? (
           <strong key={i} style={{ color: "var(--navy)" }}>
             {p}
           </strong>
@@ -34,9 +34,13 @@ function PubCard({ p }: { p: Publication }) {
         <span>{p.topic}</span>
       </div>
       <h3 className="pubTitle">
-        <a href={p.url} target="_blank" rel="noreferrer">
-          {p.title}
-        </a>
+        {p.url ? (
+          <a href={p.url} target="_blank" rel="noreferrer">
+            {p.title}
+          </a>
+        ) : (
+          p.title
+        )}
       </h3>
       <p className="pubAuthors">
         <Authors authors={p.authors} />
@@ -55,9 +59,11 @@ function PubCard({ p }: { p: Publication }) {
         ) : null}
       </p>
       <p className="pubSummary">{p.summary}</p>
-      <a className="textLink" href={p.url} target="_blank" rel="noreferrer">
-        Read the article →
-      </a>
+      {p.url ? (
+        <a className="textLink" href={p.url} target="_blank" rel="noreferrer">
+          Read the article →
+        </a>
+      ) : null}
     </article>
   );
 }
@@ -71,7 +77,7 @@ export default function PublicationsPage() {
     author: p.authors,
     datePublished: String(p.year),
     isPartOf: { "@type": "Periodical", name: p.journal },
-    url: p.url,
+    ...(p.url ? { url: p.url } : {}),
     ...(p.doi ? { sameAs: `https://doi.org/${p.doi}` } : {}),
   }));
 
@@ -85,9 +91,9 @@ export default function PublicationsPage() {
         </div>
         <h1 className="h1">Publications &amp; research</h1>
         <p className="p" style={{ maxWidth: 780 }}>
-          Dr John Kinyua Murithi&apos;s research focuses on vascular surgery in resource-limited
-          settings, dialysis access, and the development of vascular surgical training in Kenya and
-          East Africa.
+          Dr John Kinyua Murithi&apos;s research spans vascular and aortic surgery in
+          resource-limited settings, dialysis access, trauma and emergency care, and the development
+          of vascular surgical training in Kenya and East Africa.
         </p>
         <div className="btnRow">
           <a className="btn btnPrimary" href={SCHOLAR_PROFILE} target="_blank" rel="noreferrer">
@@ -96,6 +102,21 @@ export default function PublicationsPage() {
           <Link className="btn" href="/about">
             About Dr Kinyua
           </Link>
+        </div>
+      </section>
+
+      <section className="pubStats">
+        <div>
+          <strong>{PUBLICATIONS.filter((p) => p.type !== "Conference abstract").length}</strong>
+          <span>Peer-reviewed papers</span>
+        </div>
+        <div>
+          <strong>{years[years.length - 1]}–{years[0]}</strong>
+          <span>Publication years</span>
+        </div>
+        <div>
+          <strong>{new Set(PUBLICATIONS.map((p) => p.journal)).size}</strong>
+          <span>Journals</span>
         </div>
       </section>
 
