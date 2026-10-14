@@ -1,5 +1,13 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import FAQSection from "../../components/FAQSection";
+
+export const metadata: Metadata = {
+  title: "Dialysis Access Surgery in Mombasa | AV Fistula & Graft",
+  description:
+    "AV fistula and AV graft creation, planning and complication management for haemodialysis patients in Mombasa, Kenya.",
+  alternates: { canonical: "/services/dialysis-access" },
+};
 
 const WHATSAPP_NUMBER = "254721446206";
 

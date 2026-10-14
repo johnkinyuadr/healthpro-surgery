@@ -1,5 +1,13 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import FAQSection from "../../components/FAQSection";
+
+export const metadata: Metadata = {
+  title: "Varicose Veins Treatment in Mombasa | EVLA",
+  description:
+    "Assessment and minimally invasive treatment of varicose veins in Mombasa, including endovenous laser ablation (EVLA), for leg pain, swelling, skin changes and ulcers.",
+  alternates: { canonical: "/services/varicose-veins" },
+};
 
 const WHATSAPP_NUMBER = "254721446206";
 

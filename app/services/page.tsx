@@ -19,7 +19,7 @@ export default function ServicesPage() {
     width: "100%",
     borderRadius: "12px",
     marginBottom: "10px",
-    border: "1px solid rgba(255,255,255,0.08)",
+    border: "1px solid var(--border)",
   };
 
   return (
@@ -96,7 +96,11 @@ export default function ServicesPage() {
           <h3>Vascular Surgery</h3>
           <p>
             Assessment and management of arterial and venous disease, aneurysms,
-            carotid disease, limb ischemia, and vascular access planning.
+            carotid disease, limb ischaemia, and vascular access planning.
+          </p>
+          <p style={{ marginTop: 10 }}>
+            <Link className="textLink" href="/services/vascular-surgery">Vascular surgery →</Link>{" "}
+            · <Link className="textLink" href="/services/carotid-disease">Carotid disease →</Link>
           </p>
         </div>
 
@@ -136,6 +140,10 @@ export default function ServicesPage() {
           <p>
             Minimally invasive surgical options for selected abdominal conditions,
             offering faster recovery where appropriate.
+          </p>
+          <p style={{ marginTop: 10 }}>
+            <Link className="textLink" href="/services/gallbladder-surgery">Gallbladder surgery →</Link>{" "}
+            · <Link className="textLink" href="/services/hernia-surgery">Hernia surgery →</Link>
           </p>
         </div>
       </section>
@@ -213,8 +221,11 @@ export default function ServicesPage() {
           />
           <h3>Lower GI Endoscopy (Colonoscopy)</h3>
           <p>
-            Colonoscopy for rectal bleeding, anemia,
+            Colonoscopy for rectal bleeding, anaemia,
             change in bowel habits, or screening.
+          </p>
+          <p style={{ marginTop: 10 }}>
+            <Link className="textLink" href="/services/gi-endoscopy">Endoscopy &amp; colonoscopy →</Link>
           </p>
         </div>
       </section>
