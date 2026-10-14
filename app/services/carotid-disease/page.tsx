@@ -59,7 +59,7 @@ export default function CarotidDiseasePage() {
       ]}
       related={[
         { label: "Vascular surgery", href: "/services/vascular-surgery" },
-        { label: "Online second opinion", href: "/online-second-opinion" },
+        { label: "Online second opinion", href: "/second-opinion" },
       ]}
     />
   );
