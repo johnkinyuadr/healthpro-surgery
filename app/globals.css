@@ -717,3 +717,36 @@ select.input { appearance: none; background-image: linear-gradient(45deg, transp
 .serviceCover img { display: block; width: 100%; height: auto; aspect-ratio: 3 / 2; object-fit: cover; }
 .serviceCover:not(.serviceCoverPair) img { max-height: 520px; }
 @media (max-width: 600px) { .serviceCover { margin-top: 20px; } .serviceCover figure { border-radius: 12px; } }
+
+/* ---------- Services page: separated FAQ band ---------- */
+.servicesSectionHead { margin-top: 40px; margin-bottom: 4px; }
+.faqBand {
+  width: 100vw; margin: 56px 0 24px calc(50% - 50vw);
+  background: var(--teal-soft); border-top: 1px solid #c6e3e5; border-bottom: 1px solid #c6e3e5;
+  padding: 48px max(24px, calc((100vw - 1200px) / 2 + 24px)) 52px;
+}
+.faqBandHead { margin-bottom: 24px; }
+.faqBandGrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 18px; }
+.faqBandCard {
+  position: relative; background: var(--surface); border-radius: 12px; padding: 16px 16px 20px;
+  display: flex; flex-direction: column; gap: 8px; color: var(--text);
+  box-shadow: 0 1px 2px rgba(11, 37, 69, 0.06); transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.faqBandCard:hover { transform: translateY(-3px); box-shadow: var(--shadow); }
+.faqBandCard h3 { margin: 4px 0 0; font-size: 18px; }
+.faqBandCard p { margin: 0; color: var(--muted); font-size: 15px; }
+.faqBandCard .more { margin-top: auto; color: var(--teal); font-weight: 600; font-size: 15px; }
+.faqBandCard img { margin-bottom: 4px !important; }
+.faqBandTag { position: absolute; top: 26px; left: 26px; background: var(--navy); color: #fff; font-size: 11px; font-weight: 600; letter-spacing: 1px; padding: 4px 9px; border-radius: 6px; }
+
+/* ---------- Preparation timeline ---------- */
+.anchorTarget { scroll-margin-top: 90px; }
+.prepTimeline { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 12px; }
+.prepStep { display: grid; grid-template-columns: 190px minmax(0, 1fr); gap: 20px; background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 20px 22px; }
+.prepWhen { font-weight: 600; color: var(--teal); font-size: 15px; }
+.prepBody h3 { margin: 0 0 8px; font-size: 18px; }
+.prepBody ul { margin: 0; padding-left: 20px; color: var(--muted); }
+.prepBody li { margin-bottom: 5px; }
+.prepStepKey { border: 2px solid var(--teal); background: #f4fbfb; }
+.prepStepKey .prepWhen { color: var(--navy); }
+@media (max-width: 640px) { .prepStep { grid-template-columns: minmax(0, 1fr); gap: 6px; } }

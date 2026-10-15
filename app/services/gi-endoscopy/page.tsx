@@ -75,6 +75,7 @@ export default function GiEndoscopyPage() {
         },
       ]}
       related={[
+        { label: "How to prepare", href: "/services/endoscopy-preparation" },
         { label: "Gallbladder surgery", href: "/services/gallbladder-surgery" },
         { label: "Hernia surgery", href: "/services/hernia-surgery" },
       ]}
