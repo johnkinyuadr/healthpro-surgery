@@ -69,46 +69,55 @@ const FINDER = [
     title: "Swollen, aching or bulging leg veins",
     sw: "Mishipa ya miguu iliyovimba au kuuma",
     href: "/services/varicose-veins",
+    tone: "vascular",
   },
   {
     title: "Leg pain on walking, or a cold or discoloured foot",
     sw: "Maumivu ya mguu unapotembea, au mguu baridi",
     href: "/services/vascular-surgery",
+    tone: "vascular",
   },
   {
     title: "A wound or ulcer on the foot with diabetes",
     sw: "Kidonda cha mguu kwa mgonjwa wa kisukari",
     href: "/patient-guides/diabetic-foot",
+    tone: "vascular",
   },
   {
     title: "Kidney failure and needing dialysis access",
     sw: "Figo kushindwa kufanya kazi na kuhitaji dialysis",
     href: "/services/dialysis-access",
+    tone: "vascular",
   },
   {
     title: "A lump in the groin, at the navel or near a scar",
     sw: "Uvimbe kwenye kinena, kitovu au kovu",
     href: "/services/hernia-surgery",
+    tone: "abdomen",
   },
   {
     title: "Upper abdominal pain after meals, or gallstones",
     sw: "Maumivu ya tumbo baada ya kula, au mawe ya nyongo",
     href: "/services/gallbladder-surgery",
+    tone: "abdomen",
   },
   {
     title: "Heartburn, swallowing difficulty, bleeding or a change in bowel habit",
     sw: "Kiungulia, shida ya kumeza, damu au mabadiliko ya choo",
     href: "/services/gi-endoscopy",
+    tone: "abdomen",
   },
   {
     title: "A mini-stroke, or narrowing of the neck arteries",
     sw: "Kiharusi kidogo au mishipa ya shingo iliyobana",
     href: "/services/carotid-disease",
+    tone: "vascular",
   },
   {
     title: "Already have a diagnosis and want a specialist view",
     sw: "Una utambuzi tayari na unataka maoni ya pili",
     href: "/second-opinion",
+    tone: "opinion",
   },
 ];
 
@@ -210,9 +219,14 @@ export default function HomePage() {
               Choose the concern closest to yours. <span lang="sw">Chagua tatizo linalokuhusu.</span>
             </p>
           </div>
+          <div className="finderLegend" aria-hidden="true">
+            <span className="finderKey finder-vascular">Vascular &amp; dialysis</span>
+            <span className="finderKey finder-abdomen">Abdominal &amp; GI</span>
+            <span className="finderKey finder-opinion">Second opinion</span>
+          </div>
           <div className="finderGrid">
             {FINDER.map((f) => (
-              <Link key={f.href + f.title} className="finderCard" href={f.href}>
+              <Link key={f.href + f.title} className={`finderCard finder-${f.tone}`} href={f.href}>
                 <span className="finderTitle">{f.title}</span>
                 <span className="finderSw" lang="sw">
                   {f.sw}

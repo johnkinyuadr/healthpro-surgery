@@ -42,7 +42,7 @@ const COLONOSCOPY_TIMELINE = [
     when: "Siku 3 kabla",
     title: "Anza chakula chenye nyuzinyuzi kidogo",
     items: [
-      "Kula: wali mweupe, mkate mweupe, ugali wa sembe, viazi vilivyomenywa, mayai, kuku, samaki na supu safi.",
+      "Kula: wali mweupe, mkate mweupe, ugali, viazi vilivyomenywa, mayai, kuku, samaki na supu safi.",
       "Epuka: matunda na mboga zenye maganda au mbegu, maharagwe, njegere, dengu, karanga, nafaka nzima, githeri na mkate wa kahawia.",
     ],
   },

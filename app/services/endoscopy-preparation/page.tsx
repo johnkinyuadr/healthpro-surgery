@@ -41,7 +41,7 @@ const COLONOSCOPY_TIMELINE = [
     when: "3 days before",
     title: "Start a low-fibre diet",
     items: [
-      "Eat: white rice, white bread, ugali made from sifted maize flour, potatoes without skin, eggs, chicken, fish, clear soups.",
+      "Eat: white rice, white bread, ugali, potatoes without skin, eggs, chicken, fish, clear soups.",
       "Avoid: fruit and vegetables with skins or seeds, beans, peas, lentils, nuts, whole grains, githeri and brown bread.",
     ],
   },

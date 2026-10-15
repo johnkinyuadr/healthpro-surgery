@@ -752,40 +752,63 @@ select.input { appearance: none; background-image: linear-gradient(45deg, transp
 @media (max-width: 640px) { .prepStep { grid-template-columns: minmax(0, 1fr); gap: 6px; } }
 
 /* ---------- Homepage: "What brings you here?" finder ---------- */
-.finderBand { background: var(--navy); color: #fff; padding: 64px 0 56px; }
-.finderBand .eyebrow { color: var(--teal-light); }
-.finderBand .h2 { color: #fff; margin: 6px 0 8px; }
-.finderBand .lead { color: #c9d4e2; margin: 0; }
-.finderHead { margin-bottom: 28px; }
-.finderGrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 12px; }
-.finderCard {
-  position: relative; display: flex; flex-direction: column; gap: 4px;
-  background: rgba(255, 255, 255, 0.06); border: 1px solid rgba(255, 255, 255, 0.16);
-  border-radius: 12px; padding: 18px 44px 18px 18px; color: #fff;
-  transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+.finderBand {
+  --tone: var(--teal); --tone-soft: var(--teal-soft);
+  background:
+    radial-gradient(900px 380px at 100% 0%, rgba(127, 211, 217, 0.22), transparent 60%),
+    linear-gradient(180deg, #eef6f7 0%, #f7f9fb 100%);
+  border-top: 1px solid #d7e8ea; border-bottom: 1px solid #e3e7ec;
+  padding: 64px 0 56px;
 }
-.finderCard:hover, .finderCard:focus-visible { background: rgba(127, 211, 217, 0.14); border-color: var(--teal-light); transform: translateY(-2px); }
+.finderBand .h2 { color: var(--navy); margin: 6px 0 8px; }
+.finderBand .lead { color: var(--muted); margin: 0; }
+.finderBand .lead span { color: var(--teal); font-style: italic; }
+.finderHead { margin-bottom: 18px; }
+.finder-vascular { --tone: #0a6a73; --tone-soft: #e3f2f3; }
+.finder-abdomen { --tone: #1f4e8c; --tone-soft: #e6eef8; }
+.finder-opinion { --tone: #a6741f; --tone-soft: #fbf1df; }
+.finderLegend { display: flex; flex-wrap: wrap; gap: 8px 18px; margin-bottom: 18px; font-size: 13.5px; color: var(--subtle); }
+.finderKey { display: inline-flex; align-items: center; gap: 8px; }
+.finderKey::before { content: ""; width: 10px; height: 10px; border-radius: 50%; background: var(--tone); }
+.finderGrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; }
+.finderCard {
+  position: relative; display: flex; flex-direction: column; gap: 5px;
+  background: var(--surface); border: 1px solid var(--border); border-left: 4px solid var(--tone);
+  border-radius: 12px; padding: 18px 56px 18px 18px; color: var(--navy);
+  box-shadow: 0 1px 2px rgba(11, 37, 69, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+.finderCard:hover, .finderCard:focus-visible { transform: translateY(-2px); box-shadow: var(--shadow); background: linear-gradient(90deg, var(--tone-soft), #fff 70%); }
 .finderTitle { font-weight: 600; font-size: 16px; line-height: 1.35; }
-.finderSw { font-size: 13.5px; color: #a9b8cb; font-style: italic; }
-.finderArrow { position: absolute; right: 16px; top: 50%; transform: translateY(-50%); color: var(--teal-light); font-size: 20px; }
-.finderFoot { margin: 22px 0 0; color: #c9d4e2; font-size: 15px; }
-.finderFoot a { color: var(--teal-light); font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
+.finderSw { font-size: 13.5px; color: var(--subtle); font-style: italic; }
+.finderArrow {
+  position: absolute; right: 14px; top: 50%; transform: translateY(-50%);
+  width: 30px; height: 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center;
+  background: var(--tone-soft); color: var(--tone); font-size: 16px; transition: background 0.2s ease, color 0.2s ease;
+}
+.finderCard:hover .finderArrow, .finderCard:focus-visible .finderArrow { background: var(--tone); color: #fff; }
+.finderFoot { margin: 22px 0 0; color: var(--muted); font-size: 15px; }
+.finderFoot a { color: var(--teal); font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
 @media (max-width: 600px) { .finderBand { padding: 48px 0 44px; } }
 
 /* ---------- Your visit page ---------- */
 .visitChecklist { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px; list-style: none; margin: 0; padding: 0; }
 .visitChecklist li {
   background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 16px 18px 16px 48px;
-  position: relative; color: var(--text);
+  position: relative; color: var(--navy);
+  background: linear-gradient(180deg, #fff 0%, #f7fbfb 100%);
 }
 .visitChecklist li::before {
   content: "✓"; position: absolute; left: 16px; top: 15px; width: 22px; height: 22px; border-radius: 50%;
-  background: var(--teal-soft); color: var(--teal); font-weight: 700; font-size: 13px;
+  background: var(--teal); color: #fff; font-weight: 700; font-size: 12px;
   display: flex; align-items: center; justify-content: center;
 }
 .visitChecklist li span { display: block; color: var(--muted); font-size: 14px; margin-top: 2px; }
 .visitGrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px; }
-.visitGrid .card h3 { margin: 0 0 8px; font-size: 19px; }
+.visitGrid .card { border-top: 3px solid var(--teal); }
+.visitGrid .card:nth-child(2) { border-top-color: #1f4e8c; }
+.visitGrid .card:nth-child(3) { border-top-color: #a6741f; }
+.visitGrid .card h3 { margin: 0 0 8px; font-size: 19px; color: var(--navy); }
 .visitGrid .card ul { margin: 8px 0 0; padding-left: 20px; color: var(--muted); }
 .visitGrid .card li { margin-bottom: 5px; }
 .langSwitch { display: inline-flex; gap: 6px; align-items: center; font-size: 14px; font-weight: 600; margin-top: 4px; }
