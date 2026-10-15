@@ -45,48 +45,11 @@ export default function ServicesPage() {
       </section>
 
       {/* CORE SERVICES */}
-      <h2 className="sectionTitle">Core Services</h2>
+      <div className="servicesSectionHead">
+        <div className="eyebrow">What we treat</div>
+        <h2 className="sectionTitle" style={{ margin: "6px 0 0" }}>Core Services</h2>
+      </div>
 
-      {/* === START: SERVICE FAQs (ADDED - NO EXISTING CONTENT REMOVED) === */}
-      <h2 className="sectionTitle">Service FAQs</h2>
-      <section className="grid">
-        <Link className="card" href="/services/varicose-veins">
-          <img
-            src="/images/services/varicose-faq.jpg"
-            alt="Varicose veins and venous disease FAQs"
-            style={imgStyle}
-          />
-          <h3>Varicose Veins – FAQs</h3>
-          <p>
-            Symptoms, risks, treatment options, and when to seek care.
-          </p>
-        </Link>
-
-        <Link className="card" href="/services/dialysis-access">
-          <img
-            src="/images/services/dialysis-faq.jpg"
-            alt="Dialysis and vascular access FAQs"
-            style={imgStyle}
-          />
-          <h3>Dialysis Access – FAQs</h3>
-          <p>
-            AV fistula/graft planning, timelines, and common complications.
-          </p>
-        </Link>
-
-        <Link className="card" href="/services/hernia-surgery">
-          <img
-            src="/images/services/hernia-surgery.jpg"
-            alt="Hernia surgery FAQs"
-            style={imgStyle}
-          />
-          <h3>Hernia Surgery – FAQs</h3>
-          <p>
-            Hernia types, warning signs, surgery timing, and recovery guidance.
-          </p>
-        </Link>
-      </section>
-      {/* === END: SERVICE FAQs (ADDED) === */}
 
       <section className="grid">
         <div className="card">
@@ -159,8 +122,8 @@ export default function ServicesPage() {
       <section className="grid">
         <div className="card">
           <img
-            src="/images/services/general-surgery.jpg"
-            alt="General surgery procedures"
+            src="/images/services/general-surgery-procedures.jpg"
+            alt="Surgical team performing an open general surgical procedure"
             style={imgStyle}
           />
           <h3>General Surgery Procedures</h3>
@@ -195,6 +158,11 @@ export default function ServicesPage() {
         </div>
 
         <div className="card">
+          <img
+            src="/images/services/preop-followup.jpg"
+            alt="Pre-operative consultation, surgery and post-operative follow-up on the ward"
+            style={imgStyle}
+          />
           <h3>Pre-operative Assessment &amp; Follow-up</h3>
           <p>
             Thorough evaluation before surgery and structured
@@ -234,6 +202,58 @@ export default function ServicesPage() {
           <p style={{ marginTop: 10 }}>
             <Link className="textLink" href="/services/gi-endoscopy">Endoscopy &amp; colonoscopy →</Link>
           </p>
+        </div>
+      </section>
+
+      {/* SERVICE FAQs — kept separate from the clinical services above */}
+      <section className="faqBand">
+        <div className="faqBandHead">
+          <div className="eyebrow">Patient information</div>
+          <h2 className="sectionTitle" style={{ margin: "6px 0 6px" }}>Service FAQs &amp; preparation guides</h2>
+          <p className="p" style={{ margin: 0, maxWidth: 720 }}>
+            Answers to the questions patients ask most often — what to expect, how to prepare and
+            when to seek care.
+          </p>
+        </div>
+        <div className="faqBandGrid">
+          {[
+            {
+              href: "/services/varicose-veins",
+              img: "/images/services/varicose-faq.jpg",
+              alt: "Vascular surgeon reviewing a leg vein ultrasound with a patient",
+              title: "Varicose Veins – FAQs",
+              text: "Symptoms, risks, treatment options, and when to seek care.",
+            },
+            {
+              href: "/services/dialysis-access",
+              img: "/images/services/dialysis-faq.jpg",
+              alt: "Nurse caring for a patient during haemodialysis",
+              title: "Dialysis Access – FAQs",
+              text: "AV fistula/graft planning, timelines, and common complications.",
+            },
+            {
+              href: "/services/hernia-surgery",
+              img: "/images/services/hernia-surgery.jpg",
+              alt: "Laparoscopic hernia repair",
+              title: "Hernia Surgery – FAQs",
+              text: "Hernia types, warning signs, surgery timing, and recovery guidance.",
+            },
+            {
+              href: "/services/endoscopy-preparation",
+              img: "/images/services/endoscopy-preparation.jpg",
+              alt: "Doctor explaining bowel preparation for colonoscopy",
+              title: "Preparing for Endoscopy & Colonoscopy",
+              text: "Diet, ColoPrep and Dulcolax timing, medicines and fasting instructions.",
+            },
+          ].map((f) => (
+            <Link key={f.href} className="faqBandCard" href={f.href}>
+              <img src={f.img} alt={f.alt} style={imgStyle} />
+              <span className="faqBandTag">FAQ</span>
+              <h3>{f.title}</h3>
+              <p>{f.text}</p>
+              <span className="more">Read answers →</span>
+            </Link>
+          ))}
         </div>
       </section>
 

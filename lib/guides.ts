@@ -19,6 +19,11 @@ export const PATIENT_GUIDES: Guide[] = [
     href: "/patient-guides/hernia-repair-recovery",
   },
   {
+    title: "Preparing for endoscopy & colonoscopy",
+    text: "Bowel preparation timings, diet, medicines and fasting before your procedure.",
+    href: "/services/endoscopy-preparation",
+  },
+  {
     title: "Varicose veins",
     text: "Symptoms, when treatment is needed, and what EVLA involves.",
     href: "/services/varicose-veins",

@@ -12,6 +12,7 @@ const PATHS = [
   "/services/hernia-surgery",
   "/services/gallbladder-surgery",
   "/services/gi-endoscopy",
+  "/services/endoscopy-preparation",
   "/consulting-hospitals",
   "/second-opinion",
   "/patient-guides",
