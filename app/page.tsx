@@ -12,6 +12,8 @@ export const metadata: Metadata = {
 
 const WHATSAPP_NUMBER = "254721446206";
 const PHONE_DISPLAY = "0721 446 206";
+const OFFICE_PHONE = "254798595946";
+const OFFICE_PHONE_DISPLAY = "0798 595 946";
 const EMAIL = "johnkinyua@gmail.com";
 
 
@@ -124,7 +126,7 @@ export default function HomePage() {
                 (endoscopy) mjini Mombasa. Kliniki yetu iko Aga Khan Hospital Mombasa, Doctors&apos;
                 Plaza, ghorofa ya kwanza. Bima zote za Kenya zinakubaliwa.
               </p>
-              <p>Kwa miadi, wasiliana nasi kwa WhatsApp: 0721 446 206.</p>
+              <p>Kwa miadi, piga simu ofisini: 0798 595 946, au wasiliana nasi kwa WhatsApp: 0721 446 206.</p>
             </KiswahiliSummary>
           </div>
 
@@ -335,7 +337,12 @@ export default function HomePage() {
                 </div>
                 <div>
                   <b>Contact</b>
-                  <a href={`tel:+${WHATSAPP_NUMBER}`}>{PHONE_DISPLAY}</a>
+                  Office: <a href={`tel:+${OFFICE_PHONE}`}>{OFFICE_PHONE_DISPLAY}</a>
+                  <br />
+                  WhatsApp:{" "}
+                  <a href={`https://wa.me/${WHATSAPP_NUMBER}`} target="_blank" rel="noreferrer">
+                    {PHONE_DISPLAY}
+                  </a>
                   <br />
                   <a href={`mailto:${EMAIL}`}>{EMAIL}</a>
                 </div>
@@ -344,7 +351,7 @@ export default function HomePage() {
                 <a className="btn btnPrimary" href={MAPS_DIRECTIONS} target="_blank" rel="noreferrer">
                   Get directions
                 </a>
-                <a className="btn" href={`tel:+${WHATSAPP_NUMBER}`}>
+                <a className="btn" href={`tel:+${OFFICE_PHONE}`}>
                   Call the clinic
                 </a>
               </div>

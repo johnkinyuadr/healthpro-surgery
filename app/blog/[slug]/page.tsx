@@ -123,7 +123,7 @@ export default async function BlogPostPage({ params }: Params) {
           <h2>{sw ? "Una swali kuhusu afya yako?" : "Concerned about your health?"}</h2>
           <p>
             {sw
-              ? "Wasiliana nasi kwa WhatsApp au piga simu 0721 446 206. Kliniki yetu iko Aga Khan Hospital Mombasa, Doctors' Plaza."
+              ? "Piga simu ofisini 0798 595 946, au wasiliana nasi kwa WhatsApp 0721 446 206. Kliniki yetu iko Aga Khan Hospital Mombasa, Doctors' Plaza."
               : "Book a consultation at Aga Khan Hospital Mombasa, Doctors' Plaza, or ask us a question on WhatsApp."}
           </p>
           <div className="btnRow">

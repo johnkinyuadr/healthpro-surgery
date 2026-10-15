@@ -2,7 +2,10 @@
 
 export const SITE_URL = "https://www.healthprosurgery.com";
 export const WHATSAPP_NUMBER = "254721446206";
-export const PHONE_DISPLAY = "0721 446 206";
+export const PHONE_DISPLAY = "0721 446 206"; // WhatsApp & second opinion
+export const WHATSAPP_DISPLAY = "0721 446 206";
+export const OFFICE_PHONE = "254798595946"; // office line for calls and appointments
+export const OFFICE_PHONE_DISPLAY = "0798 595 946";
 export const EMAIL = "johnkinyua@gmail.com";
 
 export const LOCATION_LINE = "Aga Khan Hospital Mombasa, Doctors' Plaza, First Floor";

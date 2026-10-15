@@ -78,7 +78,23 @@ export default function RootLayout({
               "@type": "MedicalBusiness",
               name: "HealthPro Surgery",
               url: siteUrl,
-              telephone: "+254721446206",
+              telephone: "+254798595946",
+              contactPoint: [
+                {
+                  "@type": "ContactPoint",
+                  telephone: "+254798595946",
+                  contactType: "appointments",
+                  areaServed: "KE",
+                  availableLanguage: ["English", "Swahili"],
+                },
+                {
+                  "@type": "ContactPoint",
+                  telephone: "+254721446206",
+                  contactType: "customer support",
+                  description: "WhatsApp enquiries and online second opinions",
+                  availableLanguage: ["English", "Swahili"],
+                },
+              ],
               email: "johnkinyua@gmail.com",
               address: {
                 "@type": "PostalAddress",
