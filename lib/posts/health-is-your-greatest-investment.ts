@@ -8,6 +8,12 @@ const post: Post = {
   excerpt:
     "We save for school fees, land and the future — yet often neglect the asset that protects all the others. Why investing in health is the wisest financial decision a family can make.",
   date: "2026-10-15",
+  image: {
+    src: "/blog/health-is-your-greatest-investment.jpg",
+    alt: "Your health is your greatest investment: a family by the sea in Mombasa, savings growing, a blood pressure check, healthy food and a morning jog",
+    width: 1200,
+    height: 800,
+  },
   body: `We spend much of our lives planning for the future. We save for school fees, invest in land, buy livestock, build homes and contribute faithfully to our chamas. These are wise decisions, and they reflect a deep commitment to family and community. Yet there is one investment that underpins all the others, and it is the one we most often neglect: our health.
 
 ## The asset behind every other asset

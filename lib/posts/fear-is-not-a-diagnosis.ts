@@ -8,6 +8,12 @@ const post: Post = {
   excerpt:
     "Fear of bad news, of hospitals or of surgery keeps many people away from care they need. Practical encouragement on facing that fear — and why knowledge brings back control.",
   date: "2026-10-15",
+  image: {
+    src: "/blog/fear-is-not-a-diagnosis.jpg",
+    alt: "Fear is not a diagnosis: a worried woman at home imagining theatre and hospital, then the surgeon and nurse explaining her scan, and finally the patient smiling and reassured",
+    width: 1200,
+    height: 800,
+  },
   body: `Every doctor knows the patient who begins the consultation with an apology: "Daktari, I should have come earlier." When I ask gently what kept them away, the answer is very often the same. They were afraid.
 
 Afraid of what the doctor would find. Afraid of the word "cancer". Afraid of being told they need an operation. Afraid of hospitals, of needles, of the cost, of being a burden to their family. Fear is one of the most common reasons people delay seeking care, and it is one of the least talked about.
