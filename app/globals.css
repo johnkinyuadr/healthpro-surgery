@@ -699,3 +699,12 @@ select.input { appearance: none; background-image: linear-gradient(45deg, transp
   .postBody blockquote { font-size: 20px; }
   .postCardFeatured { padding: 26px; }
 }
+
+/* ---------- Blog cover images ---------- */
+.postCover { max-width: 960px; margin: 32px auto 0; border-radius: 16px; overflow: hidden; box-shadow: var(--shadow); background: var(--chip); }
+.postCover img { display: block; width: 100%; height: auto; }
+.postCardImage { position: relative; display: block; margin: -26px -26px 6px; aspect-ratio: 3 / 2; overflow: hidden; border-radius: 14px 14px 0 0; background: var(--chip); }
+.postCardImage img { object-fit: cover; transition: transform 0.4s ease; }
+.postCard:hover .postCardImage img { transform: scale(1.03); }
+.postCardFeatured .postCardImage { margin: -36px -36px 8px; }
+@media (max-width: 600px) { .postCover { border-radius: 12px; margin-top: 20px; } .postCardFeatured .postCardImage { margin: -26px -26px 6px; } }

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { POSTS, formatDate, readingMinutes, type Post } from "@/lib/blog";
 
@@ -11,7 +12,16 @@ export const metadata: Metadata = {
 
 function PostCard({ post, featured = false }: { post: Post; featured?: boolean }) {
   return (
-    <Link href={`/blog/${post.slug}`} className={featured ? "postCard postCardFeatured" : "postCard"} lang={post.lang}>
+    <Link
+      href={`/blog/${post.slug}`}
+      className={`postCard${featured ? " postCardFeatured" : ""}${post.image ? " postCardHasImage" : ""}`}
+      lang={post.lang}
+    >
+      {post.image && (
+        <span className="postCardImage">
+          <Image src={post.image.src} alt="" fill sizes="(max-width: 700px) 100vw, 420px" />
+        </span>
+      )}
       <div className="postCardMeta">
         <span className="postCategory">{post.category}</span>
         <span>{readingMinutes(post)} min</span>

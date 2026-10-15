@@ -8,6 +8,12 @@ const post: Post = {
   excerpt:
     "Tunaweka akiba kwa ajili ya karo, mashamba na nyumba — lakini mara nyingi tunasahau mtaji unaolinda yote hayo. Kwa nini kuwekeza katika afya ni uamuzi wa busara zaidi kwa familia.",
   date: "2026-10-15",
+  image: {
+    src: "/blog/afya-ni-mtaji.jpg",
+    alt: "Afya ni Mtaji: familia ikitembea pamoja kwa mazoezi asubuhi, pamoja na picha za stethoskopu, mboga na matunda, viatu vya kutembea na mikono inayolinda familia",
+    width: 1200,
+    height: 800,
+  },
   body: `Tunatumia sehemu kubwa ya maisha yetu kupanga mipango ya baadaye. Tunaweka akiba kwa ajili ya karo za watoto, tunanunua mashamba, tunafuga mifugo, tunajenga nyumba, na tunachangia katika chama zetu kwa uaminifu. Haya yote ni maamuzi ya busara yanayoonyesha upendo wetu kwa familia na jamii. Lakini kuna uwekezaji mmoja unaobeba yote hayo, na mara nyingi ndio tunaousahau zaidi: afya zetu.
 
 ## Mtaji unaobeba mitaji mingine yote
