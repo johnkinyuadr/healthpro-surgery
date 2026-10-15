@@ -831,3 +831,15 @@ select.input { appearance: none; background-image: linear-gradient(45deg, transp
 .profileLinks { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px; font-size: 14px; color: var(--subtle); }
 .profileLinks span { font-weight: 600; }
 .profileLinks a { color: var(--teal); font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
+
+/* ---------- Google review prompt ---------- */
+.reviewPrompt {
+  margin-top: 32px; display: flex; flex-wrap: wrap; align-items: center; gap: 18px 24px;
+  background: linear-gradient(135deg, #fbf1df 0%, #ffffff 70%); border: 1px solid #ecd9b4;
+  border-radius: 16px; padding: 24px 26px;
+}
+.reviewStars { font-size: 26px; letter-spacing: 3px; color: #c8912a; line-height: 1; }
+.reviewText { flex: 1 1 320px; min-width: 0; }
+.reviewText h2 { margin: 0 0 4px; font-size: 21px; color: var(--navy); }
+.reviewText p { margin: 0; color: var(--muted); }
+.reviewText span { font-style: italic; color: #8a6418; }

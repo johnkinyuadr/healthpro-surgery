@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import FAQSection from "@/app/components/FAQSection";
 import KiswahiliSummary from "@/components/KiswahiliSummary";
+import ReviewPrompt from "@/components/ReviewPrompt";
 import {
   CLINIC_HOURS,
   INTERNATIONAL_INSURERS,
@@ -251,6 +252,8 @@ export default function YourVisitPage() {
           </li>
         ))}
       </ol>
+
+      <ReviewPrompt />
 
       <FAQSection title="Frequently asked questions" faqs={faqs} />
 

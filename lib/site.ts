@@ -72,3 +72,7 @@ export const PROFILES = [
   { label: "Google Scholar", href: "https://scholar.google.com/citations?user=f6vrkE0AAAAJ" },
 ];
 export const PROFILE_URLS = PROFILES.map((p) => p.href);
+
+// Google review link (from the Google Business Profile). /review on the site redirects here.
+export const GOOGLE_REVIEW_LINK = "https://g.page/r/CSSEc0Zle1CJEBM/review";
+export const REVIEW_SHORT_LINK = `${SITE_URL}/review`;
