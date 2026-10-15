@@ -8,6 +8,12 @@ const post: Post = {
   excerpt:
     "You do not need dramatic changes to protect your health. Simple, consistent habits — walking, knowing your numbers, caring for your feet and keeping appointments — make a lasting difference.",
   date: "2026-10-15",
+  image: {
+    src: "/blog/small-steps-strong-life.jpg",
+    alt: "Small steps, strong life: a couple walking on the Mombasa seafront, healthy food, home blood pressure monitoring, a foot check, a clinic visit, stretching and drinking water",
+    width: 1200,
+    height: 800,
+  },
   body: `Many of the conditions I treat as a surgeon — blocked arteries in the legs, diabetic foot wounds, strokes caused by narrowing of the neck arteries, kidney failure needing dialysis — share something in common. They develop slowly, over many years, and they are strongly influenced by the way we live.
 
 That is sobering, but it is also deeply hopeful. If the way we live can contribute to illness, then the way we live can also protect us. And the habits that make the greatest difference are not dramatic or expensive. They are small, ordinary steps, repeated every day.

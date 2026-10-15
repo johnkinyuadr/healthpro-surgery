@@ -8,6 +8,12 @@ const post: Post = {
   excerpt:
     "Medicine is a science practised as an art. Reflections on the enduring principles that guide good doctors — doing no harm, listening, honesty, humility and care for the whole person.",
   date: "2026-10-15",
+  image: {
+    src: "/blog/art-and-science-of-healing.jpg",
+    alt: "The art and science of healing: a surgeon in conversation with a patient, a surgical team in theatre, a reassuring hand, and a quiet moment by the Mombasa seafront",
+    width: 1200,
+    height: 800,
+  },
   body: `Every surgeon remembers the first time they held a scalpel on a living patient. It is a moment of extraordinary trust. A person you may have met only days before has allowed you to open their body, in the belief that you will do them good. Over the years, that trust has shaped how I think about what medicine is, and what it asks of those who practise it.
 
 Medicine is often described as a science. It is that, and its scientific foundations have transformed human life. But medicine is also an art — the art of applying knowledge to one particular person, with their own body, history, fears and hopes. Good doctors must be both scientists and artists, and the tension between the two lies at the heart of the profession.

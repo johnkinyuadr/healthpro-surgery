@@ -8,6 +8,12 @@ const post: Post = {
   excerpt:
     "In medicine, time is rarely neutral. A surgeon reflects on why we delay seeking care — and why the decision not to wait is so often the one that saves a life or a limb.",
   date: "2026-10-15",
+  image: {
+    src: "/blog/the-cost-of-waiting.jpg",
+    alt: "The cost of waiting: a surgeon explaining a scan to a patient, an hourglass, surgery in theatre, wound care, and a recovered patient walking with his wife",
+    width: 1200,
+    height: 800,
+  },
   body: `In my years as a surgeon — in Mombasa, in Somalia, and in the operating theatres where I trained — I have learned that some of the hardest conversations I have with patients are not about what we can do. They are about what we could have done, had we met sooner.
 
 A man arrives with a foot that has turned black. The wound began as a small blister three months earlier. A woman comes with a breast lump she first noticed a year ago and hoped would disappear. A teenager is brought in with severe pain in the scrotum that started the previous evening; the family waited for morning, then waited for transport, then tried a remedy at home. By the time he reaches theatre, the testis cannot be saved.
