@@ -826,3 +826,8 @@ select.input { appearance: none; background-image: linear-gradient(45deg, transp
   background: var(--teal-soft); color: var(--teal); font-weight: 600; font-size: 14px; border: 1px solid #c6e3e5;
 }
 .downloadLink:hover { background: var(--teal); color: #fff; }
+
+/* ---------- Professional profile links ---------- */
+.profileLinks { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px; font-size: 14px; color: var(--subtle); }
+.profileLinks span { font-weight: 600; }
+.profileLinks a { color: var(--teal); font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }

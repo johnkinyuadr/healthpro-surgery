@@ -4,7 +4,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import PostBody from "@/components/PostBody";
 import { POSTS, formatDate, getPost, readingMinutes } from "@/lib/blog";
-import { SITE_URL, waLink } from "@/lib/site";
+import { PROFILE_URLS, SITE_URL, waLink } from "@/lib/site";
 
 type Params = { params: Promise<{ slug: string }> };
 
@@ -71,6 +71,8 @@ export default async function BlogPostPage({ params }: Params) {
       "@type": "Physician",
       name: "Dr John Kinyua Murithi",
       honorificSuffix: "MBChB, FCS(ECSA), FACS",
+      url: `${SITE_URL}/about`,
+      sameAs: PROFILE_URLS,
     },
     publisher: { "@type": "MedicalBusiness", name: "HealthPro Surgery", url: SITE_URL },
     mainEntityOfPage: `${SITE_URL}/blog/${post.slug}`,
