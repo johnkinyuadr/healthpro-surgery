@@ -150,10 +150,18 @@ export default function ServicesPage() {
         </div>
 
         <div className="card">
+          <img
+            src="/images/services/second-opinion.jpg"
+            alt="Surgeons discussing a case together outside the operating theatre"
+            style={imgStyle}
+          />
           <h3>Consultation &amp; Second Opinion</h3>
           <p>
             Clear assessment, explanation of findings,
             and shared decision-making.
+          </p>
+          <p style={{ marginTop: 10 }}>
+            <Link className="textLink" href="/second-opinion">Online second opinion →</Link>
           </p>
         </div>
 
