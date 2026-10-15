@@ -131,8 +131,8 @@ export default function HomePage() {
           <div className="homeHeroMedia">
             <div className="portrait">
               <Image
-                src="/images/dr-kinyua.jpg"
-                alt="Dr John Kinyua Murithi in surgical scrubs"
+                src="/images/dr-kinyua-theatre.jpg"
+                alt="Dr John Kinyua Murithi, Consultant Vascular and General Surgeon, in the operating theatre"
                 fill
                 priority
                 sizes="(max-width: 900px) 90vw, 460px"
