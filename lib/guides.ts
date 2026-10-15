@@ -24,6 +24,16 @@ export const PATIENT_GUIDES: Guide[] = [
     href: "/services/endoscopy-preparation",
   },
   {
+    title: "Maandalizi ya colonoscopy (Kiswahili)",
+    text: "Muda wa kunywa ColoPrep na Dulcolax, chakula, dawa na siku ya kipimo.",
+    href: "/services/endoscopy-preparation/kiswahili",
+  },
+  {
+    title: "Planning your visit",
+    text: "How to book, what to bring, insurance pre-authorisation and directions.",
+    href: "/your-visit",
+  },
+  {
     title: "Varicose veins",
     text: "Symptoms, when treatment is needed, and what EVLA involves.",
     href: "/services/varicose-veins",

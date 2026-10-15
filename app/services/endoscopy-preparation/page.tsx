@@ -18,7 +18,13 @@ export const metadata: Metadata = {
       "Diet, bowel preparation timing, medicines, fasting and what to expect on the day of your endoscopy or colonoscopy.",
     images: [{ url: `https://www.healthprosurgery.com${IMAGE}`, width: 1200, height: 800 }],
   },
-  alternates: { canonical: "/services/endoscopy-preparation" },
+  alternates: {
+    canonical: "/services/endoscopy-preparation",
+    languages: {
+      en: "/services/endoscopy-preparation",
+      sw: "/services/endoscopy-preparation/kiswahili",
+    },
+  },
 };
 
 const COLONOSCOPY_TIMELINE = [
@@ -145,6 +151,12 @@ export default function EndoscopyPreparationPage() {
           <a className="btn" href="#ogd">
             Upper GI endoscopy (OGD)
           </a>
+        </div>
+        <div className="langSwitch">
+          <span lang="sw">Kwa Kiswahili:</span>
+          <Link href="/services/endoscopy-preparation/kiswahili" lang="sw">
+            Maandalizi ya endoscopy na colonoscopy
+          </Link>
         </div>
       </section>
 

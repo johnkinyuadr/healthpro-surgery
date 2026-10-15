@@ -63,6 +63,55 @@ const SERVICES = [
 
 const GUIDES = PATIENT_GUIDES;
 
+// "What brings you here?" quick-finder: plain-language concerns mapped to the right page.
+const FINDER = [
+  {
+    title: "Swollen, aching or bulging leg veins",
+    sw: "Mishipa ya miguu iliyovimba au kuuma",
+    href: "/services/varicose-veins",
+  },
+  {
+    title: "Leg pain on walking, or a cold or discoloured foot",
+    sw: "Maumivu ya mguu unapotembea, au mguu baridi",
+    href: "/services/vascular-surgery",
+  },
+  {
+    title: "A wound or ulcer on the foot with diabetes",
+    sw: "Kidonda cha mguu kwa mgonjwa wa kisukari",
+    href: "/patient-guides/diabetic-foot",
+  },
+  {
+    title: "Kidney failure and needing dialysis access",
+    sw: "Figo kushindwa kufanya kazi na kuhitaji dialysis",
+    href: "/services/dialysis-access",
+  },
+  {
+    title: "A lump in the groin, at the navel or near a scar",
+    sw: "Uvimbe kwenye kinena, kitovu au kovu",
+    href: "/services/hernia-surgery",
+  },
+  {
+    title: "Upper abdominal pain after meals, or gallstones",
+    sw: "Maumivu ya tumbo baada ya kula, au mawe ya nyongo",
+    href: "/services/gallbladder-surgery",
+  },
+  {
+    title: "Heartburn, swallowing difficulty, bleeding or a change in bowel habit",
+    sw: "Kiungulia, shida ya kumeza, damu au mabadiliko ya choo",
+    href: "/services/gi-endoscopy",
+  },
+  {
+    title: "A mini-stroke, or narrowing of the neck arteries",
+    sw: "Kiharusi kidogo au mishipa ya shingo iliyobana",
+    href: "/services/carotid-disease",
+  },
+  {
+    title: "Already have a diagnosis and want a specialist view",
+    sw: "Una utambuzi tayari na unataka maoni ya pili",
+    href: "/second-opinion",
+  },
+];
+
 function Icon({ d }: { d: string }) {
   return (
     <svg
@@ -146,6 +195,42 @@ export default function HomePage() {
               <span>Aga Khan Hospital Mombasa · Doctors&apos; Plaza</span>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* SYMPTOM FINDER */}
+      <section className="bleed finderBand" aria-labelledby="finder-title">
+        <div className="wrap">
+          <div className="finderHead">
+            <div className="eyebrow">Start here</div>
+            <h2 id="finder-title" className="h2">
+              What brings you here?
+            </h2>
+            <p className="lead">
+              Choose the concern closest to yours. <span lang="sw">Chagua tatizo linalokuhusu.</span>
+            </p>
+          </div>
+          <div className="finderGrid">
+            {FINDER.map((f) => (
+              <Link key={f.href + f.title} className="finderCard" href={f.href}>
+                <span className="finderTitle">{f.title}</span>
+                <span className="finderSw" lang="sw">
+                  {f.sw}
+                </span>
+                <span className="finderArrow" aria-hidden="true">
+                  →
+                </span>
+              </Link>
+            ))}
+          </div>
+          <p className="finderFoot">
+            Not sure, or concerned about something else?{" "}
+            <a href={waBookLink} target="_blank" rel="noreferrer">
+              Message us on WhatsApp
+            </a>{" "}
+            or call the office on <a href={`tel:+${OFFICE_PHONE}`}>{OFFICE_PHONE_DISPLAY}</a>.{" "}
+            <Link href="/your-visit">Planning your visit? →</Link>
+          </p>
         </div>
       </section>
 
@@ -354,6 +439,9 @@ export default function HomePage() {
                 <a className="btn" href={`tel:+${OFFICE_PHONE}`}>
                   Call the clinic
                 </a>
+                <Link className="btn" href="/your-visit">
+                  Plan your visit
+                </Link>
               </div>
             </div>
             <div className="visitMap">
