@@ -5,7 +5,7 @@ import { useEffect } from "react";
 type Gtag = (command: "event", name: string, params?: Record<string, unknown>) => void;
 
 // Sends Google Analytics events when a visitor starts an enquiry:
-// WhatsApp clicks, phone clicks, email clicks and form submissions.
+// WhatsApp clicks, phone clicks, email clicks, Google review clicks and form submissions.
 export default function EnquiryTracking() {
   useEffect(() => {
     const send = (name: string, params: Record<string, unknown>) => {
@@ -23,6 +23,7 @@ export default function EnquiryTracking() {
       if (href.startsWith("https://wa.me/")) send("whatsapp_click", { link_text: label });
       else if (href.startsWith("tel:")) send("phone_click", { link_text: label });
       else if (href.startsWith("mailto:")) send("email_click", { link_text: label });
+      else if (href.includes("g.page/r/")) send("review_click", { link_text: label });
     };
 
     const onSubmit = (e: SubmitEvent) => {

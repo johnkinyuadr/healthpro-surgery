@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import ReviewPrompt from "@/components/ReviewPrompt";
 import {
   CLINIC_HOURS,
   EMAIL,
@@ -98,6 +99,8 @@ export default function ContactPage() {
           </p>
         </div>
       </section>
+
+      <ReviewPrompt />
 
       <div className="card" style={{ marginTop: 18, padding: 0, overflow: "hidden" }}>
         <iframe

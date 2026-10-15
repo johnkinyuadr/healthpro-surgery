@@ -485,7 +485,123 @@ AVF_EN = {
 
 SHEETS = [COLONOSCOPY_EN, COLONOSCOPY_SW, OGD_EN, HERNIA_EN, AVF_EN]
 
+# ---------------------------------------------------------------------------
+# Google review card: page 1 an A4 desk poster, page 2 four A6 hand-out cards.
+# The QR code points to /review on the site, which redirects to the Google review form.
+# ---------------------------------------------------------------------------
+
+GOLD = colors.HexColor("#c8912a")
+REVIEW_URL = SITE + "/review"
+
+
+def draw_qr(c, url, x, y, size, color=NAVY):
+    qr = QrCodeWidget(url)
+    qr.barLevel = "M"
+    qr.barFillColor = color
+    b = qr.getBounds()
+    d = Drawing(size, size, transform=[size / (b[2] - b[0]), 0, 0, size / (b[3] - b[1]), 0, 0])
+    d.add(qr)
+    renderPDF.draw(d, c, x, y)
+
+
+def draw_stars(c, cx, y, size, n=5, gap=None):
+    import math
+    gap = gap or size * 0.35
+    total = n * size + (n - 1) * gap
+    x0 = cx - total / 2 + size / 2
+    c.setFillColor(GOLD)
+    for i in range(n):
+        x = x0 + i * (size + gap)
+        p = c.beginPath()
+        for k in range(10):
+            r = size / 2 if k % 2 == 0 else size / 5
+            a = math.pi / 2 + k * math.pi / 5
+            px, py = x + r * math.cos(a), y + r * math.sin(a)
+            p.moveTo(px, py) if k == 0 else p.lineTo(px, py)
+        p.close()
+        c.drawPath(p, stroke=0, fill=1)
+
+
+def review_panel(c, x, y, w, h, scale):
+    """One review panel (poster or card) inside the box x, y, w, h."""
+    k = scale
+    cx = x + w / 2
+    # header band
+    hb = 26 * mm * k
+    c.setFillColor(NAVY)
+    c.rect(x, y + h - hb, w, hb, stroke=0, fill=1)
+    c.setFillColor(TEAL_LIGHT)
+    c.rect(x, y + h - hb - 1.2 * mm * k, w, 1.2 * mm * k, stroke=0, fill=1)
+    logo = 15 * mm * k
+    c.setFont("Serif-Bold", 17 * k)
+    title_w = c.stringWidth("HealthPro Surgery", "Serif-Bold", 17 * k)
+    start = cx - (logo + 5 * mm * k + title_w) / 2
+    draw_logo(c, start, y + h - hb + (hb - logo) / 2, logo)
+    c.setFillColor(colors.white)
+    c.drawString(start + logo + 5 * mm * k, y + h - hb / 2 - 6 * k, "HealthPro Surgery")
+
+    top = y + h - hb - 16 * mm * k
+    c.setFillColor(NAVY)
+    c.setFont("Serif-Bold", 24 * k)
+    c.drawCentredString(cx, top, "How was your visit?")
+    c.setFont("Sans", 12.5 * k)
+    c.setFillColor(MUTED)
+    c.drawCentredString(cx, top - 9 * mm * k, "Please share your experience on Google.")
+    c.setFont("Sans-Italic", 12 * k)
+    c.setFillColor(colors.HexColor("#8a6418"))
+    c.drawCentredString(cx, top - 15 * mm * k, "Tafadhali tuachie maoni yako kwenye Google.")
+    draw_stars(c, cx, top - 26 * mm * k, 9 * mm * k)
+
+    q = 78 * mm * k
+    qy = top - 43 * mm * k - q
+    c.setStrokeColor(BORDER)
+    c.setLineWidth(1)
+    c.roundRect(cx - q / 2 - 5 * mm * k, qy - 5 * mm * k, q + 10 * mm * k, q + 10 * mm * k, 6 * mm * k, stroke=1, fill=0)
+    draw_qr(c, REVIEW_URL, cx - q / 2, qy, q)
+
+    c.setFillColor(NAVY)
+    c.setFont("Sans-Bold", 11 * k)
+    c.drawCentredString(cx, qy - 13 * mm * k, "Open your phone camera  \u2192  point at the code  \u2192  tap the stars")
+    c.setFont("Sans-Italic", 10 * k)
+    c.setFillColor(MUTED)
+    c.drawCentredString(cx, qy - 19 * mm * k, "Fungua kamera ya simu  \u2192  elekeza kwenye msimbo  \u2192  bonyeza nyota")
+    c.setFont("Sans", 10 * k)
+    c.setFillColor(TEAL)
+    c.drawCentredString(cx, qy - 26 * mm * k, "or visit  www.healthprosurgery.com/review")
+
+    c.setFont("Sans", 8.5 * k)
+    c.setFillColor(MUTED)
+    c.drawCentredString(cx, y + 12 * mm * k, "Thank you for choosing HealthPro Surgery  \u00b7  Asante kwa kutuchagua")
+    c.drawCentredString(cx, y + 7 * mm * k,
+                        "Aga Khan Hospital Mombasa, Doctors' Plaza  \u00b7  Office 0798 595 946  \u00b7  WhatsApp 0721 446 206")
+
+
+def make_review_card():
+    from reportlab.pdfgen import canvas as rl_canvas
+    out = OUT / "google-review-card.pdf"
+    c = rl_canvas.Canvas(str(out), pagesize=A4)
+    c.setTitle("HealthPro Surgery — Google review card")
+    c.setAuthor("HealthPro Surgery")
+    # Page 1: A4 desk poster
+    review_panel(c, 0, 0, PAGE_W, PAGE_H, 1.25)
+    c.showPage()
+    # Page 2: four A6 cards with cut marks
+    w, h = PAGE_W / 2, PAGE_H / 2
+    for i in range(2):
+        for j in range(2):
+            review_panel(c, i * w, j * h, w, h, 0.62)
+    c.setStrokeColor(colors.HexColor("#9aa5b1"))
+    c.setDash(3, 3)
+    c.setLineWidth(0.5)
+    c.line(w, 0, w, PAGE_H)
+    c.line(0, h, PAGE_W, h)
+    c.showPage()
+    c.save()
+    return out
+
+
 if __name__ == "__main__":
     OUT.mkdir(parents=True, exist_ok=True)
     for sheet in SHEETS:
         print(make_page(sheet))
+    print(make_review_card())

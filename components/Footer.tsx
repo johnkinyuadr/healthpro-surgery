@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { CLINIC_HOURS, OFFICE_PHONE, OFFICE_PHONE_DISPLAY, WHATSAPP_DISPLAY, WHATSAPP_NUMBER } from "@/lib/site";
+import { GOOGLE_REVIEW_LINK, CLINIC_HOURS, OFFICE_PHONE, OFFICE_PHONE_DISPLAY, WHATSAPP_DISPLAY, WHATSAPP_NUMBER } from "@/lib/site";
 
 export default function Footer() {
   const year = new Date().getFullYear();
@@ -53,6 +53,9 @@ export default function Footer() {
                 WhatsApp: {WHATSAPP_DISPLAY}
               </a>
               <a href="mailto:johnkinyua@gmail.com">johnkinyua@gmail.com</a>
+              <a href={GOOGLE_REVIEW_LINK} target="_blank" rel="noreferrer">
+                ★ Review us on Google
+              </a>
               <Link href="/privacy-policy">Privacy policy</Link>
             </div>
           </div>
