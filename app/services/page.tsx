@@ -176,7 +176,7 @@ export default function ServicesPage() {
         <div className="card">
           <img
             src="/images/services/minor-surgery.jpg"
-            alt="Operating theatre prepared for minor and day-case surgery"
+            alt="Surgical team performing a minor procedure under ultrasound guidance"
             style={imgStyle}
           />
           <h3>Minor &amp; Day-Case Surgery</h3>
