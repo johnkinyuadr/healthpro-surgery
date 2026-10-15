@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { PATIENT_GUIDES } from "@/lib/guides";
+import { PRINTABLES } from "@/lib/printables";
 
 export const metadata: Metadata = {
   title: "Patient Guides",
@@ -32,6 +33,21 @@ export default function PatientGuidesPage() {
             <span className="more">Read guide →</span>
           </Link>
         ))}
+      </section>
+
+      <section className="card" style={{ marginTop: 32 }}>
+        <h2 style={{ fontSize: 22, margin: "0 0 6px" }}>Printable sheets</h2>
+        <p style={{ marginBottom: 12 }}>
+          One-page A4 sheets to print or share on WhatsApp. Each has a QR code linking back to the
+          full guide.
+        </p>
+        <div className="downloadRow" style={{ marginTop: 0 }}>
+          {PRINTABLES.map((p) => (
+            <a key={p.key} className="downloadLink" href={p.href} target="_blank" rel="noreferrer" lang={p.lang}>
+              {p.title} (PDF)
+            </a>
+          ))}
+        </div>
       </section>
 
       <p className="small" style={{ marginTop: 24 }}>

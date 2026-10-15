@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import DownloadLinks from "@/components/DownloadLinks";
 import FAQSection from "@/app/components/FAQSection";
 import ServiceCover from "@/components/ServiceCover";
 import { OFFICE_PHONE, OFFICE_PHONE_DISPLAY, waLink } from "@/lib/site";
@@ -158,6 +159,7 @@ export default function EndoscopyPreparationPage() {
             Maandalizi ya endoscopy na colonoscopy
           </Link>
         </div>
+        <DownloadLinks keys={["colonoscopy", "ogd", "colonoscopy-sw"]} />
       </section>
 
       <ServiceCover images={[{ src: IMAGE, alt: "Doctor and nurse explaining bowel preparation for colonoscopy to a patient" }]} />

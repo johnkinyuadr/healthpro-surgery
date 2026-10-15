@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import DownloadLinks from "@/components/DownloadLinks";
 import ServiceCover from "@/components/ServiceCover";
 import FAQSection from "@/app/components/FAQSection";
 import KiswahiliSummary from "@/components/KiswahiliSummary";
@@ -119,6 +120,7 @@ export default function HerniaRecoveryPage() {
             Warning signs
           </a>
         </div>
+        <DownloadLinks keys={["hernia"]} />
       </section>
 
       <ServiceCover images={[{ src: "/images/services/hernia-surgery.jpg", alt: "Recovery after laparoscopic hernia repair" }]} />
