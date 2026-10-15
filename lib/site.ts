@@ -64,3 +64,11 @@ export const INSURANCE = {
 export function waLink(message: string) {
   return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
 }
+
+// Dr Kinyua's professional profiles (shown on About/Publications and used as schema.org sameAs).
+export const PROFILES = [
+  { label: "LinkedIn", href: "https://www.linkedin.com/in/kinyua-murithi-27ab1818" },
+  { label: "ORCID", href: "https://orcid.org/0000-0002-9631-1414" },
+  { label: "Google Scholar", href: "https://scholar.google.com/citations?user=f6vrkE0AAAAJ" },
+];
+export const PROFILE_URLS = PROFILES.map((p) => p.href);

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import ProfileLinks from "@/components/ProfileLinks";
 import { PUBLICATIONS, SCHOLAR_PROFILE, type Publication } from "@/lib/publications";
 
 export const metadata: Metadata = {
@@ -103,6 +104,9 @@ export default function PublicationsPage() {
             About Dr Kinyua
           </Link>
         </div>
+        <div style={{ marginTop: 14 }}>
+          <ProfileLinks />
+        </div>
       </section>
 
       <section className="pubStats">
@@ -137,6 +141,10 @@ export default function PublicationsPage() {
           For the complete and up-to-date list of publications and citations, see Dr Kinyua&apos;s{" "}
           <a href={SCHOLAR_PROFILE} target="_blank" rel="noreferrer" style={{ color: "var(--teal)", fontWeight: 600 }}>
             Google Scholar profile
+          </a>{" "}
+          and{" "}
+          <a href="https://orcid.org/0000-0002-9631-1414" target="_blank" rel="noreferrer" style={{ color: "var(--teal)", fontWeight: 600 }}>
+            ORCID record
           </a>
           . For research collaboration, contact{" "}
           <a href="mailto:johnkinyua@gmail.com" style={{ color: "var(--navy)", fontWeight: 600 }}>

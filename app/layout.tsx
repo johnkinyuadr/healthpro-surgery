@@ -6,6 +6,7 @@ import Footer from "@/components/Footer";
 import EnquiryTracking from "@/components/EnquiryTracking";
 import MobileActionBar from "@/components/MobileActionBar";
 import ScrollReveal from "@/components/ScrollReveal";
+import { PROFILE_URLS } from "@/lib/site";
 
 const siteUrl = "https://www.healthprosurgery.com";
 
@@ -132,6 +133,9 @@ export default function RootLayout({
                 jobTitle: "Consultant General, Vascular and Laparoscopic Surgeon",
                 medicalSpecialty: ["VascularSurgery", "GeneralSurgery"],
                 image: `${siteUrl}/images/dr-kinyua.jpg`,
+                url: `${siteUrl}/about`,
+                identifier: { "@type": "PropertyValue", propertyID: "ORCID", value: "0000-0002-9631-1414" },
+                sameAs: PROFILE_URLS,
               },
             }),
           }}
