@@ -18,7 +18,13 @@ export const metadata: Metadata = {
       "Diet, bowel preparation timing, medicines, fasting and what to expect on the day of your endoscopy or colonoscopy.",
     images: [{ url: `https://www.healthprosurgery.com${IMAGE}`, width: 1200, height: 800 }],
   },
-  alternates: { canonical: "/services/endoscopy-preparation" },
+  alternates: {
+    canonical: "/services/endoscopy-preparation",
+    languages: {
+      en: "/services/endoscopy-preparation",
+      sw: "/services/endoscopy-preparation/kiswahili",
+    },
+  },
 };
 
 const COLONOSCOPY_TIMELINE = [
@@ -35,7 +41,7 @@ const COLONOSCOPY_TIMELINE = [
     when: "3 days before",
     title: "Start a low-fibre diet",
     items: [
-      "Eat: white rice, white bread, ugali made from sifted maize flour, potatoes without skin, eggs, chicken, fish, clear soups.",
+      "Eat: white rice, white bread, ugali, potatoes without skin, eggs, chicken, fish, clear soups.",
       "Avoid: fruit and vegetables with skins or seeds, beans, peas, lentils, nuts, whole grains, githeri and brown bread.",
     ],
   },
@@ -145,6 +151,12 @@ export default function EndoscopyPreparationPage() {
           <a className="btn" href="#ogd">
             Upper GI endoscopy (OGD)
           </a>
+        </div>
+        <div className="langSwitch">
+          <span lang="sw">Kwa Kiswahili:</span>
+          <Link href="/services/endoscopy-preparation/kiswahili" lang="sw">
+            Maandalizi ya endoscopy na colonoscopy
+          </Link>
         </div>
       </section>
 

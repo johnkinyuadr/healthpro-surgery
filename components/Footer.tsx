@@ -26,6 +26,7 @@ export default function Footer() {
               <Link href="/publications">Publications</Link>
               <Link href="/blog">Blog</Link>
               <Link href="/patient-guides">Patient guides</Link>
+              <Link href="/your-visit">Your visit</Link>
               <Link href="/contact">Contact</Link>
             </nav>
             <div className="footerCol">

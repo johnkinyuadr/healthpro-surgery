@@ -13,6 +13,8 @@ const PATHS = [
   "/services/gallbladder-surgery",
   "/services/gi-endoscopy",
   "/services/endoscopy-preparation",
+  "/services/endoscopy-preparation/kiswahili",
+  "/your-visit",
   "/consulting-hospitals",
   "/second-opinion",
   "/patient-guides",
