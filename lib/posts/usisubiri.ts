@@ -6,9 +6,9 @@ const post: Post = {
   title: "Usisubiri: Umuhimu wa Kutafuta Matibabu Mapema",
   category: "Kutafuta matibabu",
   excerpt:
-    "Usipoziba ufa, utajenga ukuta. Daktari mpasuaji anaeleza kwa nini tunachelewa kutafuta matibabu, dalili zisizopaswa kupuuzwa, na kwa nini uamuzi wa kutosubiri mara nyingi huokoa maisha.",
+    "Usipoziba ufa, utajenga ukuta. Daktari wa upasuaji anaeleza kwa nini tunachelewa kutafuta matibabu, dalili zisizopaswa kupuuzwa, na kwa nini uamuzi wa kutosubiri mara nyingi huokoa maisha.",
   date: "2026-10-15",
-  body: `Katika miaka yangu ya kazi kama daktari mpasuaji hapa Mombasa, nimekutana na wagonjwa wengi waliofika hospitalini wakiwa wamechelewa. Mara nyingi, maneno yao ya kwanza huwa ni yale yale: "Daktari, nilidhani itapona yenyewe." Nimeandika makala hii kwa sababu nataka kila mmoja wetu aelewe kwamba kutafuta matibabu mapema si dalili ya woga wala udhaifu. Ni uamuzi wa busara unaoweza kuokoa maisha, kiungo, na hata mali ya familia nzima.
+  body: `Katika miaka yangu ya kazi kama daktari wa upasuaji hapa Mombasa, nimekutana na wagonjwa wengi waliofika hospitalini wakiwa wamechelewa. Mara nyingi, maneno yao ya kwanza huwa ni yale yale: "Daktari, nilidhani itapona yenyewe." Nimeandika makala hii kwa sababu nataka kila mmoja wetu aelewe kwamba kutafuta matibabu mapema si dalili ya woga wala udhaifu. Ni uamuzi wa busara unaoweza kuokoa maisha, kiungo, na hata mali ya familia nzima.
 
 ## Usipoziba ufa, utajenga ukuta
 
