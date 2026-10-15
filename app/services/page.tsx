@@ -20,6 +20,8 @@ export default function ServicesPage() {
     borderRadius: "12px",
     marginBottom: "10px",
     border: "1px solid var(--border)",
+    aspectRatio: "3 / 2",
+    objectFit: "cover",
   };
 
   return (
@@ -50,7 +52,7 @@ export default function ServicesPage() {
       <section className="grid">
         <Link className="card" href="/services/varicose-veins">
           <img
-            src="/images/varicose.png"
+            src="/images/services/varicose-faq.jpg"
             alt="Varicose veins and venous disease FAQs"
             style={imgStyle}
           />
@@ -62,7 +64,7 @@ export default function ServicesPage() {
 
         <Link className="card" href="/services/dialysis-access">
           <img
-            src="/images/dialysis.jpg"
+            src="/images/services/dialysis-faq.jpg"
             alt="Dialysis and vascular access FAQs"
             style={imgStyle}
           />
@@ -74,7 +76,7 @@ export default function ServicesPage() {
 
         <Link className="card" href="/services/hernia-surgery">
           <img
-            src="/images/general-surgery.jpg"
+            src="/images/services/hernia-surgery.jpg"
             alt="Hernia surgery FAQs"
             style={imgStyle}
           />
@@ -89,7 +91,7 @@ export default function ServicesPage() {
       <section className="grid">
         <div className="card">
           <img
-            src="/images/vasccons.jpg"
+            src="/images/services/vascular-surgery.jpg"
             alt="Vascular surgery assessment"
             style={imgStyle}
           />
@@ -106,7 +108,7 @@ export default function ServicesPage() {
 
         <div className="card">
           <img
-            src="/images/varicose.png"
+            src="/images/services/varicose-veins.jpg"
             alt="Varicose veins and venous disease"
             style={imgStyle}
           />
@@ -119,7 +121,7 @@ export default function ServicesPage() {
 
         <div className="card">
           <img
-            src="/images/dialysis.jpg"
+            src="/images/services/dialysis-access.jpg"
             alt="Dialysis and vascular access care"
             style={imgStyle}
           />
@@ -132,7 +134,7 @@ export default function ServicesPage() {
 
         <div className="card">
           <img
-            src="/images/laparoscopic.jpg"
+            src="/images/services/laparoscopic-surgery.jpg"
             alt="Laparoscopic surgery"
             style={imgStyle}
           />
@@ -157,7 +159,7 @@ export default function ServicesPage() {
       <section className="grid">
         <div className="card">
           <img
-            src="/images/general-surgery.jpg"
+            src="/images/services/general-surgery.jpg"
             alt="General surgery procedures"
             style={imgStyle}
           />
@@ -172,6 +174,11 @@ export default function ServicesPage() {
         </div>
 
         <div className="card">
+          <img
+            src="/images/services/minor-surgery.jpg"
+            alt="Surgical team performing a minor procedure under ultrasound guidance"
+            style={imgStyle}
+          />
           <h3>Minor &amp; Day-Case Surgery</h3>
           <p>
             Lipoma excision, ganglion excision, wound care,
@@ -202,7 +209,7 @@ export default function ServicesPage() {
       <section className="grid">
         <div className="card">
           <img
-            src="/images/endoscopy-upper.jpg"
+            src="/images/services/endoscopy.jpg"
             alt="Upper GI endoscopy (OGD)"
             style={imgStyle}
           />
@@ -215,7 +222,7 @@ export default function ServicesPage() {
 
         <div className="card">
           <img
-            src="/images/endoscopy-colonoscopy.jpg"
+            src="/images/services/colonoscopy.jpg"
             alt="Lower GI endoscopy (colonoscopy)"
             style={imgStyle}
           />

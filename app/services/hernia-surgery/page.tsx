@@ -1,11 +1,19 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import ServiceCover from "@/components/ServiceCover";
 import FAQSection from "../../components/FAQSection";
 
 export const metadata: Metadata = {
   title: "Hernia Surgery in Mombasa | Laparoscopic Repair",
   description:
     "Inguinal, umbilical, incisional and epigastric hernia repair in Mombasa, including laparoscopic (keyhole) surgery.",
+  openGraph: {
+    type: "website",
+    siteName: "HealthPro Surgery",
+    title: "Hernia Surgery in Mombasa | Laparoscopic Repair | HealthPro Surgery",
+    description: "Inguinal, umbilical, incisional and epigastric hernia repair in Mombasa, including laparoscopic (keyhole) surgery.",
+    images: [{ url: "https://www.healthprosurgery.com/images/services/hernia-surgery.jpg", width: 1200, height: 800 }],
+  },
   alternates: { canonical: "/services/hernia-surgery" },
 };
 
@@ -67,6 +75,8 @@ export default function HerniaSurgeryPage() {
           </Link>
         </div>
       </section>
+
+      <ServiceCover images={[{ src: "/images/services/hernia-surgery.jpg", alt: "Laparoscopic hernia repair with mesh" }]} />
 
       <FAQSection title="Hernia Surgery – FAQs" faqs={faqs} />
     </>

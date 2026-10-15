@@ -1,11 +1,19 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import ServiceCover from "@/components/ServiceCover";
 import FAQSection from "../../components/FAQSection";
 
 export const metadata: Metadata = {
   title: "Dialysis Access Surgery in Mombasa | AV Fistula & Graft",
   description:
     "AV fistula and AV graft creation, planning and complication management for haemodialysis patients in Mombasa, Kenya.",
+  openGraph: {
+    type: "website",
+    siteName: "HealthPro Surgery",
+    title: "Dialysis Access Surgery in Mombasa | AV Fistula & Graft | HealthPro Surgery",
+    description: "AV fistula and AV graft creation, planning and complication management for haemodialysis patients in Mombasa, Kenya.",
+    images: [{ url: "https://www.healthprosurgery.com/images/services/dialysis-faq.jpg", width: 1200, height: 800 }],
+  },
   alternates: { canonical: "/services/dialysis-access" },
 };
 
@@ -67,6 +75,8 @@ export default function DialysisAccessPage() {
           </Link>
         </div>
       </section>
+
+      <ServiceCover images={[{ src: "/images/services/dialysis-faq.jpg", alt: "Nurse caring for a patient during haemodialysis" }]} />
 
       <FAQSection title="Dialysis Access – FAQs" faqs={faqs} />
     </>

@@ -1,11 +1,19 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import ServiceCover from "@/components/ServiceCover";
 import FAQSection from "../../components/FAQSection";
 
 export const metadata: Metadata = {
   title: "Varicose Veins Treatment in Mombasa | EVLA",
   description:
     "Assessment and minimally invasive treatment of varicose veins in Mombasa, including endovenous laser ablation (EVLA), for leg pain, swelling, skin changes and ulcers.",
+  openGraph: {
+    type: "website",
+    siteName: "HealthPro Surgery",
+    title: "Varicose Veins Treatment in Mombasa | EVLA | HealthPro Surgery",
+    description: "Assessment and minimally invasive treatment of varicose veins in Mombasa, including endovenous laser ablation (EVLA), for leg pain, swelling, skin changes and ulcers.",
+    images: [{ url: "https://www.healthprosurgery.com/images/services/varicose-faq.jpg", width: 1200, height: 800 }],
+  },
   alternates: { canonical: "/services/varicose-veins" },
 };
 
@@ -65,6 +73,8 @@ export default function VaricoseVeinsPage() {
           </Link>
         </div>
       </section>
+
+      <ServiceCover images={[{ src: "/images/services/varicose-faq.jpg", alt: "Vascular surgeon reviewing a duplex ultrasound scan of the leg veins with a patient" }]} />
 
       <FAQSection title="Varicose Veins – FAQs" faqs={faqs} />
     </>

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import ServiceCover from "@/components/ServiceCover";
 import FAQSection from "@/app/components/FAQSection";
 import KiswahiliSummary from "@/components/KiswahiliSummary";
 import { waLink } from "@/lib/site";
@@ -8,6 +9,13 @@ export const metadata: Metadata = {
   title: "Caring for Your AV Fistula: A Patient Guide",
   description:
     "How to look after an arteriovenous (AV) fistula for haemodialysis: daily checks for the thrill, protecting the access arm, exercises after surgery, and warning signs that need urgent care.",
+  openGraph: {
+    type: "website",
+    siteName: "HealthPro Surgery",
+    title: "Caring for Your AV Fistula: A Patient Guide | HealthPro Surgery",
+    description: "How to look after an arteriovenous (AV) fistula for haemodialysis: daily checks for the thrill, protecting the access arm, exercises after surgery, and warning signs that need urgent care.",
+    images: [{ url: "https://www.healthprosurgery.com/images/services/dialysis-access.jpg", width: 1200, height: 800 }],
+  },
   alternates: { canonical: "/patient-guides/av-fistula-care" },
 };
 
@@ -121,6 +129,8 @@ export default function AvFistulaCarePage() {
           </a>
         </div>
       </section>
+
+      <ServiceCover images={[{ src: "/images/services/dialysis-access.jpg", alt: "Arteriovenous fistula in use during haemodialysis" }]} />
 
       <KiswahiliSummary>
         <p>

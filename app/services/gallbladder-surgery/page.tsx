@@ -5,12 +5,22 @@ export const metadata: Metadata = {
   title: "Gallbladder Surgery in Mombasa | Laparoscopic Cholecystectomy",
   description:
     "Laparoscopic (keyhole) gallbladder removal in Mombasa for gallstones and gallbladder disease. Consultant-led care at Aga Khan Hospital Mombasa.",
+  openGraph: {
+    type: "website",
+    siteName: "HealthPro Surgery",
+    title: "Gallbladder Surgery in Mombasa | Laparoscopic Cholecystectomy | HealthPro Surgery",
+    description: "Laparoscopic (keyhole) gallbladder removal in Mombasa for gallstones and gallbladder disease. Consultant-led care at Aga Khan Hospital Mombasa.",
+    images: [{ url: "https://www.healthprosurgery.com/images/services/laparoscopic-surgery.jpg", width: 1200, height: 800 }],
+  },
   alternates: { canonical: "/services/gallbladder-surgery" },
 };
 
 export default function GallbladderSurgeryPage() {
   return (
     <ServicePage
+      images={[
+        { src: "/images/services/laparoscopic-surgery.jpg", alt: "Surgical team performing laparoscopic (keyhole) surgery" },
+      ]}
       eyebrow="Laparoscopic surgery"
       title="Gallbladder Surgery"
       intro="Gallstones are common and often cause no trouble, but when they lead to pain or complications, removal of the gallbladder is the definitive treatment. Most operations are performed laparoscopically (keyhole), allowing a shorter hospital stay and quicker return to normal activity."

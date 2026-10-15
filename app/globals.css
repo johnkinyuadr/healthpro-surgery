@@ -709,3 +709,11 @@ select.input { appearance: none; background-image: linear-gradient(45deg, transp
 .postCardFeatured .postCardImage { margin: -36px -36px 8px; }
 @media (max-width: 600px) { .postCover { border-radius: 12px; margin-top: 20px; } .postCardFeatured .postCardImage { margin: -26px -26px 6px; } }
 .portrait img { object-position: center 12%; }
+
+/* ---------- Service cover photos ---------- */
+.serviceCover { margin-top: 28px; display: grid; gap: 16px; }
+.serviceCoverPair { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+.serviceCover figure { margin: 0; border-radius: 16px; overflow: hidden; box-shadow: var(--shadow); background: var(--chip); }
+.serviceCover img { display: block; width: 100%; height: auto; aspect-ratio: 3 / 2; object-fit: cover; }
+.serviceCover:not(.serviceCoverPair) img { max-height: 520px; }
+@media (max-width: 600px) { .serviceCover { margin-top: 20px; } .serviceCover figure { border-radius: 12px; } }

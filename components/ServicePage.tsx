@@ -1,6 +1,7 @@
 import Link from "next/link";
 import FAQSection from "@/app/components/FAQSection";
 import { waLink } from "@/lib/site";
+import ServiceCover, { type CoverImage } from "@/components/ServiceCover";
 
 type FAQ = { question: string; answer: string };
 
@@ -13,6 +14,7 @@ type Props = {
   approach: { heading: string; items: string[] };
   faqs: FAQ[];
   related?: { label: string; href: string }[];
+  images?: CoverImage[];
 };
 
 export default function ServicePage({
@@ -24,6 +26,7 @@ export default function ServicePage({
   approach,
   faqs,
   related = [],
+  images = [],
 }: Props) {
   return (
     <>
@@ -44,6 +47,8 @@ export default function ServicePage({
           </Link>
         </div>
       </section>
+
+      <ServiceCover images={images} />
 
       <section className="grid">
         <div className="card">
