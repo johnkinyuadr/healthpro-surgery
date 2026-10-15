@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import DownloadLinks from "@/components/DownloadLinks";
 import FAQSection from "@/app/components/FAQSection";
 import ServiceCover from "@/components/ServiceCover";
 import { OFFICE_PHONE, OFFICE_PHONE_DISPLAY, waLink } from "@/lib/site";
@@ -147,6 +148,7 @@ export default function EndoscopyPreparationSwahiliPage() {
           <span>English version:</span>
           <Link href="/services/endoscopy-preparation">Preparing for endoscopy &amp; colonoscopy</Link>
         </div>
+        <DownloadLinks keys={["colonoscopy-sw", "colonoscopy"]} label="Karatasi ya kuchapisha (PDF):" />
       </section>
 
       <div lang="sw">

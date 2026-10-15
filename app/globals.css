@@ -813,3 +813,16 @@ select.input { appearance: none; background-image: linear-gradient(45deg, transp
 .visitGrid .card li { margin-bottom: 5px; }
 .langSwitch { display: inline-flex; gap: 6px; align-items: center; font-size: 14px; font-weight: 600; margin-top: 4px; }
 .langSwitch a { color: var(--teal); text-decoration: underline; text-underline-offset: 3px; }
+
+/* ---------- Referral form ---------- */
+.formGroupTitle {
+  margin: 14px 0 0; padding-top: 14px; border-top: 1px solid var(--border);
+  font-size: 13px; font-weight: 600; letter-spacing: 1.2px; text-transform: uppercase; color: var(--teal);
+}
+.formGroupTitle:first-of-type { border-top: 0; padding-top: 0; margin-top: 4px; }
+.downloadRow { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin-top: 12px; }
+.downloadLink {
+  display: inline-flex; align-items: center; gap: 8px; padding: 8px 14px; border-radius: 999px;
+  background: var(--teal-soft); color: var(--teal); font-weight: 600; font-size: 14px; border: 1px solid #c6e3e5;
+}
+.downloadLink:hover { background: var(--teal); color: #fff; }

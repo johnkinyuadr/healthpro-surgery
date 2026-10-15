@@ -33,6 +33,7 @@ export default function Footer() {
               <h4>Second opinion</h4>
               <Link href="/second-opinion">How it works</Link>
               <Link href="/second-opinion#request">Submit a case</Link>
+              <Link href="/referring-doctors">Refer a patient</Link>
             </div>
             <div className="footerCol">
               <h4>Clinic hours</h4>

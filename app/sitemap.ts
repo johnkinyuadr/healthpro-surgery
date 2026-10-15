@@ -17,6 +17,7 @@ const PATHS = [
   "/your-visit",
   "/consulting-hospitals",
   "/second-opinion",
+  "/referring-doctors",
   "/patient-guides",
   "/patient-guides/diabetic-foot",
   "/patient-guides/av-fistula-care",

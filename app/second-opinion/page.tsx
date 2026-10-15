@@ -243,6 +243,10 @@ export default function SecondOpinionPage() {
             <a href="tel:+254721446206" style={{ color: "var(--navy)", fontWeight: 600 }}>
               0721 446 206
             </a>
+            . To refer a patient for consultation or surgery, use the{" "}
+            <Link href="/referring-doctors" style={{ color: "var(--teal)", fontWeight: 600 }}>
+              referral form for doctors
+            </Link>
             .
           </p>
         </div>

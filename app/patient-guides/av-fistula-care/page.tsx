@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import DownloadLinks from "@/components/DownloadLinks";
 import ServiceCover from "@/components/ServiceCover";
 import FAQSection from "@/app/components/FAQSection";
 import KiswahiliSummary from "@/components/KiswahiliSummary";
@@ -128,6 +129,7 @@ export default function AvFistulaCarePage() {
             Warning signs
           </a>
         </div>
+        <DownloadLinks keys={["avf"]} />
       </section>
 
       <ServiceCover images={[{ src: "/images/services/dialysis-access.jpg", alt: "Arteriovenous fistula in use during haemodialysis" }]} />
