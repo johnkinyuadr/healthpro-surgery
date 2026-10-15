@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { EMAIL, LOCATION_LINE, PHONE_DISPLAY } from "@/lib/site";
+import { EMAIL, LOCATION_LINE, OFFICE_PHONE_DISPLAY } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Privacy Policy",
@@ -96,7 +96,7 @@ const sections: { h: string; body: React.ReactNode }[] = [
     h: "Contact",
     body: (
       <p>
-        For any privacy question or request, contact us on {PHONE_DISPLAY} or at{" "}
+        For any privacy question or request, contact us on {OFFICE_PHONE_DISPLAY} or at{" "}
         <a href={`mailto:${EMAIL}`} style={{ color: "var(--teal)", fontWeight: 600 }}>
           {EMAIL}
         </a>

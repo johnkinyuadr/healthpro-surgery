@@ -6,7 +6,9 @@ import {
   INSURANCE,
   MAPS_DIRECTIONS,
   MAPS_EMBED,
-  PHONE_DISPLAY,
+  OFFICE_PHONE,
+  OFFICE_PHONE_DISPLAY,
+  WHATSAPP_DISPLAY,
   WHATSAPP_NUMBER,
   waLink,
 } from "@/lib/site";
@@ -36,8 +38,8 @@ export default function ContactPage() {
           >
             Book on WhatsApp
           </a>
-          <a className="btn" href={`tel:+${WHATSAPP_NUMBER}`}>
-            Call {PHONE_DISPLAY}
+          <a className="btn" href={`tel:+${OFFICE_PHONE}`}>
+            Call {OFFICE_PHONE_DISPLAY}
           </a>
         </div>
       </section>
@@ -53,7 +55,11 @@ export default function ContactPage() {
             Mombasa, Kenya
           </p>
           <p style={{ marginTop: 12 }}>
-            Phone / WhatsApp: <a href={`tel:+${WHATSAPP_NUMBER}`} style={{ color: "var(--navy)", fontWeight: 600 }}>{PHONE_DISPLAY}</a>
+            Office (calls &amp; appointments):{" "}
+            <a href={`tel:+${OFFICE_PHONE}`} style={{ color: "var(--navy)", fontWeight: 600 }}>{OFFICE_PHONE_DISPLAY}</a>
+            <br />
+            WhatsApp enquiries &amp; second opinions:{" "}
+            <a href={`https://wa.me/${WHATSAPP_NUMBER}`} target="_blank" rel="noreferrer" style={{ color: "var(--navy)", fontWeight: 600 }}>{WHATSAPP_DISPLAY}</a>
             <br />
             Email: <a href={`mailto:${EMAIL}`} style={{ color: "var(--navy)", fontWeight: 600 }}>{EMAIL}</a>
           </p>

@@ -82,9 +82,9 @@ export default function MediaPage() {
       <section className="card" style={{ marginTop: 28 }}>
         <h2 style={{ fontSize: 20 }}>Media enquiries</h2>
         <p>
-          For interviews, health talks or community outreach, contact HealthPro Surgery on{" "}
-          <a href="tel:+254721446206" style={{ color: "var(--navy)", fontWeight: 600 }}>
-            0721 446 206
+          For interviews, health talks or community outreach, call the HealthPro Surgery office on{" "}
+          <a href="tel:+254798595946" style={{ color: "var(--navy)", fontWeight: 600 }}>
+            0798 595 946
           </a>{" "}
           or{" "}
           <a href="mailto:johnkinyua@gmail.com" style={{ color: "var(--navy)", fontWeight: 600 }}>

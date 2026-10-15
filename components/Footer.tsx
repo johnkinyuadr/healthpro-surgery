@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { CLINIC_HOURS } from "@/lib/site";
+import { CLINIC_HOURS, OFFICE_PHONE, OFFICE_PHONE_DISPLAY, WHATSAPP_DISPLAY, WHATSAPP_NUMBER } from "@/lib/site";
 
 export default function Footer() {
   const year = new Date().getFullYear();
@@ -46,7 +46,10 @@ export default function Footer() {
             </div>
             <div className="footerCol">
               <h4>Contact</h4>
-              <a href="tel:+254721446206">0721 446 206</a>
+              <a href={`tel:+${OFFICE_PHONE}`}>Office: {OFFICE_PHONE_DISPLAY}</a>
+              <a href={`https://wa.me/${WHATSAPP_NUMBER}`} target="_blank" rel="noreferrer">
+                WhatsApp: {WHATSAPP_DISPLAY}
+              </a>
               <a href="mailto:johnkinyua@gmail.com">johnkinyua@gmail.com</a>
               <Link href="/privacy-policy">Privacy policy</Link>
             </div>

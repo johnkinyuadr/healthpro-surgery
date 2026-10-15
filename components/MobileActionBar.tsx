@@ -1,11 +1,11 @@
 import Link from "next/link";
-import { WHATSAPP_NUMBER, waLink } from "@/lib/site";
+import { OFFICE_PHONE, waLink } from "@/lib/site";
 
 // Fixed Call / WhatsApp / Book bar shown on phones only.
 export default function MobileActionBar() {
   return (
     <nav className="actionBar" aria-label="Quick contact">
-      <a href={`tel:+${WHATSAPP_NUMBER}`} className="actionBtn">
+      <a href={`tel:+${OFFICE_PHONE}`} className="actionBtn">
         <svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
           <path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z" />
         </svg>
