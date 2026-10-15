@@ -5,12 +5,22 @@ export const metadata: Metadata = {
   title: "Carotid Artery Disease & Stroke Prevention | Mombasa",
   description:
     "Assessment and surgical treatment of carotid artery stenosis in Mombasa, including carotid endarterectomy, to reduce the risk of stroke.",
+  openGraph: {
+    type: "website",
+    siteName: "HealthPro Surgery",
+    title: "Carotid Artery Disease & Stroke Prevention | Mombasa | HealthPro Surgery",
+    description: "Assessment and surgical treatment of carotid artery stenosis in Mombasa, including carotid endarterectomy, to reduce the risk of stroke.",
+    images: [{ url: "https://www.healthprosurgery.com/images/services/vascular-surgery.jpg", width: 1200, height: 800 }],
+  },
   alternates: { canonical: "/services/carotid-disease" },
 };
 
 export default function CarotidDiseasePage() {
   return (
     <ServicePage
+      images={[
+        { src: "/images/services/vascular-surgery.jpg", alt: "Vascular surgeon performing an endovascular procedure with angiography guidance" },
+      ]}
       eyebrow="Vascular surgery"
       title="Carotid Artery Disease"
       intro="Narrowing of the carotid arteries in the neck is an important and treatable cause of stroke. Assessment focuses on how severe the narrowing is, whether it has caused symptoms, and whether you would benefit from surgery in addition to best medical treatment."

@@ -5,12 +5,23 @@ export const metadata: Metadata = {
   title: "Endoscopy & Colonoscopy in Mombasa | OGD",
   description:
     "Upper GI endoscopy (OGD) and colonoscopy in Mombasa for reflux, swallowing difficulty, bleeding, anaemia, change in bowel habit and screening. Aga Khan Hospital Mombasa.",
+  openGraph: {
+    type: "website",
+    siteName: "HealthPro Surgery",
+    title: "Endoscopy & Colonoscopy in Mombasa | OGD | HealthPro Surgery",
+    description: "Upper GI endoscopy (OGD) and colonoscopy in Mombasa for reflux, swallowing difficulty, bleeding, anaemia, change in bowel habit and screening. Aga Khan Hospital Mombasa.",
+    images: [{ url: "https://www.healthprosurgery.com/images/services/endoscopy.jpg", width: 1200, height: 800 }],
+  },
   alternates: { canonical: "/services/gi-endoscopy" },
 };
 
 export default function GiEndoscopyPage() {
   return (
     <ServicePage
+      images={[
+        { src: "/images/services/endoscopy.jpg", alt: "Upper GI endoscopy (OGD) being performed" },
+        { src: "/images/services/colonoscopy.jpg", alt: "Doctor explaining colonoscopy to a patient" },
+      ]}
       eyebrow="GI endoscopy"
       title="Endoscopy and Colonoscopy"
       intro="Diagnostic and therapeutic endoscopy of the upper and lower gastrointestinal tract. Endoscopy allows direct inspection of the lining of the gut, biopsy where needed, and treatment of selected conditions in the same sitting."

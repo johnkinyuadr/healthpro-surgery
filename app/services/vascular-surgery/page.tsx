@@ -5,12 +5,22 @@ export const metadata: Metadata = {
   title: "Vascular Surgeon in Mombasa | Arterial & Venous Disease",
   description:
     "Consultant vascular surgery in Mombasa: peripheral arterial disease, diabetic foot, aneurysms, carotid disease, venous disease and dialysis access. Aga Khan Hospital Mombasa, Doctors' Plaza.",
+  openGraph: {
+    type: "website",
+    siteName: "HealthPro Surgery",
+    title: "Vascular Surgeon in Mombasa | Arterial & Venous Disease | HealthPro Surgery",
+    description: "Consultant vascular surgery in Mombasa: peripheral arterial disease, diabetic foot, aneurysms, carotid disease, venous disease and dialysis access. Aga Khan Hospital Mombasa, Doctors' Plaza.",
+    images: [{ url: "https://www.healthprosurgery.com/images/services/vascular-surgery.jpg", width: 1200, height: 800 }],
+  },
   alternates: { canonical: "/services/vascular-surgery" },
 };
 
 export default function VascularSurgeryPage() {
   return (
     <ServicePage
+      images={[
+        { src: "/images/services/vascular-surgery.jpg", alt: "Vascular surgeon performing an endovascular procedure with angiography guidance" },
+      ]}
       eyebrow="Vascular surgery"
       title="Vascular Surgery in Mombasa"
       intro="Specialist assessment and treatment of diseases of the arteries and veins, with open and endovascular options. Care is planned around your symptoms, imaging and overall health, with the aim of relieving pain, healing wounds and preventing limb loss or stroke."

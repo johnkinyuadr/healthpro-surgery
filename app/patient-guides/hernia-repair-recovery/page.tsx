@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import ServiceCover from "@/components/ServiceCover";
 import FAQSection from "@/app/components/FAQSection";
 import KiswahiliSummary from "@/components/KiswahiliSummary";
 import { waLink } from "@/lib/site";
@@ -8,6 +9,13 @@ export const metadata: Metadata = {
   title: "Recovery After Hernia Repair: A Patient Guide",
   description:
     "What to expect after inguinal, umbilical or incisional hernia repair: pain relief, wound care, returning to work, driving and lifting, and warning signs after surgery.",
+  openGraph: {
+    type: "website",
+    siteName: "HealthPro Surgery",
+    title: "Recovery After Hernia Repair: A Patient Guide | HealthPro Surgery",
+    description: "What to expect after inguinal, umbilical or incisional hernia repair: pain relief, wound care, returning to work, driving and lifting, and warning signs after surgery.",
+    images: [{ url: "https://www.healthprosurgery.com/images/services/hernia-surgery.jpg", width: 1200, height: 800 }],
+  },
   alternates: { canonical: "/patient-guides/hernia-repair-recovery" },
 };
 
@@ -112,6 +120,8 @@ export default function HerniaRecoveryPage() {
           </a>
         </div>
       </section>
+
+      <ServiceCover images={[{ src: "/images/services/hernia-surgery.jpg", alt: "Recovery after laparoscopic hernia repair" }]} />
 
       <KiswahiliSummary>
         <p>
