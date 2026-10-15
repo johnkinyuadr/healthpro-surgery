@@ -11,5 +11,8 @@ export type Post = {
   category: string;
   excerpt: string;
   date: string; // ISO date
+  // Optional cover image (in /public/blog). Also used as the link preview on WhatsApp/Facebook.
+  // Best size: 1200 × 800 or 1200 × 630 JPEG, under 300 KB.
+  image?: { src: string; alt: string; width: number; height: number };
   body: string;
 };

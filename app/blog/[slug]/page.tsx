@@ -25,8 +25,30 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
       title: post.title,
       description: post.excerpt,
       url: `${SITE_URL}/blog/${post.slug}`,
+      siteName: "HealthPro Surgery",
+      locale: post.lang === "sw" ? "sw_KE" : "en_GB",
       publishedTime: post.date,
       authors: ["Dr John Kinyua Murithi"],
+      ...(post.image
+        ? {
+            images: [
+              {
+                url: `${SITE_URL}${post.image.src}`,
+                secureUrl: `${SITE_URL}${post.image.src}`,
+                width: post.image.width,
+                height: post.image.height,
+                alt: post.image.alt,
+                type: "image/jpeg",
+              },
+            ],
+          }
+        : {}),
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: post.title,
+      description: post.excerpt,
+      ...(post.image ? { images: [`${SITE_URL}${post.image.src}`] } : {}),
     },
   };
 }
@@ -52,6 +74,7 @@ export default async function BlogPostPage({ params }: Params) {
     },
     publisher: { "@type": "MedicalBusiness", name: "HealthPro Surgery", url: SITE_URL },
     mainEntityOfPage: `${SITE_URL}/blog/${post.slug}`,
+    ...(post.image ? { image: `${SITE_URL}${post.image.src}` } : {}),
   };
 
   return (
@@ -78,6 +101,19 @@ export default async function BlogPostPage({ params }: Params) {
           </span>
         </div>
       </section>
+
+      {post.image && (
+        <figure className="postCover">
+          <Image
+            src={post.image.src}
+            alt={post.image.alt}
+            width={post.image.width}
+            height={post.image.height}
+            priority
+            sizes="(max-width: 1000px) 100vw, 960px"
+          />
+        </figure>
+      )}
 
       <article className="postArticle" lang={post.lang}>
         <p className="postLead">{post.excerpt}</p>
