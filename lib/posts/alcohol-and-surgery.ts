@@ -8,6 +8,12 @@ const post: Post = {
   excerpt:
     "Alcohol affects healing, bleeding, infection and anaesthesia. Why your surgeon asks how much you drink, why stopping a few weeks before an operation helps, and why heavy drinkers should never stop suddenly without advice.",
   date: "2026-10-16",
+  image: {
+    src: "/blog/alcohol-and-surgery.jpg",
+    alt: "Alcohol and surgery: a surgeon advising a patient, common alcoholic drinks, the effects of alcohol on bleeding, wound healing, the liver, heart and lungs, and a healthy recovery",
+    width: 1200,
+    height: 800,
+  },
   body: `Before every planned operation, I ask my patients the same question: "How much alcohol do you drink in a typical week?" Some laugh. Some look away. A few are offended, as if I were passing judgement. I am not. The answer helps me keep you safe, and it can change how I prepare you for surgery, how I look after you afterwards, and sometimes when the operation should take place.
 
 Alcohol is part of social life in Kenya, from a cold beer after work to celebrations, weddings and funerals. Most people never connect it with what happens in an operating theatre. Yet regular drinking quietly affects almost every system the body depends on to get through surgery and heal afterwards.
