@@ -6,11 +6,13 @@ import artAndScience from "./posts/art-and-science-of-healing";
 import smallSteps from "./posts/small-steps-strong-life";
 import usisubiri from "./posts/usisubiri";
 import afyaNiMtaji from "./posts/afya-ni-mtaji";
+import alcoholAndSurgery from "./posts/alcohol-and-surgery";
 
 export type { Post };
 
 // Order shown on the blog page (newest / featured first).
 export const POSTS: Post[] = [
+  alcoholAndSurgery,
   theCostOfWaiting,
   healthInvestment,
   artAndScience,
