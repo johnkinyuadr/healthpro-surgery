@@ -68,12 +68,12 @@ const GROUPS: { id: string; title: string; faqs: QA[] }[] = [
       {
         question: "Can I eat on the day?",
         answer:
-          "If the procedure is done under local anaesthetic alone, you can usually have a light meal beforehand. If you are having sedation, spinal or general anaesthesia, you will be asked to fast; specific instructions are given when you book.",
+          "Most patients have spinal or general anaesthesia, so you will be asked not to eat for about six hours beforehand. Small sips of water are usually allowed until two hours before. Exact fasting times are given when you book.",
       },
       {
         question: "What should I bring?",
         answer:
-          "Loose, comfortable trousers or a long skirt to wear home over the bandages and stockings, flat shoes, your medicines list, your insurance card and, if you are having sedation, an adult to take you home.",
+          "Loose, comfortable trousers or a long skirt to wear home over the bandages and stockings, flat shoes, your medicines list, your insurance card, and an adult to take you home after the anaesthetic.",
       },
       {
         question: "Will my insurance cover it?",
@@ -89,22 +89,22 @@ const GROUPS: { id: string; title: string; faqs: QA[] }[] = [
       {
         question: "What kind of anaesthesia is used?",
         answer:
-          "Most EVLA is done with local anaesthetic. A dilute anaesthetic solution is injected around the vein under ultrasound guidance; this numbs the leg and also protects the surrounding tissue. Light sedation can be added if you are anxious. Some patients, particularly when both legs and additional branch treatment are planned, choose spinal or general anaesthesia. We will agree the best option with you.",
+          "For treatment of both legs, our preferred option is spinal anaesthesia. An injection in the lower back numbs you from the waist down for a few hours, so you feel nothing in your legs during the procedure. You stay awake and breathe for yourself, and light sedation can be added to help you relax. General anaesthesia, where you are fully asleep, is also available if you prefer it or if spinal anaesthesia is not suitable for you. Local anaesthesia alone is possible, but it is not our preferred approach when both legs are treated, because it needs many injections along both legs. Whichever option is used, a dilute fluid is also injected around the vein to protect the surrounding tissue. The anaesthetist will discuss the choice with you before the procedure.",
       },
       {
         question: "Will it hurt?",
         answer:
-          "Most patients feel the initial needle pricks of the local anaesthetic, then little more than pressure. Many are surprised at how comfortable the procedure is.",
+          "No. With spinal or general anaesthesia you will not feel the procedure. Afterwards, most people describe mild aching or tenderness rather than pain, and this is usually well controlled with simple painkillers.",
       },
       {
         question: "How long does it take?",
         answer:
-          "Treating both legs usually takes about one to two hours in theatre, depending on the number of veins and whether branch veins are treated at the same time. Allow half a day at the hospital in total.",
+          "Treating both legs usually takes about one to two hours in theatre, depending on the number of veins and whether branch veins are treated at the same time. Allow most of the day at the hospital, including time to recover from the anaesthetic.",
       },
       {
         question: "Will I stay in hospital?",
         answer:
-          "No. EVLA is a day-case procedure. You will walk shortly after the treatment and usually go home the same day.",
+          "EVLA is usually a day-case procedure. After a spinal anaesthetic, you rest until the feeling and strength in your legs have returned and you have passed urine, and you then go home the same day. Occasionally an overnight stay is advised.",
       },
     ],
   },
@@ -118,24 +118,29 @@ const GROUPS: { id: string; title: string; faqs: QA[] }[] = [
           "Yes. Bandages or compression stockings are applied at the end of the procedure. Typically they are worn day and night for the first one to two days, then during the day for about one to two weeks. You will be given exact instructions; stockings reduce bruising and discomfort.",
       },
       {
+        question: "Should I rest in bed after the procedure?",
+        answer:
+          "Resting at home for about a week after treatment is advisable, but it is not mandatory. Many patients find that a week of rest, with the legs raised, reduces bruising and discomfort and makes recovery easier. Rest does not mean staying in bed all day: get up and walk around the house for a few minutes every hour while you are awake, to keep the circulation moving. If you feel well and prefer to return to normal activities sooner, that is safe too.",
+      },
+      {
         question: "How much should I walk?",
         answer:
-          "Walking is the most important part of recovery. Walk for at least 30 minutes, spread through the day, from the day of treatment. Avoid standing still or sitting for long periods; when resting, raise your legs. Walking keeps blood flowing in the deep veins and reduces the risk of clots.",
+          "Once the anaesthetic has worn off, get up and walk for a few minutes every hour while you are awake. Avoid sitting with your legs down or standing still for long periods; when resting, raise your legs. Regular short walks keep blood flowing in the deep veins and reduce the risk of clots.",
       },
       {
         question: "When can I return to work?",
         answer:
-          "Most people return to office or desk work within two to three days. If your job involves heavy physical work or long hours standing, allow about a week.",
+          "We recommend a week off work to rest, which most patients find makes recovery more comfortable. If you feel well, office or desk work can be resumed sooner. Physically demanding work, or work involving long hours standing, should wait until after the first week.",
       },
       {
         question: "When can I drive?",
         answer:
-          "You should not drive on the day of treatment, especially after sedation. Most people drive again after one to two days, once they can move comfortably and make an emergency stop without discomfort.",
+          "Do not drive for at least 24 hours after a spinal or general anaesthetic. Most people drive again after a few days, once they can move comfortably and make an emergency stop without discomfort.",
       },
       {
         question: "When can I exercise, swim or travel?",
         answer:
-          "Gentle walking is encouraged immediately. Return to the gym, running or sport after about one to two weeks. Wait until the puncture sites have healed, usually about a week, before swimming or soaking in a bath. Avoid long-haul flights and very long road journeys for about four weeks; if travel is unavoidable, discuss it with us beforehand.",
+          "Short walks are encouraged from the day of treatment. Return to the gym, running or sport after about two weeks. Wait until the puncture sites have healed, usually about a week, before swimming or soaking in a bath. Avoid long-haul flights and very long road journeys for about four weeks; if travel is unavoidable, discuss it with us beforehand.",
       },
       {
         question: "Can I shower?",
@@ -214,9 +219,9 @@ const GROUPS: { id: string; title: string; faqs: QA[] }[] = [
 ];
 
 const RECOVERY = [
-  { title: "Day of treatment", text: "Walk shortly after the procedure and go home the same day. Rest with legs raised, with short walks every hour." },
-  { title: "Days 1–3", text: "Keep stockings on as instructed. Walk at least 30 minutes daily. Most return to desk work." },
-  { title: "Week 1–2", text: "Bruising fades. A tight feeling in the thigh is common around days 5–10. Resume driving, then exercise." },
+  { title: "Day of treatment", text: "Spinal anaesthetic (preferred) or general anaesthetic. Home the same day once the feeling in your legs has returned." },
+  { title: "First week", text: "Rest at home with legs raised (advisable, not mandatory), walking a few minutes every hour. Stockings as instructed." },
+  { title: "Week 2", text: "Bruising fades. A tight feeling in the thigh is common around days 5–10. Back to work, driving and then exercise." },
   { title: "Weeks 2–12", text: "Lumps and discolouration settle. Follow-up scan. Legs continue to look and feel better." },
 ];
 
@@ -245,8 +250,8 @@ export default function BilateralEvlaPage() {
         <h1 className="h1">Laser treatment of varicose veins in both legs: your questions answered</h1>
         <p className="p" style={{ maxWidth: 800 }}>
           Endovenous laser ablation (EVLA) is a modern, minimally invasive day-case treatment for
-          varicose veins. Most people walk out the same day and return to normal activities within
-          a few days. This guide explains what to expect when both legs are treated together.
+          varicose veins. Most people go home the same day and are back to normal activities within
+          one to two weeks. This guide explains what to expect when both legs are treated together.
         </p>
         <div className="btnRow">
           <a
@@ -272,12 +277,14 @@ export default function BilateralEvlaPage() {
         <p>
           EVLA ni matibabu ya kisasa ya mishipa ya miguu iliyovimba (varicose veins) kwa kutumia
           leza. Waya mwembamba wa leza huingizwa ndani ya mshipa kupitia sindano, kwa msaada wa
-          ultrasound, na kuufunga mshipa huo. Miguu yote miwili inaweza kutibiwa siku moja, na
-          wagonjwa wengi hurudi nyumbani siku hiyo hiyo.
+          ultrasound, na kuufunga mshipa huo. Miguu yote miwili inaweza kutibiwa siku moja. Tunapendekeza
+          nusukaputi ya uti wa mgongo (spinal anaesthesia); nusukaputi kamili (general anaesthesia) pia
+          inapatikana. Wagonjwa wengi hurudi nyumbani siku hiyo hiyo.
         </p>
         <p>
-          Baada ya matibabu, vaa soksi maalum (compression stockings) kama ulivyoelekezwa na tembea
-          angalau dakika 30 kila siku. Michubuko na hisia ya kuvuta pajani ni kawaida na hupona yenyewe.
+          Baada ya matibabu, kupumzika nyumbani kwa wiki moja kunashauriwa, ingawa si lazima. Unapopumzika,
+          inua miguu na amka kutembea kwa dakika chache kila saa. Vaa soksi maalum (compression stockings)
+          kama ulivyoelekezwa. Michubuko na hisia ya kuvuta pajani ni kawaida na hupona yenyewe.
           Tafuta msaada haraka ukipata maumivu au uvimbe wa ndama unaozidi, maumivu ya kifua au
           kushindwa kupumua.
         </p>

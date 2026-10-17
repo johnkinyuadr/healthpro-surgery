@@ -499,31 +499,32 @@ EVLA_EN = {
         ("bullets", [
             "Continue your regular medicines unless told otherwise. Tell us if you take <b>blood thinners</b>, have had "
             "a <b>blood clot (DVT)</b>, take the <b>contraceptive pill or HRT</b>, or could be pregnant.",
-            "Local anaesthetic only: a light meal beforehand is fine. Sedation, spinal or general anaesthetic: fast as instructed.",
-            "Bring loose trousers or a long skirt, flat shoes, your medicines list, insurance card and, after sedation, "
-            "an adult to take you home.",
+            "Do not eat for about 6 hours before (sips of water until 2 hours before), as instructed when you book.",
+            "Bring loose trousers or a long skirt, flat shoes, your medicines list, your insurance card and an adult "
+            "to take you home.",
         ]),
         ("h2", "On the day"),
         ("grid", [
-            ("Anaesthesia", "Usually local anaesthetic injected around the vein under ultrasound, with light sedation if "
-             "you wish. Spinal or general anaesthesia is an option; we will agree this with you."),
-            ("How long", "About one to two hours for both legs. Allow half a day at the hospital. You walk soon "
-             "afterwards and go home the same day."),
+            ("Anaesthesia", "<b>Spinal anaesthesia is our preferred option</b>: you are numb from the waist down and "
+             "feel nothing, with light sedation if you wish. <b>General anaesthesia</b> is available if you prefer to be "
+             "asleep. Local anaesthesia alone is possible but not preferred when both legs are treated."),
+            ("How long", "About one to two hours in theatre. Allow most of the day at the hospital. You go home the "
+             "same day once the feeling in your legs has returned."),
         ]),
         ("h2", "Your recovery"),
         ("timeline", [
-            ("Day of treatment", "Walk, then rest with legs raised", [
-                "Walk shortly after the procedure. At home, take short walks every hour and raise your legs when resting.",
-                "No driving today.",
+            ("Day of treatment", "Home once the anaesthetic wears off", [
+                "Go home once the feeling in your legs has returned. No driving for at least 24 hours.",
             ], False),
-            ("Days 1–3", "Stockings and walking", [
+            ("First week", "Rest, with short walks", [
+                "<b>Resting at home for about a week is advisable, but not mandatory.</b> Keep your legs raised when resting.",
+                "<b>Get up and walk for a few minutes every hour</b> while awake, to keep the circulation moving.",
                 "Wear stockings day and night for the first 1–2 days, then in the daytime for about 1–2 weeks, as instructed.",
-                "<b>Walk at least 30 minutes a day.</b> Avoid long periods of sitting or standing still.",
-                "Shower once the first stockings are removed (usually after 24–48 hours). Most return to desk work.",
+                "Shower once the first stockings are removed (usually after 24–48 hours).",
             ], True),
-            ("Week 1–2", "Back to normal activities", [
-                "Drive once you can make an emergency stop comfortably (usually 1–2 days).",
-                "Gym, running and sport after about 1–2 weeks. Swim once puncture sites have healed (about a week).",
+            ("Week 2", "Back to normal activities", [
+                "Return to work; desk work sooner if you feel well. Drive once you can make an emergency stop comfortably.",
+                "Gym, running and sport after about 2 weeks. Swim once puncture sites have healed (about a week).",
                 "Avoid long-haul flights and very long journeys for about 4 weeks unless discussed with us.",
             ], False),
             ("Weeks 2–12", "Settling and follow-up", [
@@ -550,7 +551,7 @@ EVLA_EN = {
              "tiny nicks or treated with foam, at the same time or later."),
             ("Can veins come back?", "Treated veins rarely return, but new ones can develop over the years. Staying "
              "active and avoiding long periods of standing help."),
-            ("Will it hurt?", "Most patients feel the first needle pricks, then little more than pressure."),
+            ("Will it hurt?", "Not during the procedure. Afterwards most people have mild aching, eased by simple painkillers."),
             ("Is it covered by insurance?", "Usually, when veins cause symptoms. We handle pre-authorisation with your insurer."),
         ]),
         ("alert", "These are uncommon, but contact us or go to A&amp;E if you notice", [
