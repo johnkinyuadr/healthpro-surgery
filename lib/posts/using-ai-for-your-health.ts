@@ -8,6 +8,12 @@ const post: Post = {
   excerpt:
     "More patients now ask an AI chatbot about their symptoms before they see a doctor. Used well, AI can help you understand your condition and prepare for your appointment. Used badly, it can mislead. A surgeon's practical guide.",
   date: "2026-10-17",
+  image: {
+    src: "/blog/using-ai-for-your-health.jpg",
+    alt: "Using AI for your health: a doctor and patient reviewing information on a tablet, a worried man reading symptoms on his phone, and everyday uses of AI for reports, checklists, medicines and exercise",
+    width: 1200,
+    height: 800,
+  },
   body: `Increasingly, patients arrive at my clinic having already asked an AI chatbot about their condition. Some bring a printed page: their ultrasound report, explained in plain language, with a list of sensible questions. Those consultations are often among the most productive of the day, because we can go straight to what matters.
 
 Others arrive frightened. An AI tool has told them that their symptoms "could indicate" something serious, and they have spent sleepless nights worrying. After examination and the right investigations, the cause often turns out to be far less alarming.
