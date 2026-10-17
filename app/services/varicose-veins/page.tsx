@@ -76,6 +76,15 @@ export default function VaricoseVeinsPage() {
 
       <ServiceCover images={[{ src: "/images/services/varicose-faq.jpg", alt: "Vascular surgeon reviewing a duplex ultrasound scan of the leg veins with a patient" }]} />
 
+      <Link className="guideCard" href="/patient-guides/bilateral-evla" style={{ marginTop: 28, display: "flex" }}>
+        <h2 style={{ margin: 0, fontSize: 20 }}>Having laser treatment (EVLA)? Read the patient guide</h2>
+        <p>
+          What happens on the day, compression stockings, returning to work and driving, what is normal
+          during recovery, and results — including when both legs are treated together.
+        </p>
+        <span className="more">Read the EVLA guide →</span>
+      </Link>
+
       <FAQSection title="Varicose Veins – FAQs" faqs={faqs} />
     </>
   );

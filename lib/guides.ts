@@ -34,6 +34,11 @@ export const PATIENT_GUIDES: Guide[] = [
     href: "/your-visit",
   },
   {
+    title: "Laser treatment of varicose veins (EVLA)",
+    text: "Treating both legs: what happens, recovery, stockings, work and driving, and what is normal afterwards.",
+    href: "/patient-guides/bilateral-evla",
+  },
+  {
     title: "Varicose veins",
     text: "Symptoms, when treatment is needed, and what EVLA involves.",
     href: "/services/varicose-veins",
