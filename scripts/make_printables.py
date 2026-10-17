@@ -483,7 +483,86 @@ AVF_EN = {
     ],
 }
 
-SHEETS = [COLONOSCOPY_EN, COLONOSCOPY_SW, OGD_EN, HERNIA_EN, AVF_EN]
+EVLA_EN = {
+    "file": "evla-varicose-veins.pdf",
+    "url": "/patient-guides/bilateral-evla",
+    "badge": "Patient guide",
+    "eyebrow": "Varicose veins",
+    "title": "Laser treatment of varicose veins (EVLA)",
+    "intro": "Endovenous laser ablation (EVLA) is a modern, minimally invasive day-case treatment. A thin laser fibre "
+             "is passed inside the faulty vein through a needle puncture, under ultrasound guidance, and seals it from "
+             "the inside. Blood then flows through the healthy deep veins. When both legs need treatment, they are "
+             "usually treated in the same session: one visit, one anaesthetic and one recovery period.",
+    "blocks": [
+        ("fill", ["Procedure date:", "Arrival time:"]),
+        ("h2", "Before the procedure"),
+        ("bullets", [
+            "Continue your regular medicines unless told otherwise. Tell us if you take <b>blood thinners</b>, have had "
+            "a <b>blood clot (DVT)</b>, take the <b>contraceptive pill or HRT</b>, or could be pregnant.",
+            "Local anaesthetic only: a light meal beforehand is fine. Sedation, spinal or general anaesthetic: fast as instructed.",
+            "Bring loose trousers or a long skirt, flat shoes, your medicines list, insurance card and, after sedation, "
+            "an adult to take you home.",
+        ]),
+        ("h2", "On the day"),
+        ("grid", [
+            ("Anaesthesia", "Usually local anaesthetic injected around the vein under ultrasound, with light sedation if "
+             "you wish. Spinal or general anaesthesia is an option; we will agree this with you."),
+            ("How long", "About one to two hours for both legs. Allow half a day at the hospital. You walk soon "
+             "afterwards and go home the same day."),
+        ]),
+        ("h2", "Your recovery"),
+        ("timeline", [
+            ("Day of treatment", "Walk, then rest with legs raised", [
+                "Walk shortly after the procedure. At home, take short walks every hour and raise your legs when resting.",
+                "No driving today.",
+            ], False),
+            ("Days 1–3", "Stockings and walking", [
+                "Wear stockings day and night for the first 1–2 days, then in the daytime for about 1–2 weeks, as instructed.",
+                "<b>Walk at least 30 minutes a day.</b> Avoid long periods of sitting or standing still.",
+                "Shower once the first stockings are removed (usually after 24–48 hours). Most return to desk work.",
+            ], True),
+            ("Week 1–2", "Back to normal activities", [
+                "Drive once you can make an emergency stop comfortably (usually 1–2 days).",
+                "Gym, running and sport after about 1–2 weeks. Swim once puncture sites have healed (about a week).",
+                "Avoid long-haul flights and very long journeys for about 4 weeks unless discussed with us.",
+            ], False),
+            ("Weeks 2–12", "Settling and follow-up", [
+                "Bruising, lumps and discolouration settle. An ultrasound review checks the result.",
+            ], False),
+        ]),
+        ("h2", "What is normal afterwards"),
+        ("grid", [
+            ("Bruising", "Common along the thigh or calf. Usually painless; fades over 2–3 weeks."),
+            ("Tight, pulling feeling", "Often around days 5–10, like a pulled muscle. Keep walking and take simple "
+             "pain relief; it settles in a few days."),
+            ("Firm cord or small lumps", "This is the sealed vein. It softens and disappears over weeks to months."),
+            ("Numb or tingly patch", "Occasionally, from small skin nerves near the vein. Almost always improves over time."),
+        ]),
+        ("p", "Pain relief: paracetamol, with ibuprofen if suitable for you, for a few days. Aching and heaviness often "
+              "improve within weeks; appearance continues to improve over 2–3 months."),
+        ("h2", "Common questions"),
+        ("grid", [
+            ("Where does the blood go?", "The sealed vein was not working properly. Blood flows through the healthy "
+             "deep veins instead, and circulation usually improves."),
+            ("Why both legs together?", "One visit to theatre, one anaesthetic and one recovery. If you prefer, the "
+             "legs can be treated a few weeks apart."),
+            ("Will the smaller veins go?", "Many shrink once the main vein is sealed. Others can be removed through "
+             "tiny nicks or treated with foam, at the same time or later."),
+            ("Can veins come back?", "Treated veins rarely return, but new ones can develop over the years. Staying "
+             "active and avoiding long periods of standing help."),
+            ("Will it hurt?", "Most patients feel the first needle pricks, then little more than pressure."),
+            ("Is it covered by insurance?", "Usually, when veins cause symptoms. We handle pre-authorisation with your insurer."),
+        ]),
+        ("alert", "These are uncommon, but contact us or go to A&amp;E if you notice", [
+            "Increasing pain, swelling or tightness in the calf",
+            "Chest pain or sudden breathlessness",
+            "Fever, or spreading redness or discharge from a puncture site",
+            "Bleeding that does not stop after 10 minutes of firm pressure with the leg raised",
+        ]),
+    ],
+}
+
+SHEETS = [COLONOSCOPY_EN, COLONOSCOPY_SW, OGD_EN, HERNIA_EN, AVF_EN, EVLA_EN]
 
 # ---------------------------------------------------------------------------
 # Google review card: page 1 an A4 desk poster, page 2 four A6 hand-out cards.

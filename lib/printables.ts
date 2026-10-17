@@ -7,6 +7,7 @@ export const PRINTABLES: Printable[] = [
   { key: "colonoscopy-sw", title: "Maandalizi ya colonoscopy (Kiswahili)", href: "/downloads/maandalizi-ya-colonoscopy.pdf", lang: "sw" },
   { key: "ogd", title: "OGD (upper GI endoscopy) preparation", href: "/downloads/ogd-preparation.pdf", lang: "en" },
   { key: "hernia", title: "Recovery after hernia repair", href: "/downloads/hernia-repair-recovery.pdf", lang: "en" },
+  { key: "evla", title: "Laser treatment of varicose veins (EVLA)", href: "/downloads/evla-varicose-veins.pdf", lang: "en" },
   { key: "avf", title: "Caring for your AV fistula", href: "/downloads/av-fistula-care.pdf", lang: "en" },
 ];
 

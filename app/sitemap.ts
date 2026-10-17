@@ -22,6 +22,7 @@ const PATHS = [
   "/patient-guides/diabetic-foot",
   "/patient-guides/av-fistula-care",
   "/patient-guides/hernia-repair-recovery",
+  "/patient-guides/bilateral-evla",
   "/media",
   "/publications",
   "/blog",
