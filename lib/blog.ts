@@ -8,11 +8,13 @@ import usisubiri from "./posts/usisubiri";
 import afyaNiMtaji from "./posts/afya-ni-mtaji";
 import alcoholAndSurgery from "./posts/alcohol-and-surgery";
 import usingAi from "./posts/using-ai-for-your-health";
+import smokingAndSurgery from "./posts/smoking-and-surgery";
 
 export type { Post };
 
 // Order shown on the blog page (newest / featured first).
 export const POSTS: Post[] = [
+  smokingAndSurgery,
   usingAi,
   alcoholAndSurgery,
   theCostOfWaiting,
