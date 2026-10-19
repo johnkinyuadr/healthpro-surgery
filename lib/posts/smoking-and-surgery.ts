@@ -8,6 +8,12 @@ const post: Post = {
   excerpt:
     "Smoking slows healing, increases infection and strains the heart and lungs during surgery. A surgeon explains what smoking does to your operation, why stopping even a few weeks beforehand helps, and how to make it happen.",
   date: "2026-10-19",
+  image: {
+    src: "/blog/smoking-and-surgery.jpg",
+    alt: "A man refusing an offered cigarette before his operation, with a surgeon walking towards the operating theatre in the background",
+    width: 1200,
+    height: 800,
+  },
   body: `When I plan an operation with a patient, I ask about smoking as routinely as I check blood pressure. Many people expect a lecture. What I offer instead is an opportunity: the weeks before surgery are one of the most effective times to stop smoking, and one of the times when stopping makes the biggest difference.
 
 Every operation is a test of the body's ability to heal. Smoking makes that test harder in almost every way. The encouraging news is that the body begins to recover remarkably quickly once smoking stops.
