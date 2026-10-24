@@ -8,6 +8,12 @@ const post: Post = {
   excerpt:
     "No tablets, no injections, no queues. Just a simple prescription for your weekend — rest, move, eat well, connect and come back on Monday stronger. Written by a surgeon who sees what happens when weekends go wrong.",
   date: "2026-10-24",
+  image: {
+    src: "/blog/weekend-prescription.jpg",
+    alt: "A weekend prescription checklist for sleep, exercise, healthy food, no drinking and driving, family time and heart health, with a family watching the sunset on the beach",
+    width: 1200,
+    height: 800,
+  },
   body: `It is Saturday. The alarm is off, the week's hustle is behind you, and for a day or two, your time is your own.
 
 As a doctor, I have a confession: I think about weekends a lot. Partly because I look forward to mine like everyone else. But also because, working in surgery and emergency care, I see what happens when weekends go wrong. The road accident on the way home from a party. The "weekend footballer" with a torn tendon. The man who drank all Saturday and arrived in A&E on Sunday with chest pain. The family who spent the whole weekend on their phones and barely spoke.
