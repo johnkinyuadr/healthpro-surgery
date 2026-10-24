@@ -11,11 +11,13 @@ import usingAi from "./posts/using-ai-for-your-health";
 import smokingAndSurgery from "./posts/smoking-and-surgery";
 import everydayMashujaa from "./posts/everyday-mashujaa";
 import hataShujaa from "./posts/hata-shujaa-huenda-hospitali";
+import weekendPrescription from "./posts/weekend-prescription";
 
 export type { Post };
 
 // Order shown on the blog page (newest / featured first).
 export const POSTS: Post[] = [
+  weekendPrescription,
   everydayMashujaa,
   hataShujaa,
   smokingAndSurgery,
