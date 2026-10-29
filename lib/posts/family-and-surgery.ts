@@ -8,6 +8,12 @@ const post: Post = {
   excerpt:
     "No one goes through an operation alone. Families shape the decision, the day itself and the weeks of recovery at home. A surgeon's guide to how loved ones can help most — and the common, well-meant mistakes that can hold recovery back.",
   date: "2026-10-29",
+  image: {
+    src: "/blog/family-and-surgery.jpg",
+    alt: "Surgery Is a Family Journey: an older man smiling in a hospital bed, surrounded by his family",
+    width: 1200,
+    height: 800,
+  },
   body: `When I explain an operation in my clinic, I am rarely speaking to one person. A wife sits beside her husband. A son has taken a day off work to bring his mother. A daughter in London joins on a video call. Sometimes an uncle arrives with a notebook full of questions from the rest of the family.
 
 I welcome them all. In Kenya, as in much of the world, illness is never a private matter. When one person needs surgery, the whole family goes through it. Families can make an enormous difference to how well a patient recovers. With a little guidance, that difference can be even greater.
