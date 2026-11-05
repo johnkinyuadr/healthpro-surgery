@@ -136,6 +136,11 @@ export default function RootLayout({
                 url: `${siteUrl}/about`,
                 identifier: { "@type": "PropertyValue", propertyID: "ORCID", value: "0000-0002-9631-1414" },
                 sameAs: PROFILE_URLS,
+                memberOf: {
+                  "@type": "Organization",
+                  name: "American College of Surgeons",
+                  url: "https://www.facs.org",
+                },
               },
             }),
           }}

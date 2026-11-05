@@ -851,3 +851,6 @@ select.input { appearance: none; background-image: linear-gradient(45deg, transp
   color: var(--navy); font-size: 14px; font-weight: 600;
 }
 .faqJump a:hover { border-color: var(--teal); color: var(--teal); }
+.chipLink { border: 1px solid transparent; transition: border-color 0.2s ease, color 0.2s ease; }
+.chipLink:hover { border-color: var(--teal); color: var(--teal); }
+.credLink { display: inline-block; margin-top: 6px; color: var(--teal); font-weight: 600; font-size: 14px; text-decoration: underline; text-underline-offset: 3px; }

@@ -4,7 +4,7 @@ import Link from "next/link";
 import InsurerPanel from "@/components/InsurerPanel";
 import KiswahiliSummary from "@/components/KiswahiliSummary";
 import { PATIENT_GUIDES } from "@/lib/guides";
-import { CLINIC_HOURS, INSURANCE } from "@/lib/site";
+import { CLINIC_HOURS, FACS_PROFILE, INSURANCE } from "@/lib/site";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/" },
@@ -173,7 +173,15 @@ export default function HomePage() {
             <div className="chips">
               <span className="chip">MBChB</span>
               <span className="chip">FCS(ECSA) General Surgery</span>
-              <span className="chip">FACS</span>
+              <a
+                className="chip chipLink"
+                href={FACS_PROFILE}
+                target="_blank"
+                rel="noreferrer"
+                title="Fellow of the American College of Surgeons: view ACS profile"
+              >
+                FACS ↗
+              </a>
               <span className="chip">COSECSA Faculty</span>
               <span className="chip">Vascular Fellowship, Paris</span>
             </div>
