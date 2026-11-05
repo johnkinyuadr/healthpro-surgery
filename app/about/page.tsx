@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import ProfileLinks from "@/components/ProfileLinks";
-import { waLink } from "@/lib/site";
+import { FACS_PROFILE, waLink } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "About Dr John Kinyua Murithi | Vascular & General Surgeon, Mombasa",
@@ -11,10 +11,10 @@ export const metadata: Metadata = {
   alternates: { canonical: "/about" },
 };
 
-const QUALIFICATIONS = [
+const QUALIFICATIONS: { title: string; text: string; href?: string; linkLabel?: string }[] = [
   { title: "MBChB", text: "Bachelor of Medicine and Bachelor of Surgery" },
   { title: "FCS(ECSA)", text: "Fellow, College of Surgeons of East, Central & Southern Africa — General Surgery" },
-  { title: "FACS", text: "Fellow, American College of Surgeons" },
+  { title: "FACS", text: "Fellow, American College of Surgeons", href: FACS_PROFILE, linkLabel: "View ACS profile ↗" },
   { title: "Vascular fellowship", text: "Vascular surgery fellowship training in Paris, France" },
 ];
 
@@ -114,6 +114,11 @@ export default function AboutPage() {
           <div key={q.title} className="credItem">
             <strong>{q.title}</strong>
             <span>{q.text}</span>
+            {q.href && (
+              <a href={q.href} target="_blank" rel="noreferrer" className="credLink">
+                {q.linkLabel}
+              </a>
+            )}
           </div>
         ))}
       </section>

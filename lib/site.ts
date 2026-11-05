@@ -70,7 +70,9 @@ export const PROFILES = [
   { label: "LinkedIn", href: "https://www.linkedin.com/in/kinyua-murithi-27ab1818" },
   { label: "ORCID", href: "https://orcid.org/0000-0002-9631-1414" },
   { label: "Google Scholar", href: "https://scholar.google.com/citations?user=f6vrkE0AAAAJ" },
+  { label: "American College of Surgeons (FACS)", href: "https://www.facs.org/profile/62925347/" },
 ];
+export const FACS_PROFILE = "https://www.facs.org/profile/62925347/";
 export const PROFILE_URLS = PROFILES.map((p) => p.href);
 
 // Google review link (from the Google Business Profile). /review on the site redirects here.
