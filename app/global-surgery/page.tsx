@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import ProfileLinks from "@/components/ProfileLinks";
 import data from "@/lib/global-surgery-data.json";
@@ -35,7 +36,7 @@ export const metadata: Metadata = {
     title: "Global Surgery: Research & Advocacy | HealthPro Surgery",
     description:
       "Evidence and priorities for equitable, affordable and safe surgical care in Kenya and sub-Saharan Africa.",
-    images: [{ url: `${SITE_URL}/images/dr-kinyua-theatre.jpg`, width: 1200, height: 800 }],
+    images: [{ url: `${SITE_URL}/images/global-surgery/og.jpg`, width: 1200, height: 630 }],
   },
   alternates: { canonical: "/global-surgery" },
 };
@@ -115,6 +116,17 @@ export default function GlobalSurgeryPage() {
         </div>
       </section>
 
+      <figure className="gsFigure gsBanner">
+        <Image
+          src="/images/global-surgery/mombasa-collage.jpg"
+          alt="Mombasa's Old Town waterfront and Fort Jesus above scenes of surgical care: an operating theatre, an emergency department, clinical teaching, ward care, a county hospital, monitoring, surgical instruments, health financing and a map of Kenya"
+          width={1600}
+          height={900}
+          priority
+          sizes="(max-width: 1200px) 100vw, 1150px"
+        />
+      </figure>
+
       <h2 className="sectionTitle">Focus areas</h2>
       <section className="grid">
         {FOCUS.map((f) => (
@@ -126,6 +138,16 @@ export default function GlobalSurgeryPage() {
       </section>
 
       <section className="card gsRoles" style={{ marginTop: 28 }}>
+        <figure className="gsFigure gsRolesImg">
+          <Image
+            src="/images/global-surgery/ward-teaching.jpg"
+            alt="A consultant surgeon teaching junior doctors on a hospital ward, reviewing results on a tablet"
+            width={1600}
+            height={900}
+            sizes="(max-width: 900px) 100vw, 520px"
+          />
+        </figure>
+        <div className="gsRolesText">
         <h2 style={{ fontSize: 22, margin: 0 }}>Why this work</h2>
         <p>
           Dr Kinyua leads emergency care at a public teaching and referral hospital in Mombasa, trains
@@ -135,6 +157,7 @@ export default function GlobalSurgeryPage() {
           that work in public hospitals with limited resources.
         </p>
         <ProfileLinks />
+        </div>
       </section>
 
       <h2 id="priorities" className="sectionTitle anchorTarget">
@@ -202,6 +225,16 @@ export default function GlobalSurgeryPage() {
         Summaries are written for a general audience; please read the original papers for full
         findings. Last updated {new Date(data.updated).toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric" })}.
       </p>
+
+      <figure className="gsFigure" style={{ marginTop: 36 }}>
+        <Image
+          src="/images/global-surgery/surgical-care-collage.jpg"
+          alt="Surgical care across Kenya: surgeons operating, a consultant teaching, an emergency team receiving a patient, a county hospital, theatre equipment, health costs, a patient's hand and an ambulance on a rural road"
+          width={1600}
+          height={900}
+          sizes="(max-width: 1200px) 100vw, 1150px"
+        />
+      </figure>
 
       <section id="collaborate" className="card anchorTarget" style={{ marginTop: 32, display: "flex", flexDirection: "column", gap: 14 }}>
         <h2 style={{ fontSize: 22, margin: 0 }}>Collaborate</h2>
