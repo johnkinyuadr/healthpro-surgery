@@ -29,7 +29,7 @@ const THEME_LABEL: Record<string, string> = {
 export const metadata: Metadata = {
   title: "Global Surgery: Research & Advocacy",
   description:
-    "Dr John Kinyua Murithi's research and advocacy for equitable, affordable and safe surgical care in Kenya and sub-Saharan Africa: key evidence, priorities for Kenyan referral hospitals and opportunities to collaborate.",
+    "HealthPro Surgery's research and advocacy for equitable, affordable and safe surgical care in Kenya and sub-Saharan Africa: the evidence we follow, the priorities we advocate for Kenyan referral hospitals, and how to work with us.",
   openGraph: {
     type: "website",
     siteName: "HealthPro Surgery",
@@ -94,14 +94,14 @@ export default function GlobalSurgeryPage() {
         <h1 className="h1">Global Surgery</h1>
         <p className="p" style={{ maxWidth: 820 }}>
           Billions of people worldwide cannot get safe, affordable surgery when they need it, and
-          sub-Saharan Africa carries a large share of that gap. Alongside clinical practice, Dr Kinyua
-          works on what it takes to close it in Kenya: surgical capacity in public hospitals,
-          training and keeping surgeons, safer emergency and perioperative care, and protecting
-          patients from catastrophic costs.
+          sub-Saharan Africa carries a large share of that gap. At HealthPro Surgery, our work goes
+          beyond the patients we treat. We study and advocate for what it takes to close the gap in
+          Kenya: surgical capacity in public hospitals, training and keeping surgeons, safer
+          emergency and perioperative care, and protecting patients from catastrophic costs.
         </p>
         <p className="p" style={{ maxWidth: 820 }}>
-          This page brings together the evidence he tracks and the priorities he advocates for
-          Kenyan referral hospitals. It is updated as new research is published.
+          Here we share the evidence we follow and the priorities we are pushing for in Kenyan
+          referral hospitals. We update this page as new research is published.
         </p>
         <div className="btnRow">
           <a className="btn btnPrimary" href="#priorities">
@@ -148,13 +148,17 @@ export default function GlobalSurgeryPage() {
           />
         </figure>
         <div className="gsRolesText">
-        <h2 style={{ fontSize: 22, margin: 0 }}>Why this work</h2>
+        <h2 style={{ fontSize: 22, margin: 0 }}>Why we do this work</h2>
         <p>
-          Dr Kinyua leads emergency care at a public teaching and referral hospital in Mombasa, trains
-          surgeons as COSECSA faculty, and is a Fellow of the College of Surgeons of East, Central and
-          Southern Africa and of the American College of Surgeons. His earlier work as a trauma
-          surgeon in Somalia and his vascular training in Paris shape a practical focus: improvements
-          that work in public hospitals with limited resources.
+          Our team works in both private practice and public hospitals in Mombasa. We see every day
+          how distance, cost, staffing and equipment shape what happens to a surgical patient, and
+          we believe the same standard of safe, timely surgery should be available to every Kenyan.
+        </p>
+        <p>
+          The work is led by Dr John Kinyua Murithi, FCS(ECSA), FACS, who heads emergency care at a
+          public teaching and referral hospital in Mombasa and trains surgeons as COSECSA faculty.
+          Experience in trauma surgery in Somalia and vascular training in Paris gives our approach
+          a practical focus: improvements that work in public hospitals with limited resources.
         </p>
         <ProfileLinks />
         </div>
@@ -164,8 +168,8 @@ export default function GlobalSurgeryPage() {
         Priorities for Kenyan referral hospitals
       </h2>
       <p className="p" style={{ maxWidth: 820, margin: "0 0 16px" }}>
-        Evidence-based changes that could make surgical and emergency care safer, more accessible and
-        more affordable. Each links to the research behind it.
+        The changes we advocate to make surgical and emergency care safer, more accessible and more
+        affordable. Each links to the research behind it.
       </p>
       <section className="gsPriorities">
         {PRIORITIES.map((r) => (
@@ -193,8 +197,8 @@ export default function GlobalSurgeryPage() {
         Key evidence
       </h2>
       <p className="p" style={{ maxWidth: 820, margin: "0 0 16px" }}>
-        Peer-reviewed research on surgical care in Kenya and sub-Saharan Africa, with a plain-language
-        summary of each study.
+        The peer-reviewed research that guides our work on surgical care in Kenya and sub-Saharan
+        Africa, with a plain-language summary of each study.
       </p>
       <section className="pubList">
         {PAPERS.map((p) => (
@@ -239,21 +243,21 @@ export default function GlobalSurgeryPage() {
       <section id="collaborate" className="card anchorTarget" style={{ marginTop: 32, display: "flex", flexDirection: "column", gap: 14 }}>
         <h2 style={{ fontSize: 22, margin: 0 }}>Collaborate</h2>
         <p>
-          Dr Kinyua welcomes collaboration with researchers, training programmes, hospitals, county
-          health teams and funders working on surgical access, trauma systems and surgical training in
-          East Africa. Email <strong>{EMAIL}</strong> or send a WhatsApp message.
+          We welcome collaboration with researchers, training programmes, hospitals, county health
+          teams and funders working on surgical access, trauma systems and surgical training in East
+          Africa. Email us at <strong>{EMAIL}</strong> or send a WhatsApp message.
         </p>
         <div className="btnRow">
           <a
             className="btn btnPrimary"
-            href={waLink("Hello Dr Kinyua, I'd like to discuss a global surgery collaboration.")}
+            href={waLink("Hello HealthPro Surgery, I'd like to discuss a global surgery collaboration.")}
             target="_blank"
             rel="noreferrer"
           >
             Message on WhatsApp
           </a>
           <Link className="btn" href="/publications">
-            Dr Kinyua&apos;s publications
+            Our publications
           </Link>
         </div>
       </section>
