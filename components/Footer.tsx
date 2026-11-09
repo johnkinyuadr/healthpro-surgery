@@ -24,6 +24,7 @@ export default function Footer() {
               <Link href="/consulting-hospitals">Hospitals</Link>
               <Link href="/media">Media</Link>
               <Link href="/publications">Publications</Link>
+              <Link href="/global-surgery">Global surgery</Link>
               <Link href="/blog">Blog</Link>
               <Link href="/patient-guides">Patient guides</Link>
               <Link href="/your-visit">Your visit</Link>

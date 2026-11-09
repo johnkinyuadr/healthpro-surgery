@@ -1,0 +1,307 @@
+{
+  "updated": "2026-11-09",
+  "papers": [
+    {
+      "id": "chaker-2025-kenya-surgical-capacity-study",
+      "title": "The Kenya Surgical Capacity Study: An Audit of Surgical Equipment/Infrastructure in Level 4 Public Hospitals",
+      "authors": "Chaker S, Henry JA, Hung YC, et al",
+      "journal": "Ann Afr Surg",
+      "year": 2025,
+      "volume": "22(1):4-12",
+      "doi": "10.4314/aas.v22i1.2",
+      "url": "https://doi.org/10.4314/aas.v22i1.2",
+      "themes": [
+        "capacity"
+      ],
+      "countries": [
+        "Kenya"
+      ],
+      "summary": "A national audit of Kenya's Level 4 public hospitals found that fewer than half had full theatre or anaesthesia equipment, and only about a third always had X-ray on site, so many patients must be referred for surgery."
+    },
+    {
+      "id": "bekele-2024-surgeon-retention-cosecsa",
+      "title": "A cross-sectional survey on surgeon retention in the COSECSA region after specialist training: Have things changed?",
+      "authors": "Bekele A, Alayande BT, Iradukunda J, et al",
+      "journal": "World J Surg",
+      "year": 2024,
+      "volume": "48(4):829-42",
+      "doi": "10.1002/wjs.12069",
+      "url": "https://doi.org/10.1002/wjs.12069",
+      "themes": [
+        "workforce"
+      ],
+      "countries": [
+        "COSECSA region",
+        "Kenya"
+      ],
+      "summary": "Retention of COSECSA-trained surgeons remains high, but Kenya is among the countries losing some surgeons to other continents, a reminder that training must be matched by good jobs at home."
+    },
+    {
+      "id": "falk-2020-task-sharing-nsp",
+      "title": "Surgical Task-Sharing to Non-specialist Physicians in Low-Resource Settings Globally: A Systematic Review of the Literature",
+      "authors": "Falk R, Taylor R, Kornelsen J, et al",
+      "journal": "World J Surg",
+      "year": 2020,
+      "volume": "44(5):1368-86",
+      "doi": "",
+      "url": "https://pesquisa.bvsalud.org/brasil/resource/pt/mdl-31915975",
+      "themes": [
+        "workforce",
+        "implementation"
+      ],
+      "countries": [
+        "Global",
+        "Sub-Saharan Africa"
+      ],
+      "summary": "Across 53 studies, non-specialist doctors provide much of the surgery in low-resource settings, yet few African countries offer them formal surgical training."
+    },
+    {
+      "id": "ouma-2018-emergency-hospital-access-ssa",
+      "title": "Access to emergency hospital care provided by the public sector in sub-Saharan Africa in 2015: a geocoded inventory and spatial analysis",
+      "authors": "Ouma PO, Maina J, Thuranira PN, et al",
+      "journal": "Lancet Glob Health",
+      "year": 2018,
+      "volume": "6(3):e342-50",
+      "doi": "",
+      "url": "https://doaj.org/article/684e030a79d245ae9fe8918826aebf1e",
+      "themes": [
+        "capacity"
+      ],
+      "countries": [
+        "Sub-Saharan Africa",
+        "Kenya"
+      ],
+      "summary": "Nearly three in ten people in sub-Saharan Africa live more than two hours from a public hospital. Kenya does well on distance, with over 90% of people within two hours, so the bigger challenge is what those hospitals can provide."
+    },
+    {
+      "id": "asos-2018-perioperative-outcomes-africa",
+      "title": "Perioperative patient outcomes in the African Surgical Outcomes Study: a 7-day prospective observational cohort study",
+      "authors": "Biccard BM, Madiba TE, et al; African Surgical Outcomes Study (ASOS) investigators",
+      "journal": "Lancet",
+      "year": 2018,
+      "volume": "391(10130):1589-98",
+      "doi": "10.1016/S0140-6736(18)30001-1",
+      "url": "https://doi.org/10.1016/S0140-6736(18)30001-1",
+      "themes": [
+        "capacity",
+        "outcomes",
+        "quality"
+      ],
+      "countries": [
+        "Sub-Saharan Africa",
+        "Multi-country (25 African countries)"
+      ],
+      "summary": "In more than 11,000 surgical patients across 25 African countries, about one in five had a complication and patients were twice as likely to die after surgery as the global average. Nearly all deaths happened after the day of the operation, pointing to better ward monitoring as a priority."
+    },
+    {
+      "id": "globalsurg-2018-ssi-hdi",
+      "title": "Surgical site infection after gastrointestinal surgery in high-income, middle-income, and low-income countries: a prospective, international, multicentre cohort study",
+      "authors": "GlobalSurg Collaborative",
+      "journal": "Lancet Infect Dis",
+      "year": 2018,
+      "volume": "18(5):516-25",
+      "doi": "10.1016/S1473-3099(18)30101-4",
+      "url": "https://doi.org/10.1016/S1473-3099(18)30101-4",
+      "themes": [
+        "outcomes",
+        "quality"
+      ],
+      "countries": [
+        "Global",
+        "Low-HDI countries"
+      ],
+      "summary": "Wound infection after bowel surgery affected almost one in four patients in low-income countries, and over a third of these infections resisted the antibiotic given to prevent them."
+    },
+    {
+      "id": "botchey-2017-injuries-kenya-multisite",
+      "title": "Epidemiology and outcomes of injuries in Kenya: A multisite surveillance study",
+      "authors": "Botchey I, Hung Y, Bachani A, et al",
+      "journal": "Surgery",
+      "year": 2017,
+      "volume": "162(6S)",
+      "doi": "10.1016/j.surg.2017.01.030",
+      "url": "https://doi.org/10.1016/j.surg.2017.01.030",
+      "themes": [
+        "capacity",
+        "outcomes",
+        "quality"
+      ],
+      "countries": [
+        "Kenya"
+      ],
+      "summary": "A registry of more than 14,000 injured patients at four Kenyan hospitals found road traffic crashes were the leading cause of injury, and showed that hospital trauma registries can guide improvements in emergency care."
+    },
+    {
+      "id": "hutch-2017-brain-drain-myth",
+      "title": "The Brain Drain Myth: Retention of Specialist Surgical Graduates in East, Central and Southern Africa, 1974-2013",
+      "authors": "Hutch A, Bekele A, O'Flynn E, et al",
+      "journal": "World J Surg",
+      "year": 2017,
+      "volume": "41(12):3046-53",
+      "doi": "10.1007/s00268-017-4307-x",
+      "url": "https://doi.org/10.1007/s00268-017-4307-x",
+      "themes": [
+        "workforce"
+      ],
+      "countries": [
+        "COSECSA region"
+      ],
+      "summary": "Over four decades, 85% of surgeons trained in the COSECSA region stayed in the country where they trained, showing that regional training builds the local workforce."
+    },
+    {
+      "id": "wfsa-2017-anesthesia-workforce",
+      "title": "The WFSA Global Anesthesia Workforce Survey",
+      "authors": "Kempthorne P, Morriss WW, Mellin-Olsen J, Gore-Booth J",
+      "journal": "Anesth Analg",
+      "year": 2017,
+      "volume": "125(3):981-90",
+      "doi": "",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/28753173/",
+      "themes": [
+        "workforce"
+      ],
+      "countries": [
+        "Global"
+      ],
+      "summary": "Most African countries have fewer than five physician anaesthesia providers per 100,000 people, a shortage that limits how many operations hospitals can safely perform."
+    },
+    {
+      "id": "oflynn-2016-surgeon-workforce-ecsa",
+      "title": "The Specialist Surgeon Workforce in East, Central and Southern Africa: A Situation Analysis",
+      "authors": "O'Flynn E, Andrew J, Hutch A, et al",
+      "journal": "World J Surg",
+      "year": 2016,
+      "volume": "40(11):2620-7",
+      "doi": "10.1007/s00268-016-3601-3",
+      "url": "https://doi.org/10.1007/s00268-016-3601-3",
+      "themes": [
+        "workforce"
+      ],
+      "countries": [
+        "COSECSA region",
+        "Kenya"
+      ],
+      "summary": "East, Central and Southern Africa had about one specialist surgeon for every 200,000 people, with two-thirds working in the main commercial city of each country."
+    },
+    {
+      "id": "shrime-2015-catastrophic-expenditure-surgery",
+      "title": "Catastrophic expenditure to pay for surgery worldwide: a modelling study",
+      "authors": "Shrime MG, Dare AJ, Alkire BC, et al",
+      "journal": "Lancet Glob Health",
+      "year": 2015,
+      "volume": "3 Suppl 2:S38-44",
+      "doi": "",
+      "url": "https://doaj.org/article/d8231b35c7ba41b793eab804d8566833",
+      "themes": [
+        "financing"
+      ],
+      "countries": [
+        "Global"
+      ],
+      "summary": "Around 81 million people a year face financial catastrophe from the cost of surgery and the travel, food and lost income that come with it, with the poorest hit hardest."
+    },
+    {
+      "id": "meara-2015-global-surgery-2030",
+      "title": "Global Surgery 2030: evidence and solutions for achieving health, welfare, and economic development",
+      "authors": "Meara JG, Leather AJM, Hagander L, et al",
+      "journal": "Lancet",
+      "year": 2015,
+      "volume": "386(9993):569-624",
+      "doi": "10.1016/S0140-6736(15)60160-X",
+      "url": "https://doi.org/10.1016/S0140-6736(15)60160-X",
+      "themes": [
+        "capacity",
+        "workforce",
+        "implementation",
+        "financing",
+        "quality"
+      ],
+      "countries": [
+        "Global",
+        "Sub-Saharan Africa"
+      ],
+      "summary": "The Lancet Commission on Global Surgery showed that most of the world's population cannot access safe, affordable surgical and anaesthesia care when needed, and set out national indicators and surgical plans to close the gap by 2030."
+    }
+  ],
+  "priorities": [
+    {
+      "id": "knowing-our-surgical-capacity",
+      "title": "Knowing our surgical capacity",
+      "summary": "Structured assessments of theatres, equipment, staff, blood and imaging, using tools developed for Kenyan hospitals, to guide investment where it matters most.",
+      "theme": "capacity",
+      "evidence": [
+        "chaker-2025-kenya-surgical-capacity-study"
+      ]
+    },
+    {
+      "id": "training-and-keeping-surgeons-in-kenya",
+      "title": "Training and keeping surgeons in Kenya",
+      "summary": "More accredited surgical training posts outside the capital and employment pathways that keep newly qualified surgeons in the counties that need them.",
+      "theme": "workforce",
+      "evidence": [
+        "oflynn-2016-surgeon-workforce-ecsa",
+        "hutch-2017-brain-drain-myth",
+        "bekele-2024-surgeon-retention-cosecsa"
+      ]
+    },
+    {
+      "id": "supporting-surgery-closer-to-home",
+      "title": "Supporting surgery closer to home",
+      "summary": "Mentorship, skills training and teleconsultation for doctors operating in county hospitals, with clear referral pathways, so that more patients can be treated safely nearer home.",
+      "theme": "implementation",
+      "evidence": [
+        "falk-2020-task-sharing-nsp",
+        "chaker-2025-kenya-surgical-capacity-study",
+        "ouma-2018-emergency-hospital-access-ssa"
+      ]
+    },
+    {
+      "id": "no-one-should-be-impoverished-by-emergency-surgery",
+      "title": "No one should be impoverished by emergency surgery",
+      "summary": "Documenting what patients pay for emergency operations and advocating for insurance coverage without upfront payment, so cost never delays life-saving care.",
+      "theme": "financing",
+      "evidence": [
+        "shrime-2015-catastrophic-expenditure-surgery",
+        "meara-2015-global-surgery-2030"
+      ]
+    },
+    {
+      "id": "safer-recovery-on-surgical-wards",
+      "title": "Safer recovery on surgical wards",
+      "summary": "Early warning scores, clear escalation and high-dependency care for the highest-risk patients, because most deaths after surgery in Africa happen on the ward.",
+      "theme": "outcomes",
+      "evidence": [
+        "asos-2018-perioperative-outcomes-africa"
+      ]
+    },
+    {
+      "id": "measuring-perioperative-mortality",
+      "title": "Measuring perioperative mortality",
+      "summary": "Routine reporting of deaths after surgery, using the Lancet Commission's definitions, as a core quality measure for every hospital that operates.",
+      "theme": "quality",
+      "evidence": [
+        "meara-2015-global-surgery-2030",
+        "asos-2018-perioperative-outcomes-africa"
+      ]
+    },
+    {
+      "id": "trauma-registries-in-kenyan-referral-hospitals",
+      "title": "Trauma registries in Kenyan referral hospitals",
+      "summary": "Recording every injured patient seen in emergency departments, using a standard Kenyan data set, so that hospitals can measure trauma outcomes and target improvements.",
+      "theme": "quality",
+      "evidence": [
+        "botchey-2017-injuries-kenya-multisite"
+      ]
+    },
+    {
+      "id": "wound-infection-surveillance-and-antibiotic-stewardship",
+      "title": "Wound infection surveillance and antibiotic stewardship",
+      "summary": "Tracking infections after major operations, checking that preventive antibiotics are given correctly, and using local culture results to choose them.",
+      "theme": "quality",
+      "evidence": [
+        "globalsurg-2018-ssi-hdi",
+        "asos-2018-perioperative-outcomes-africa"
+      ]
+    }
+  ]
+}

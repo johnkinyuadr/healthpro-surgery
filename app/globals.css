@@ -854,3 +854,15 @@ select.input { appearance: none; background-image: linear-gradient(45deg, transp
 .chipLink { border: 1px solid transparent; transition: border-color 0.2s ease, color 0.2s ease; }
 .chipLink:hover { border-color: var(--teal); color: var(--teal); }
 .credLink { display: inline-block; margin-top: 6px; color: var(--teal); font-weight: 600; font-size: 14px; text-decoration: underline; text-underline-offset: 3px; }
+
+/* ---------- Global Surgery page ---------- */
+.gsRoles p { margin: 10px 0; max-width: 80ch; }
+.gsPriorities { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px; }
+.gsPriority { background: var(--surface); border: 1px solid var(--border); border-top: 3px solid var(--teal); border-radius: 12px; padding: 20px 22px; display: flex; flex-direction: column; gap: 8px; }
+.gsPriority h3 { margin: 0; font-size: 19px; color: var(--heading); }
+.gsPriority p { margin: 0; color: var(--muted); }
+.gsTheme { align-self: flex-start; font-size: 12px; font-weight: 600; letter-spacing: .6px; text-transform: uppercase; color: var(--teal); }
+.gsEvidence { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; font-size: 13px; color: var(--subtle); margin-top: auto; padding-top: 6px; }
+.gsEvidence a { background: var(--teal-soft); color: var(--teal); font-weight: 600; padding: 2px 9px; border-radius: 999px; text-decoration: none; }
+.gsEvidence a:hover { background: var(--teal); color: #fff; }
+.gsCite { margin: 0; font-size: 13.5px; color: var(--subtle); }
