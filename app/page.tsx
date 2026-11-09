@@ -298,9 +298,14 @@ export default function HomePage() {
               At Coast General Teaching and Referral Hospital he serves as Head of Accident and
               Emergency, leads quality-improvement work and trains surgeons as COSECSA faculty.
             </p>
-            <Link className="textLink" href="/about">
-              Read full profile →
-            </Link>
+            <div style={{ display: "flex", flexWrap: "wrap", gap: "8px 20px" }}>
+              <Link className="textLink" href="/about">
+                Read full profile →
+              </Link>
+              <Link className="textLink" href="/global-surgery">
+                Global surgery research &amp; advocacy →
+              </Link>
+            </div>
           </div>
           <div className="credGrid">
             <div className="cred">
