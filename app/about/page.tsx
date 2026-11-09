@@ -134,6 +134,9 @@ export default function AboutPage() {
           <p style={{ marginTop: 14 }}>
             <Link className="textLink" href="/publications">
               Publications &amp; research →
+            </Link>{" "}
+            <Link className="textLink" href="/global-surgery">
+              Global surgery research &amp; advocacy →
             </Link>
           </p>
         </div>

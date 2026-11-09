@@ -104,6 +104,10 @@ export default function PublicationsPage() {
             About Dr Kinyua
           </Link>
         </div>
+        <p className="small" style={{ marginTop: 12 }}>
+          See also <Link href="/global-surgery">Global surgery research &amp; advocacy</Link>: key
+          evidence and priorities for surgical care in Kenya.
+        </p>
         <div style={{ marginTop: 14 }}>
           <ProfileLinks />
         </div>

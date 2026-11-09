@@ -25,6 +25,7 @@ const PATHS = [
   "/patient-guides/bilateral-evla",
   "/media",
   "/publications",
+  "/global-surgery",
   "/blog",
   ...POSTS.map((p) => `/blog/${p.slug}`),
   "/contact",
