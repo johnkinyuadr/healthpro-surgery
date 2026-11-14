@@ -4,6 +4,7 @@
 //   "> text"          → pull quote
 //   "- item"          → bullet list (consecutive lines)
 //   **bold**          → bold text
+//   ![alt](/blog/x.jpg "caption") → full-width photo (caption optional)
 export type Post = {
   slug: string;
   lang: "en" | "sw";

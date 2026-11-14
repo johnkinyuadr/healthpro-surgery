@@ -10,7 +10,7 @@ const post: Post = {
   date: "2026-11-14",
   image: {
     src: "/blog/diabetes-and-your-feet.jpg",
-    alt: "Diabetes and Your Feet: Small Checks That Save Legs — World Diabetes Day, 14 November",
+    alt: "A surgeon in a white coat examining the foot and lower leg of an older man with diabetes in a clinic, with an ultrasound machine behind them",
     width: 1200,
     height: 800,
   },
@@ -45,7 +45,11 @@ The single most important habit is a daily foot check. It takes less than two mi
 
 If you find a problem, do not wait to see whether it heals on its own.
 
+![An older man sitting on a sofa at home, holding a hand mirror to check the sole of his foot](/blog/diabetes-foot-check-mirror.jpg "A hand mirror makes it easy to check the soles of your feet every day.")
+
 ## Everyday foot care
+
+![A man sitting on a sofa at home, lacing up closed black shoes worn with socks](/blog/diabetes-foot-shoes.jpg "Closed, well-fitting shoes and soft socks protect feet that may not feel injury.")
 
 - **Never walk barefoot,** indoors or outdoors, including at home, at the beach and around the compound. Feet without feeling are easily injured.
 - **Wear well-fitting, closed shoes** with soft socks. Avoid tight shoes, and break in new shoes slowly. Sandals and open shoes leave toes and heels exposed.
@@ -80,6 +84,8 @@ Circulation can be assessed simply in the clinic, for example by feeling the pul
 Foot care sits alongside the rest of diabetes care. Keeping blood sugar, blood pressure and cholesterol well controlled protects both nerves and arteries. **Stopping smoking** is one of the most powerful things you can do for your circulation. Regular walking improves blood flow, provided your shoes protect your feet. And every person with diabetes should have their feet examined by a health worker at least once a year, and more often if they have had ulcers or circulation problems before.
 
 ## A message for families
+
+![A younger woman kneeling to examine the foot of her elderly mother, who is seated on a sofa at home](/blog/diabetes-foot-family.jpg "A family member can check the feet of a parent who cannot easily see or reach them.")
 
 Families play a vital part. Many patients with long-standing diabetes have poor eyesight, stiff backs or knees, or simply cannot see the soles of their own feet. A son, daughter or spouse who checks a parent's feet each evening may prevent a hospital admission. If you notice a wound, a smell or a change in colour, take it seriously and seek help early.
 
