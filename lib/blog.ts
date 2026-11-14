@@ -14,11 +14,13 @@ import hataShujaa from "./posts/hata-shujaa-huenda-hospitali";
 import weekendPrescription from "./posts/weekend-prescription";
 import familyAndSurgery from "./posts/family-and-surgery";
 import weightAndSurgery from "./posts/weight-and-surgery";
+import diabetesAndYourFeet from "./posts/diabetes-and-your-feet";
 
 export type { Post };
 
 // Order shown on the blog page (newest / featured first).
 export const POSTS: Post[] = [
+  diabetesAndYourFeet,
   weightAndSurgery,
   familyAndSurgery,
   weekendPrescription,
