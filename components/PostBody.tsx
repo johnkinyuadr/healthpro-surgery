@@ -16,6 +16,17 @@ export default function PostBody({ body }: { body: string }) {
         const text = block.trim();
         if (text.startsWith("## ")) return <h2 key={i}>{text.slice(3)}</h2>;
         if (text.startsWith("> ")) return <blockquote key={i}>{inline(text.slice(2))}</blockquote>;
+        // "![alt text](/blog/photo.jpg "Optional caption")" → full-width photo (1200 × 800 recommended)
+        const img = text.match(/^!\[([^\]]*)\]\(([^)\s]+)(?:\s+"([^"]*)")?\)$/);
+        if (img) {
+          return (
+            <figure key={i} className="postFigure">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src={img[2]} alt={img[1]} width={1200} height={800} loading="lazy" decoding="async" />
+              {img[3] ? <figcaption>{img[3]}</figcaption> : null}
+            </figure>
+          );
+        }
         const lines = text.split("\n");
         if (lines.every((l) => l.trim().startsWith("- "))) {
           return (

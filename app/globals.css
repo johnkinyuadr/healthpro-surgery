@@ -684,6 +684,9 @@ select.input { appearance: none; background-image: linear-gradient(45deg, transp
 .postBody ul { margin: 0 0 24px; padding-left: 22px; }
 .postBody li { margin-bottom: 8px; }
 .postBody strong { color: var(--heading); }
+.postFigure { margin: 32px 0; }
+.postFigure img { display: block; width: 100%; height: auto; border-radius: 12px; }
+.postFigure figcaption { font-size: 14px; line-height: 1.5; color: #5b6878; margin-top: 10px; text-align: center; }
 .postBody blockquote {
   margin: 32px 0; padding: 4px 0 4px 24px; border-left: 3px solid var(--teal);
   font-family: var(--font-serif); font-size: 24px; line-height: 1.45; color: var(--navy);
