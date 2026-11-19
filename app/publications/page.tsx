@@ -30,6 +30,10 @@ function Authors({ authors }: { authors: string }) {
 function PubCard({ p }: { p: Publication }) {
   return (
     <article className="pubCard">
+      {p.image ? (
+        // eslint-disable-next-line @next/next/no-img-element
+        <img className="pubImage" src={p.image.src} alt={p.image.alt} width={1200} height={800} loading="lazy" decoding="async" />
+      ) : null}
       <div className="pubMeta">
         <span className="pubType">{p.type}</span>
         <span>{p.topic}</span>
