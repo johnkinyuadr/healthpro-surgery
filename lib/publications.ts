@@ -19,9 +19,29 @@ export type Publication = {
     | "Conference abstract";
   topic: string;
   summary: string;
+  // Optional illustration (1200 × 800 JPEG in /public/images/publications)
+  image?: { src: string; alt: string };
 };
 
 export const PUBLICATIONS: Publication[] = [
+  {
+    title:
+      "Autogenous Renal Artery Bypass for Renal Artery Stenosis Secondary to Takayasu Arteritis: A Case Report",
+    authors: "Murithi JK, Faulds J",
+    journal: "Annals of African Surgery",
+    year: 2026,
+    details: "24(1) · published online 17 November 2026",
+    url: "https://www.annalsofafricansurgery.com/autogenous-renal-artery-bypass",
+    doi: "10.4314/aas.v24i1.3",
+    type: "Case report",
+    topic: "Renovascular surgery",
+    summary:
+      "An 18-year-old woman with Takayasu arteritis had an occluded left renal artery with an atrophic kidney, and a greater than 80% stenosis of the right renal artery, with uncontrolled hypertension and rising creatinine despite immunosuppression. Because endovascular repair is less durable during active arteritis, she underwent open antegrade aorto–right renal artery bypass using reversed autologous femoral vein after the saphenous vein proved too small. Renal function normalised within five days, and at six months the graft was patent, inflammatory markers had settled and blood pressure was better controlled.",
+    image: {
+      src: "/images/publications/renal-artery-bypass.jpg",
+      alt: "Illustration of an autogenous vein bypass from the aorta to the right renal artery, beyond a stenosis, with an atrophic left kidney",
+    },
+  },
   {
     title: "Strengthening Vascular Surgery Training in Sub-Saharan Africa: 1-Year Kenyan Experience",
     authors:
