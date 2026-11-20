@@ -1,4 +1,5 @@
 import type { Post } from "./posts/types";
+import mensHealth from "./posts/mens-health-why-men-wait";
 import theCostOfWaiting from "./posts/the-cost-of-waiting";
 import healthInvestment from "./posts/health-is-your-greatest-investment";
 import fearIsNotADiagnosis from "./posts/fear-is-not-a-diagnosis";
@@ -20,6 +21,7 @@ export type { Post };
 
 // Order shown on the blog page (newest / featured first).
 export const POSTS: Post[] = [
+  mensHealth,
   diabetesAndYourFeet,
   weightAndSurgery,
   familyAndSurgery,
