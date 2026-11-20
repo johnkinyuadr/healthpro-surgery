@@ -10,7 +10,7 @@ const post: Post = {
   date: "2026-11-19",
   image: {
     src: "/blog/mens-health-why-men-wait.jpg",
-    alt: "Why Men Wait: a surgeon's message for International Men's Day, 19 November",
+    alt: "A surgeon in navy scrubs standing outside a hospital, with a group of smiling men of different ages behind him and a blue ribbon for men's health",
     width: 1200,
     height: 800,
   },
@@ -80,6 +80,8 @@ International Men's Day also reminds us that men's mental health matters. Stress
 Often it is a wife, a daughter or a son who finally brings a man to the clinic. If you notice that your husband, father or brother has been limping, losing weight, avoiding meals or hiding a swelling, encourage him gently to get checked, and offer to go with him. Your persistence may save his life.
 
 ## The strongest men get checked
+
+![A middle-aged man jogging along the Mombasa seafront in the early morning, with Fort Jesus in the background and a blue ribbon for men's health](/blog/mens-health-active.jpg "Regular exercise, such as a morning walk or jog, protects the heart, the arteries and the waistline.")
 
 Being a provider means being present for your family for many years to come. Looking after your own health is part of looking after them.
 
