@@ -5,6 +5,7 @@
 //   "- item"          → bullet list (consecutive lines)
 //   **bold**          → bold text
 //   ![alt](/blog/x.jpg "caption") → full-width photo (caption optional)
+//   | a | b | / | --- | --- | / rows → table
 export type Post = {
   slug: string;
   lang: "en" | "sw";

@@ -686,6 +686,11 @@ select.input { appearance: none; background-image: linear-gradient(45deg, transp
 .postBody li { margin-bottom: 8px; }
 .postBody strong { color: var(--heading); }
 .postFigure { margin: 32px 0; }
+.postTableWrap { overflow-x: auto; margin: 24px 0; }
+.postTable { width: 100%; border-collapse: collapse; font-size: 15px; }
+.postTable th, .postTable td { text-align: left; padding: 10px 14px; border-bottom: 1px solid var(--border); vertical-align: top; }
+.postTable th { background: var(--navy); color: #fff; font-weight: 600; }
+.postTable tbody tr:nth-child(even) td { background: rgba(11, 37, 69, 0.04); }
 .postFigure img { display: block; width: 100%; height: auto; border-radius: 12px; }
 .postFigure figcaption { font-size: 14px; line-height: 1.5; color: #5b6878; margin-top: 10px; text-align: center; }
 .postBody blockquote {
