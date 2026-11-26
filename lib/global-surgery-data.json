@@ -1,6 +1,25 @@
 {
-  "updated": "2026-11-09",
+  "updated": "2026-11-23",
   "papers": [
+    {
+      "id": "endara-mina-2026-global-anesthesia-capacity-review",
+      "title": "Global anesthesia care: a systematic review of capacity, workforce, and access",
+      "authors": "Endara-Mina J, Chango M, Escudero CJ, et al",
+      "journal": "BMC Anesthesiol",
+      "year": 2026,
+      "volume": "",
+      "doi": "10.1186/s12871-026-04215-x",
+      "url": "https://link.springer.com/article/10.1186/s12871-026-04215-x",
+      "themes": [
+        "capacity",
+        "workforce"
+      ],
+      "countries": [
+        "Global",
+        "Sub-Saharan Africa"
+      ],
+      "summary": "A review of 51 studies found deep global inequality in anaesthesia care, with the greatest shortages of specialists, equipment and monitoring in sub-Saharan Africa."
+    },
     {
       "id": "chaker-2025-kenya-surgical-capacity-study",
       "title": "The Kenya Surgical Capacity Study: An Audit of Surgical Equipment/Infrastructure in Level 4 Public Hospitals",
