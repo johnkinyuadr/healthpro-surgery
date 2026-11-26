@@ -10,7 +10,7 @@ const post: Post = {
   date: "2026-11-26",
   image: {
     src: "/blog/weight-loss-options.jpg",
-    alt: "Losing Weight: diet, exercise, medicines and surgery explained",
+    alt: "Losing Weight: Diet, Exercise, Medicines and Surgery Explained — a man and woman jogging along the Mombasa seafront near Fort Jesus, with panels showing a healthy plate, running shoes, an injection pen and the stomach",
     width: 1200,
     height: 800,
   },
