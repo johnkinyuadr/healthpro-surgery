@@ -28,6 +28,25 @@ export default function PostBody({ body }: { body: string }) {
           );
         }
         const lines = text.split("\n");
+        // Markdown table: "| a | b |" rows, second row "| --- | --- |"
+        if (lines.length >= 2 && lines.every((l) => l.trim().startsWith("|")) && /^\|[\s:|-]+\|$/.test(lines[1].trim())) {
+          const cells = (l: string) => l.trim().replace(/^\||\|$/g, "").split("|").map((c) => c.trim());
+          const [head, , ...rows] = lines;
+          return (
+            <div key={i} className="postTableWrap">
+              <table className="postTable">
+                <thead>
+                  <tr>{cells(head).map((c, j) => <th key={j}>{inline(c)}</th>)}</tr>
+                </thead>
+                <tbody>
+                  {rows.map((r, k) => (
+                    <tr key={k}>{cells(r).map((c, j) => <td key={j}>{inline(c)}</td>)}</tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          );
+        }
         if (lines.every((l) => l.trim().startsWith("- "))) {
           return (
             <ul key={i}>
